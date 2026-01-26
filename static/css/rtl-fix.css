@@ -1,0 +1,40 @@
+/* Fix main content alignment */
+body.rtl .content-wrapper,
+body.rtl .main-footer,
+body.rtl .main-header {
+    margin-left: 0 !important;
+    margin-right: 250px !important;
+}
+
+/* Fix sidebar */
+body.rtl .main-sidebar {
+    right: 0;
+    left: auto;
+}
+
+/* Fix navbar dropdowns */
+body.rtl .dropdown-menu {
+    right: auto;
+    left: 0;
+    text-align: right;
+}
+
+/* Fix cards spacing */
+body.rtl .card {
+    text-align: right;
+}
+
+/* Fix breadcrumb */
+body.rtl .breadcrumb {
+    justify-content: flex-end;
+}
+
+/* Fix buttons order */
+body.rtl .btn-group > .btn {
+    float: right;
+}
+
+/* Fix recent actions */
+body.rtl #recent-actions-module {
+    text-align: right;
+}

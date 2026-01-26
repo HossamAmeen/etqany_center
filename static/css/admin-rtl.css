@@ -1,0 +1,191 @@
+/* ================================
+   SIDEBAR SPACING FIXES - RTL
+================================ */
+
+/* Main sidebar - remove extra padding/margin */
+html[dir="rtl"] .main-sidebar {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Sidebar brand section - fix "لوحة التحكم" spacing */
+html[dir="rtl"] .brand-link {
+    padding: 0.75rem 0.5rem !important;
+    margin: 0 !important;
+    min-height: 57px;
+    border-bottom: 1px solid #4b545c;
+}
+
+html[dir="rtl"] .brand-link .brand-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* User panel - fix "hossam" spacing */
+html[dir="rtl"] .user-panel {
+    padding: 0.5rem !important;
+    margin: 0 !important;
+    border-bottom: 1px solid #4b545c;
+}
+
+html[dir="rtl"] .user-panel .info {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.2;
+}
+
+html[dir="rtl"] .user-panel .info p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0.95rem;
+}
+
+/* Sidebar menu container - remove default padding */
+html[dir="rtl"] .sidebar {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Navigation list - remove unwanted spacing */
+html[dir="rtl"] .nav-sidebar {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Menu items - fix spacing between items */
+html[dir="rtl"] .nav-sidebar > .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #4b545c;
+}
+
+html[dir="rtl"] .nav-sidebar > .nav-item:last-child {
+    border-bottom: none;
+}
+
+/* Menu links - fix text and icon spacing */
+html[dir="rtl"] .nav-sidebar .nav-link {
+    padding: 0.65rem 1rem !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+/* Remove extra space in menu text */
+html[dir="rtl"] .nav-sidebar .nav-link p {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline;
+    line-height: 1.4;
+}
+
+/* Icons - position with minimal spacing */
+html[dir="rtl"] .nav-sidebar .nav-link i {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+    width: 1.2rem;
+    text-align: center;
+}
+
+/* Menu headers - fix "Services" and "خدمات" spacing */
+html[dir="rtl"] .nav-header {
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #4b545c;
+    border-bottom: 1px solid #4b545c;
+}
+
+/* Treeview menus - fix "المصادقة والتفويض" section spacing */
+html[dir="rtl"] .nav-treeview {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+html[dir="rtl"] .nav-treeview .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html[dir="rtl"] .nav-treeview .nav-link {
+    padding-right: 2.5rem !important;
+    padding-left: 1rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+}
+
+/* Fix specific text alignment issues */
+html[dir="rtl"] .brand-text,
+html[dir="rtl"] .user-panel .info,
+html[dir="rtl"] .nav-link p {
+    text-align: right;
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+
+/* Fix for Arabic text line height */
+html[dir="rtl"] .nav-link {
+    line-height: 1.3 !important;
+}
+
+/* Remove dropdown arrow extra space */
+html[dir="rtl"] .nav-link > .right {
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0.8rem !important;
+}
+
+/* Fix collapsed sidebar spacing */
+html[dir="rtl"] body.sidebar-collapse .main-sidebar {
+    padding: 0 !important;
+}
+
+html[dir="rtl"] body.sidebar-collapse .brand-link {
+    padding: 0.75rem 0.25rem !important;
+    justify-content: center;
+}
+
+html[dir="rtl"] body.sidebar-collapse .user-panel {
+    padding: 0.5rem 0.25rem !important;
+    text-align: center;
+}
+
+html[dir="rtl"] body.sidebar-collapse .nav-link {
+    padding: 0.65rem 0.5rem !important;
+    text-align: center;
+}
+
+/* Fix the specific text wrapping issue */
+html[dir="rtl"] .nav-link,
+html[dir="rtl"] .brand-text,
+html[dir="rtl"] .user-panel .info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Remove any extra margins from parent containers */
+html[dir="rtl"] .wrapper,
+html[dir="rtl"] .content-wrapper,
+html[dir="rtl"] .main-header {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure smooth transitions */
+html[dir="rtl"] .main-sidebar,
+html[dir="rtl"] .brand-link,
+html[dir="rtl"] .nav-link {
+    transition: all 0.3s ease-in-out;
+}
