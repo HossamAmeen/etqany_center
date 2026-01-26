@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from .models import CustomerExperience, SuccessStory, Vision
+from .models import SuccessStory
 
 admin.site.register(SuccessStory)
-admin.site.register(Vision)
-admin.site.register(CustomerExperience)
+
