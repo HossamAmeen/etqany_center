@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 LOCAL_APPS = [
     "services",
+    "website",
 ]
 
 INSTALLED_APPS += LOCAL_APPS

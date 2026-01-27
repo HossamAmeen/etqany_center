@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+
 class Service(models.Model):
     title = models.CharField(_("Title"), max_length=255)
     image = models.ImageField(_("Image"), upload_to="services/")
