@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import SuccessStory
+from django.contrib.auth.models import Group
+
 
 @admin.register(SuccessStory)
 class SuccessStoryAdmin(admin.ModelAdmin):
@@ -17,3 +19,5 @@ class SuccessStoryAdmin(admin.ModelAdmin):
     def content_summary(self, obj):
         return obj.content[:50] + '...' if len(obj.content) > 50 else obj.content
     content_summary.short_description = 'Content'
+
+admin.site.unregister(Group)
