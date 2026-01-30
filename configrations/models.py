@@ -18,3 +18,12 @@ class SuccessStory(models.Model):
     class Meta:
         verbose_name = _("Success Story")
         verbose_name_plural = _("Success Stories")
+
+
+class Logo(models.Model):
+    image = models.ImageField()
+    name = models.CharField(max_length=100)
+    name_ar = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
