@@ -61,7 +61,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'front'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,6 +133,7 @@ STATIC_ROOT = BASE_DIR / "static_root"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    BASE_DIR / "front",
 ]
 
 MEDIA_URL = '/media/'
@@ -161,7 +162,6 @@ JAZZMIN_SETTINGS = {
 
     "topmenu_links": [
         {"name": _("Dashboard"), "url": "admin:index", "permissions": ["auth.view_user"]},
-        {"name": _("Support"), "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
     ],
 
     "icons": {
