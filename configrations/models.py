@@ -37,9 +37,9 @@ class Logo(models.Model):
         verbose_name_plural = _("Logos")
 
 
-class service(models.Model):
-    title = models.CharField(_("titel"), max_length=200, blank=True)
-    title_ar = models.CharField(_("titel_ar"),
+class Service(models.Model):
+    title = models.CharField(_("title"), max_length=200, blank=True)
+    title_ar = models.CharField(_("title_ar"),
                                 max_length=200, null=True, blank=True)
     description = models.TextField(_("description"), blank=True)
     description_ar = models.TextField(_("description_ar"),
@@ -53,5 +53,5 @@ class service(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = _("service")
-        verbose_name_plural = _("services")
+        verbose_name = _("Service")
+        verbose_name_plural = _("Services")
