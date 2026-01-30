@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+
 class SuccessStory(models.Model):
     name = models.CharField(_("name"), max_length=100)
     name_ar = models.CharField(_("name_ar"), max_length=100, null=True, blank=True)
@@ -27,3 +28,23 @@ class Logo(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class service(models.Model):
+    title = models.CharField(_("titel"), max_length=200, blank=True)
+    title_ar = models.CharField(_("titel_ar"),
+                                max_length=200, null=True, blank=True)
+    description = models.TextField(_("description"), blank=True)
+    description_ar = models.TextField(_("description_ar"),
+                                      null=True, blank=True)
+    image = models.ImageField(upload_to='services/icons/',
+                              null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _("service")
+        verbose_name_plural = _("services")
