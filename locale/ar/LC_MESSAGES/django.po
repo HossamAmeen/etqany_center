@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-28 19:24+0200\n"
+"POT-Creation-Date: 2026-01-30 23:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,66 +17,87 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-#: configrations/models.py:5
+
+#: configrations/models.py:6 configrations/models.py:26
 msgid "name"
 msgstr "الاسم"
 
-#: configrations/models.py:6
+#: configrations/models.py:7 configrations/models.py:27
 msgid "name_ar"
 msgstr "الاسم بالعربية"
 
-#: configrations/models.py:7
+#: configrations/models.py:8
 msgid "title"
 msgstr "العنوان"
 
-#: configrations/models.py:8
+#: configrations/models.py:9
 msgid "title_ar"
 msgstr "العنوان بالعربية"
 
-#: configrations/models.py:9
+#: configrations/models.py:10
 msgid "content"
 msgstr "المحتوى"
 
-#: configrations/models.py:10
+#: configrations/models.py:11
 msgid "content_ar"
 msgstr "المحتوى بالعربية"
 
-#: configrations/models.py:19
+#: configrations/models.py:20
 msgid "Success Story"
 msgstr "قصة نجاح"
 
-#: configrations/models.py:20
+#: configrations/models.py:21
 msgid "Success Stories"
 msgstr "قصص نجاح"
 
-#: core/settings.py:144
+#: configrations/models.py:25
+msgid "image"
+msgstr "الصورة"
+
+#: configrations/models.py:28
+msgid "is_active"
+msgstr "نشيط"
+
+#: configrations/models.py:29
+msgid "created_at"
+msgstr "تم الإنشاء في"
+
+#: configrations/models.py:35
+msgid "Logo"
+msgstr "الشعار"
+
+#: configrations/models.py:36
+msgid "Logos"
+msgstr "الشعارات"
+
+#: core/settings.py:145
 msgid "English"
 msgstr "الإنجليزية"
 
-#: core/settings.py:145
+#: core/settings.py:146
 msgid "Arabic"
 msgstr "العربية"
 
-#: core/settings.py:154
+#: core/settings.py:155
 msgid "Admin Console"
 msgstr "اللوحة الرئيسية للإدارة"
 
-#: core/settings.py:155
+#: core/settings.py:156
 msgid "Management System"
 msgstr "نظام إدارة"
 
-#: core/settings.py:156
+#: core/settings.py:157
 msgid "My Project"
 msgstr "المشروع"
 
-#: core/settings.py:157
+#: core/settings.py:158
 msgid "Welcome to the Admin Dashboard"
 msgstr "مرحبا في لوحة التحكم"
 
-#: core/settings.py:163
+#: core/settings.py:164
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
 
-#: core/settings.py:164
+#: core/settings.py:165
 msgid "Support"
 msgstr "الدعم"
