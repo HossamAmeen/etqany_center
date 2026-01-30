@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.utils.html import format_html
-
+from django.utils.translation import gettext_lazy as _
 from .models import Logo, SuccessStory
 
 
@@ -15,11 +15,11 @@ class SuccessStoryAdmin(admin.ModelAdmin):
         if obj.image:
             return format_html('<img src="{}" width="50" height="50" style="object-fit: cover; border-radius: 5px;" />', obj.image.url)
         return "No Image"
-    display_image.short_description = 'Image'
+    display_image.short_description = _('image')
 
     def content_summary(self, obj):
         return obj.content[:50] + '...' if len(obj.content) > 50 else obj.content
-    content_summary.short_description = 'Content'
+    content_summary.short_description = _('content')
 
 admin.site.unregister(Group)
 
@@ -35,4 +35,4 @@ class LogoAdmin(admin.ModelAdmin):
                 'style="object-fit: cover; border-radius: 5px;" />',
                 obj.image.url)
         return "No Image"
-    display_image.short_description = 'Image'
+    display_image.short_description = _('image')

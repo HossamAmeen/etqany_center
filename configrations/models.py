@@ -9,9 +9,9 @@ class SuccessStory(models.Model):
     title_ar = models.CharField(_("title_ar"), max_length=150, blank=True)
     content = models.TextField(_("content"))
     content_ar = models.TextField(_("content_ar"), null=True, blank=True)
-    image = models.ImageField(upload_to='success_stories/', blank=True, null=True)
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(_("image"), upload_to='success_stories/', blank=True, null=True)
+    is_active = models.BooleanField(_("is_active"), default=True)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
 
     def __str__(self):
         return self.name

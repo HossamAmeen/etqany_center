@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 23:13+0200\n"
+"POT-Creation-Date: 2026-01-30 23:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: configrations/admin.py:18 configrations/admin.py:38
+#: configrations/models.py:25
+msgid "image"
+msgstr "الصورة"
+
+#: configrations/admin.py:22 configrations/models.py:10
+msgid "content"
+msgstr "المحتوى"
 
 #: configrations/models.py:6 configrations/models.py:26
 msgid "name"
@@ -34,10 +43,6 @@ msgstr "العنوان"
 msgid "title_ar"
 msgstr "العنوان بالعربية"
 
-#: configrations/models.py:10
-msgid "content"
-msgstr "المحتوى"
-
 #: configrations/models.py:11
 msgid "content_ar"
 msgstr "المحتوى بالعربية"
@@ -49,10 +54,6 @@ msgstr "قصة نجاح"
 #: configrations/models.py:21
 msgid "Success Stories"
 msgstr "قصص نجاح"
-
-#: configrations/models.py:25
-msgid "image"
-msgstr "الصورة"
 
 #: configrations/models.py:28
 msgid "is_active"
@@ -97,7 +98,3 @@ msgstr "مرحبا في لوحة التحكم"
 #: core/settings.py:164
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
-
-#: core/settings.py:165
-msgid "Support"
-msgstr "الدعم"
