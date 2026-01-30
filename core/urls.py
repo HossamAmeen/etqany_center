@@ -14,15 +14,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+
+from configrations import views as config_views
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),  # Required for the language selector
-    
+    path('', config_views.index, name='index'),
 ]
 
 # Wrap your admin and other routes in i18n_patterns
