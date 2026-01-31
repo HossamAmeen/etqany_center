@@ -106,6 +106,17 @@ class Configuration(models.Model):
     Our_vision = models.TextField(_("Our_vision"), blank=True)
     Our_vision_ar = models.TextField(_("Our_vision_ar"), null=True, blank=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    email = models.EmailField(_("email"), max_length=254, blank=True)
+    phone_number = models.CharField(_("phone_number"), max_length=20, blank=True)
+    address = models.CharField(_("address"), max_length=255, blank=True)
+    address_ar = models.CharField(_("address_ar"), max_length=255, null=True, blank=True)
+    Technical_innovation = models.TextField(_("Technical_innovation"), blank=True)
+    Technical_innovation_ar = models.TextField(_("Technical_innovation_ar"), null=True, blank=True)
+    Social_responsibility = models.TextField(_("Social responsibility"), blank=True)
+    Social_responsibility_ar = models.TextField(_("Social responsibility_ar"), null=True, blank=True)
+    Customer_experience = models.TextField(_("Customer experience"), blank=True)
+    Customer_experience_ar = models.TextField(_("Customer experience_ar"), null=True, blank=True)
+
 
     def __str__(self):
         return "Site Configuration" 
