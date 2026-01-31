@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-31 18:02+0200\n"
+"POT-Creation-Date: 2026-01-31 18:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,7 +88,7 @@ msgstr "تم الإنشاء في"
 msgid "Success Story"
 msgstr "قصة نجاح"
 
-#: configrations/models.py:22
+#: configrations/models.py:22 front/index-en.html:469 front/index.html:469
 msgid "Success Stories"
 msgstr "قصص نجاح"
 
@@ -191,98 +191,219 @@ msgstr "مرحبا في لوحة التحكم"
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
 
-#: front/index.html:8
+#: front/index-en.html:8 front/index.html:8
 msgid "Quality Perfection"
 msgstr "جودة الإتقان"
 
-#: front/index.html:34 front/index.html:646
+#: front/index-en.html:34 front/index-en.html:632 front/index.html:34
+#: front/index.html:632
 msgid "Quality Perfection Logo"
 msgstr "شعار جودة الإتقان"
 
-#: front/index.html:65 front/index.html:98
-msgid "الرئيسية"
+#: front/index-en.html:65 front/index-en.html:98 front/index.html:65
+#: front/index.html:98
+msgid "Home"
 msgstr "الرئيسية"
 
-#: front/index.html:66 front/index.html:99
-msgid "من نحن"
+#: front/index-en.html:66 front/index-en.html:99 front/index-en.html:210
+#: front/index.html:66 front/index.html:99 front/index.html:210
+msgid "About Us"
 msgstr "من نحن"
 
-#: front/index.html:67 front/index.html:100 front/index.html:239
-msgid "خدماتنا"
+#: front/index-en.html:67 front/index-en.html:100 front/index-en.html:236
+#: front/index.html:67 front/index.html:100 front/index.html:236
+msgid "Our Services"
 msgstr "خدماتنا"
 
-#: front/index.html:68 front/index.html:101
-msgid "الشهادات"
+#: front/index-en.html:68 front/index-en.html:101 front/index.html:68
+#: front/index.html:101
+msgid "Certificates"
 msgstr "الشهادات"
 
-#: front/index.html:69 front/index.html:102
-msgid "اتصل بنا"
+#: front/index-en.html:69 front/index-en.html:102 front/index.html:69
+#: front/index.html:102
+msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: front/index.html:144
-msgid "مركز جودة الاتقان"
+#: front/index-en.html:144 front/index.html:144
+msgid "Quality Perfection Center"
 msgstr "مركز جودة الاتقان"
 
-#: front/index.html:146
-msgid "ثقة تمتد منذ 2008"
+#: front/index-en.html:146 front/index.html:146
+msgid "Trust since 2008"
 msgstr "ثقة تمتد منذ 2008"
 
-#: front/index.html:180
-msgid "عن المركز"
+#: front/index-en.html:180 front/index.html:180
+msgid "About Company"
 msgstr "عن المركز"
 
-#: front/index.html:193
-msgid "نبذه عن مركز جودة الاتقان"
+#: front/index-en.html:193 front/index.html:193
+msgid "Brief about Quality Perfection Center"
 msgstr "نبذه عن مركز جودة الاتقان"
 
-#: front/index.html:206
-msgid "المزيد"
+#: front/index-en.html:199 front/index.html:199
+msgid ""
+"Since the establishment of the Quality Perfection Center in 2008, our name "
+"has become synonymous with quality and trust in the world of comprehensive "
+"car maintenance. We started with an ambitious vision to provide services "
+"that exceed customer expectations, and we succeeded in building a wide base "
+"of individual customers, companies, and government institutions. During more "
+"than fifteen years of continuous work, we have proven that success is only "
+"determined by commitment, perfection, and constant keenness for development."
+msgstr "منذ تأســـيس مركـــز جودة الإتقان عـــام 2008م فـــي، أصبح اســـمنا مرادفً ا للجودة والثقة في عالم صيانة الســـيارات الشـــاملة. انطلقنا برؤية طموحة لتقديم خدمات تتجـــاوز توقعـــات العـــملاء، ونجحنا في بناء قاعدة واســـعة من العـــملاء من الأفراد والشركات والمؤسسات الحكومية. خلال أكثر من خمســـة عشـــة عاما من العمل المتواصل، أثبتنا أن النجاح لا يتحدد الا بالالتزام، الإتقان، والحرص الدائم على التطوير."
+
+#: front/index-en.html:203 front/index.html:203
+msgid "Read More"
 msgstr "المزيد"
 
-#: front/index.html:213
-msgid "about us"
-msgstr "من نحن"
-
-#: front/index.html:253
-msgid "خدمات المركز"
+#: front/index-en.html:250 front/index.html:250
+msgid "Center's Services"
 msgstr "خدمات المركز"
 
-#: front/index.html:335
-msgid "الابتكار التقنى والتحول الرقمي"
+#: front/index-en.html:254 front/index.html:254
+msgid ""
+"We offer at Quality Perfection Center a wide range of integrated services"
+msgstr ""
+"نقـــدم فـــي مركــــز جــــودة الإتقـــان مجموعــــة واسعــــة مـــن "
+"الخدمـــات المتكاملــــة"
+
+#: front/index-en.html:331 front/index.html:331
+msgid "Technical Innovation & Digital Transformation"
 msgstr "الابتكار التقنى والتحول الرقمي"
 
-#: front/index.html:370
-msgid "لماذا مركز جودة الاتقان"
+#: front/index-en.html:335 front/index.html:335
+msgid ""
+"We use the latest electronic inspection systems and intelligent analysis "
+"tools to provide an accurate and rapid diagnosis of technical problems. We "
+"also provide an online appointment booking service and a car status follow-"
+"up service, which facilitates the customer experience and saves time and "
+"effort"
+msgstr "نســـتخدم أحدث أنظمة الفحص الإلكتروني وأدوات التحليل الذكي لتقديم تشـــخيص دقيق وســـريع للمشـــاكل فنية. كما نوفر خدمة حجز المواعيد ومتابعة حالة السيارة عبر الإنترنت، مما يسهل تجربة العميل ويوفر الوقت والجهد"
+
+#: front/index-en.html:364 front/index.html:364
+msgid "Why Quality Perfection Center"
 msgstr "لماذا مركز جودة الاتقان"
 
-#: front/index.html:383
-msgid "ما يميزنا"
+#: front/index-en.html:377 front/index.html:377
+msgid "What Distinguishes Us"
 msgstr "ما يميزنا"
 
-#: front/index.html:420
-msgid "المسؤولية المجتمعية والبيئية"
+#: front/index-en.html:414 front/index.html:414
+msgid "Social & Environmental Responsibility"
 msgstr "المسؤولية المجتمعية والبيئية"
 
-#: front/index.html:464
-msgid "قصص عملاؤنا"
+#: front/index-en.html:417 front/index.html:417
+msgid ""
+"We at Quality Perfection Center are committed to applying environmental "
+"safety standards by using environmentally friendly materials and managing "
+"waste in safe ways. We also participate in community initiatives to support "
+"awareness of traffic safety and the preservation of vehicles"
+msgstr "نلتـــزم فـــي مركز جودة الإتقان بتطبيق معاييـــر السلامة البيئية من خلال اســـتخدام مـــواد صديقة للبيئـــة وإدارة النفايات بطرق آمنة. كما نشـــارك في مبادرات مجتمعيـــــة لدعـــــم التوعيــــة بالسلامــــة المروريــــة والحفــاظ علــــى المركبــــات"
+
+#: front/index-en.html:456 front/index.html:456
+msgid "Our Clients' Stories"
 msgstr "قصص عملاؤنا"
 
-#: front/index.html:477
-msgid "قصص النجاح"
-msgstr "قصص النجاح"
+#: front/index-en.html:543 front/index.html:543
+msgid "Future Vision & Expansion"
+msgstr "الرؤية المستقبلية والتوسع"
 
-#: front/index.html:573
-msgid "تجربة العميل وخدمات ما بعد الصيانه"
+#: front/index-en.html:544 front/index.html:544
+msgid ""
+"We plan to open new branches inside and outside the city of Riyadh, with the "
+"introduction of smart electronic services that support the customer "
+"experience and keep pace with technical development"
+msgstr "نخطط لافتتاح فروع جديدة داخل وخارج مدينة الرياض، م إدخـــال خدمات إلكترونيـــة ذكية تدعم تجربة العميل وتواكب التطور التقني"
+
+#: front/index-en.html:562 front/index.html:562
+msgid "Customer Experience and After-Sales Services"
 msgstr "تجربة العميل وخدمات ما بعد الصيانه"
 
-#: front/index.html:623
-msgid "الميكانيكا العامة"
+#: front/index-en.html:565 front/index.html:565
+msgid ""
+"Because our service does not end with delivery, we care about the smallest "
+"details through follow-up and periodic maintenance services and a "
+"specialized team to respond to inquiries and provide technical advice around "
+"the clock"
+msgstr "لأن خدمتنا لاتنتهي عند التسليم، نهتم بأدق التفاصيل من خلال خدمات المتابعة والصيانة الدورية وفريق متخصص للرد على الاستفسارات وتقديم المشورة الفنية على مدار الساعة"
+
+#: front/index-en.html:611 front/index.html:611
+msgid "General Mechanics"
 msgstr "الميكانيكا العامة"
 
-#: front/index.html:656
-msgid "الرياض - حي السلي"
+#: front/index-en.html:613 front/index.html:613
+msgid ""
+"Comprehensive maintenance including engine systems, automatic transmission, "
+"air conditioning, and suspension systems"
+msgstr "صيانـــــــة شاملـــــة تشمــــــل أنظمــــــة المحـــــــرك، الفرامــــلالعــــــــــــــــــــــزم، التكييــــــــــــــــــــــف، ونظـــــــــــــــــــم التعليــــــــــــــــــــــق"
+
+#: front/index-en.html:642 front/index.html:642
+msgid "Riyadh - Al-Sulai District"
 msgstr "الرياض - حي السلي"
 
-#: front/index.html:680
-msgid "جميع الحقوق محفوظة © 2024"
+#: front/index-en.html:666 front/index.html:666
+msgid "All Rights Reserved © 2024"
 msgstr "جميع الحقوق محفوظة © 2024"
+
+#~ msgid "الرئيسية"
+#~ msgstr "الرئيسية"
+
+#~ msgid "من نحن"
+#~ msgstr "من نحن"
+
+#~ msgid "خدماتنا"
+#~ msgstr "خدماتنا"
+
+#~ msgid "الشهادات"
+#~ msgstr "الشهادات"
+
+#~ msgid "اتصل بنا"
+#~ msgstr "اتصل بنا"
+
+#~ msgid "مركز جودة الاتقان"
+#~ msgstr "مركز جودة الاتقان"
+
+#~ msgid "ثقة تمتد منذ 2008"
+#~ msgstr "ثقة تمتد منذ 2008"
+
+#~ msgid "عن المركز"
+#~ msgstr "عن المركز"
+
+#~ msgid "نبذه عن مركز جودة الاتقان"
+#~ msgstr "نبذه عن مركز جودة الاتقان"
+
+#~ msgid "المزيد"
+#~ msgstr "المزيد"
+
+#~ msgid "خدمات المركز"
+#~ msgstr "خدمات المركز"
+
+#~ msgid "الابتكار التقنى والتحول الرقمي"
+#~ msgstr "الابتكار التقنى والتحول الرقمي"
+
+#~ msgid "لماذا مركز جودة الاتقان"
+#~ msgstr "لماذا مركز جودة الاتقان"
+
+#~ msgid "ما يميزنا"
+#~ msgstr "ما يميزنا"
+
+#~ msgid "المسؤولية المجتمعية والبيئية"
+#~ msgstr "المسؤولية المجتمعية والبيئية"
+
+#~ msgid "قصص عملاؤنا"
+#~ msgstr "قصص عملاؤنا"
+
+#~ msgid "قصص النجاح"
+#~ msgstr "قصص النجاح"
+
+#~ msgid "تجربة العميل وخدمات ما بعد الصيانه"
+#~ msgstr "تجربة العميل وخدمات ما بعد الصيانه"
+
+#~ msgid "الميكانيكا العامة"
+#~ msgstr "الميكانيكا العامة"
+
+#~ msgid "الرياض - حي السلي"
+#~ msgstr "الرياض - حي السلي"
+
+#~ msgid "جميع الحقوق محفوظة © 2024"
+#~ msgstr "جميع الحقوق محفوظة © 2024"
