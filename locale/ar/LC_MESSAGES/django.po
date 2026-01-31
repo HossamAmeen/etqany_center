@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-31 17:39+0200\n"
+"POT-Creation-Date: 2026-01-31 18:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,20 @@ msgstr "المحتوى"
 #: configrations/models.py:64 configrations/models.py:83
 msgid "description"
 msgstr "الوصف"
+
+#: configrations/admin.py:100 configrations/models.py:102
+#, fuzzy
+#| msgid "description"
+msgid "certificate_description"
+msgstr "الوصف"
+
+#: configrations/admin.py:104
+msgid "Our message"
+msgstr ""
+
+#: configrations/admin.py:108
+msgid "Our vision"
+msgstr ""
 
 #: configrations/models.py:7 configrations/models.py:27
 msgid "name"
@@ -66,7 +80,7 @@ msgstr "نشيط"
 
 #: configrations/models.py:15 configrations/models.py:30
 #: configrations/models.py:50 configrations/models.py:70
-#: configrations/models.py:89
+#: configrations/models.py:89 configrations/models.py:108
 msgid "created_at"
 msgstr "تم الإنشاء في"
 
@@ -114,6 +128,40 @@ msgstr "الهدف"
 #: configrations/models.py:96
 msgid "Goals"
 msgstr "الاهداف"
+
+#: configrations/models.py:100
+msgid "certificate_image"
+msgstr ""
+
+#: configrations/models.py:103
+#, fuzzy
+#| msgid "description_ar"
+msgid "certificate_description_ar"
+msgstr "الوصف بالعربية"
+
+#: configrations/models.py:104
+msgid "Our_message"
+msgstr ""
+
+#: configrations/models.py:105
+msgid "Our_message_ar"
+msgstr ""
+
+#: configrations/models.py:106
+msgid "Our_vision"
+msgstr ""
+
+#: configrations/models.py:107
+msgid "Our_vision_ar"
+msgstr ""
+
+#: configrations/models.py:113
+msgid "Configuration"
+msgstr ""
+
+#: configrations/models.py:114
+msgid "Configurations"
+msgstr ""
 
 #: core/settings.py:146
 msgid "English"
