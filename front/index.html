@@ -20,7 +20,7 @@
   <button id="scrollTopBtn"
     class="fixed bottom-6 z-50 w-12 h-12 text-[27px] rounded-full bg-gradient-red-to-blue -right-20 text-surface-white flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 ease-in-out "
     aria-label="Scroll to top">
-    <img src="icons/arrow.svg" alt="arrow button" class="-rotate-90">
+    <img src="{% static 'icons/arrow.svg' %}" alt="arrow button" class="-rotate-90">
   </button>
   <!-- ================= END SCROLL TO TOP BUTTON =================== -->
   <div class="flex-height-screen">
@@ -42,7 +42,7 @@
               <span class="ripple absolute inset-0"></span>
 
               <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
-                <img src="icons/phone.svg" alt="Call" class="w-4 h-4" />
+                <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
               </div>
             </a>
             <!-- ================ END PHONE NUMBER ================= -->
@@ -62,11 +62,11 @@
             <ul data-aos="fade-down"
               class="flex gap-8 text-surface-white text-[18px] font-normal ml-auto! justify-center items-center"
               dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
-              <li><a href="{% url 'index' %}" class="nav-link">{% trans "الرئيسية" %}</a></li>
-              <li><a href="about.html" class="nav-link">{% trans "من نحن" %}</a></li>
-              <li><a href="#services-section" class="nav-link">{% trans "خدماتنا" %}</a></li>
-              <li><a href="certificates.html" class="nav-link">{% trans "الشهادات" %}</a></li>
-              <li><a href="#contact" class="nav-link">{% trans "اتصل بنا" %}</a></li>
+              <li><a href="{% url 'index' %}" class="nav-link">{% trans "Home" %}</a></li>
+              <li><a href="about.html" class="nav-link">{% trans "About Us" %}</a></li>
+              <li><a href="#services-section" class="nav-link">{% trans "Our Services" %}</a></li>
+              <li><a href="certificates.html" class="nav-link">{% trans "Certificates" %}</a></li>
+              <li><a href="#contact" class="nav-link">{% trans "Contact Us" %}</a></li>
               {% if LANGUAGE_CODE == 'ar' %}
               <a href="/en/" class="switchLang_1 ms-auto cursor-pointer uppercase">EN</a>
               {% else %}
@@ -95,11 +95,11 @@
       <div id="mobileMenu"
         class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out bg-gradient-dark">
         <ul class="flex flex-col items-end gap-6 py-4! text-surface-white text-[18px] font-normal pb-10! px-5!">
-          <li><a href="{% url 'index' %}" class="nav-link">{% trans "الرئيسية" %}</a></li>
-          <li><a href="about.html" class="nav-link">{% trans "من نحن" %}</a></li>
-          <li><a href="#services-section" class="nav-link">{% trans "خدماتنا" %}</a></li>
-          <li><a href="certificates.html" class="nav-link">{% trans "الشهادات" %}</a></li>
-          <li><a href="#contact" class="nav-link">{% trans "اتصل بنا" %}</a></li>
+          <li><a href="{% url 'index' %}" class="nav-link">{% trans "Home" %}</a></li>
+          <li><a href="about.html" class="nav-link">{% trans "About Us" %}</a></li>
+          <li><a href="#services-section" class="nav-link">{% trans "Our Services" %}</a></li>
+          <li><a href="certificates.html" class="nav-link">{% trans "Certificates" %}</a></li>
+          <li><a href="#contact" class="nav-link">{% trans "Contact Us" %}</a></li>
         </ul>
       </div>
     </nav>
@@ -141,9 +141,9 @@
             class="content-info-header absolute max-[670px]:bottom-[50%] max-[670px]:right-[0%] max-[670px]:transform max-[670px]:translate-middle max-[879px]:bottom-[25%] max-[1024px]:bottom-[15%]   bottom-37.5 flex flex-col max-[670px]:h-auto h-screen max-[670px]:items-center max-[670px]:text-center justify-center  w-full">
             <h1
               class="max-[450px]:text-[35px] max-[1025px]:text-[37px] max-[1280px]:text-[50px]  text-[62px] font-bold text-surface-white">
-              {% trans "مركز جودة الاتقان" %}</h1>
+              {% trans "Quality Perfection Center" %}</h1>
             <p class="max-[450px]:text-[22px] max-[550px]:text-[24px] text-[27px]  font-normal text-surface-white">
-              {% trans "ثقة تمتد منذ 2008" %}</p>
+              {% trans "Trust since 2008" %}</p>
 
           </div>
           <!-- ================ END CONTENT INFO HEADER ================== -->
@@ -177,7 +177,7 @@
 
                 <!-- START TEXT CONTENT -->
                 <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-3!">
-                  {% trans "عن المركز" %}
+                  {% trans "About Company" %}
                 </h2>
                 <!-- END TEXT CONTENT -->
                 <!--  START LINES LEFT -->
@@ -190,27 +190,29 @@
               <!-- ============ END HEADER TITLE =============== -->
               <!-- =========== START INFO TITLE =============== -->
               <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-dark">
-                {% trans "نبذه عن مركز جودة الاتقان" %}
+                {% trans "Brief about Quality Perfection Center" %}
               </h2>
               <!-- =========== END INFO TITLE =============== -->
             </div>
             <!-- ============== END SECTION TILTE ================ -->
             <p class="text-[20px] font-light text-surface-dark leading-9! mt-1!">
-              {% trans "منذ تأســـيس مركـــز جودة الإتقان عـــام 2008م فـــي، أصبح اســـمنا مرادفً ا للجودة والثقة في
-              عالم صيانة الســـيارات الشـــاملة. انطلقنا برؤية طموحة لتقديم خدمات تتجـــاوز توقعـــات العـــملاء، ونجحنا
-              في بناء قاعدة واســـعة من العـــملاء من الأفراد والشركات والمؤسسات الحكومية. خلال أكثر من خمســـة عشـــة
-              عاما من العمل المتواصل، أثبتنا أن النجاح لا يتحقق الا بالالتزام، الإتقان، والحرص الدائم على التطوير." %}
+              {% trans "Since the establishment of the Quality Perfection Center in 2008, our name has become synonymous
+              with quality and trust in the world of comprehensive car maintenance. We started with an ambitious vision
+              to provide services that exceed customer expectations, and we succeeded in building a wide base of
+              individual customers, companies, and government institutions. During more than fifteen years of continuous
+              work, we have proven that success is only determined by commitment, perfection, and constant keenness for
+              development." %}
 
             </p>
             <a href="about.html" class="btn mt-6!">
-              <img src="{% static 'icons/arrow.svg' %}" alt="arrow" class="inline-block ml-2" /> {% trans "المزيد" %}
+              <img src="{% static 'icons/arrow.svg' %}" alt="arrow" class="inline-block ml-2" /> {% trans "Read More" %}
             </a>
           </div>
           <!-- ================ END CONTENT ABOUT =============== -->
 
           <!-- ================= START IMAGE ABOUT ================= -->
           <div class="image-about  md:pt-16! md:ms-15!" data-aos="fade-right">
-            <img src="{% static 'images/about-image.png' %}" alt="{% trans 'about us' %}"
+            <img src="{% static 'images/about-image.png' %}" alt="{% trans 'About Us' %}"
               class="w-full h-full object-cover" loading="lazy" />
             <!-- ================= END IMAGE ABOUT ================= -->
 
@@ -236,7 +238,7 @@
 
               <!-- START TEXT CONTENT -->
               <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
-                {% trans "خدماتنا" %}
+                {% trans "Our Services" %}
               </h2>
               <!-- END TEXT CONTENT -->
               <!--  START LINES LEFT -->
@@ -250,12 +252,11 @@
             <!-- =========== START INFO TITLE =============== -->
             <h2
               class="info-title text-[24px] sm:text-[32px] lg:text-[44px] font-bold text-surface-dark leading-normal!">
-              {% trans "خدمات المركز" %}
+              {% trans "Center's Services" %}
             </h2>
             <p
               class="text-[16px] sm:text-[20px] font-medium sm:font-light text-surface-dark w-full text-center leading-10!">
-              {% trans "نقـــدم فـــي مركــــز جــــودة الإتقـــان مجموعــــة واسعــــة مـــن الخدمـــات المتكاملــــة"
-              %}
+              {% trans "We offer at Quality Perfection Center a wide range of integrated services" %}
             </p>
             <!-- =========== END INFO TITLE =============== -->
           </div>
@@ -332,13 +333,13 @@
         <div class="main-content-social py-20! md:py-35! max-w-158.5 w-full text-center sm:text-start"
           data-aos="fade-left">
           <h1 class="text-[22px] sm:text-[32px] md:text-[44px] font-bold text-surface-white pb-3!">
-            {% trans "الابتكار التقنى والتحول الرقمي" %}
+            {% trans "Technical Innovation & Digital Transformation" %}
           </h1>
           <p
             class="text-[16px] md:text-[20px] font-light text-surface-white leading-8! max-[1199px]:max-w-full w-full max-w-137.5">
-            {% trans "نســـتخدم أحدث أنظمة الفحص الإلكتروني وأدوات التحليل الذكي لتقديم تشـــخيص دقيق وســـريع
-            للمشـــاكل الفنية. كما نوفر خدمة حجز المواعيد ومتابعة حالة السيارة عبر الإنترنت، مما يسهل تجربة العميل
-            ويوفر الوقت والجهد" %}
+            {% trans "We use the latest electronic inspection systems and intelligent analysis tools to provide an
+            accurate and rapid diagnosis of technical problems. We also provide an online appointment booking service
+            and a car status follow-up service, which facilitates the customer experience and saves time and effort" %}
           </p>
         </div>
         <!-- ================= END MAIN CONTENR SOCIAL ================== -->
@@ -349,7 +350,7 @@
   <!-- =================  START WHY QPC ===================== -->
   <section class="why-qpc py-21.25! md:padding-y-120 relative">
     <div class="bg-car absolute bottom-0 left-0 right-0 w-full">
-      <img src="images/bg-car.svg" alt="bg car" class="w-full h-full object-cover" />
+      <img src="{% static 'images/bg-car.svg' %}" alt="bg car" class="w-full h-full object-cover" />
     </div>
     <!-- =============== START CONTAINER ============== -->
     <div class="container-media">
@@ -367,7 +368,7 @@
 
           <!-- START TEXT CONTENT -->
           <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
-            {% trans "لماذا مركز جودة الاتقان" %}
+            {% trans "Why Quality Perfection Center" %}
           </h2>
           <!-- END TEXT CONTENT -->
           <!--  START LINES LEFT -->
@@ -380,7 +381,7 @@
         <!-- ============ END HEADER TITLE =============== -->
         <!-- =========== START INFO TITLE =============== -->
         <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-dark">
-          {% trans "ما يميزنا" %}
+          {% trans "What Distinguishes Us" %}
         </h2>
         <!-- =========== END INFO TITLE =============== -->
       </div>
@@ -417,12 +418,12 @@
     <!-- ================= START MAIN CONTENR SOCIAL ================== -->
     <div class="main-content-social py-20! md:py-35! max-w-158.5 w-full text-center sm:text-start" data-aos="fade-left">
       <h1 class="text-[22px] sm:text-[32px] md:text-[44px] font-bold text-surface-white pb-6!">
-        {% trans "المسؤولية المجتمعية والبيئية" %}
+        {% trans "Social & Environmental Responsibility" %}
       </h1>
       <p class="text-[16px] md:text-[20px] font-normal text-surface-white leading-8!">
-        {% trans "نلتـــزم فـــي مركز جودة الإتقان بتطبيق معاييـــر السلامة البيئية من خلال اســـتخدام مـــواد صديقة
-        للبيئـــة وإدارة النفايات بطرق آمنة. كما نشـــارك في مبادرات مجتمعيـــــة لدعـــــم التوعيــــة بالسلامــــة
-        المروريــــة والحفــاظ علــــى المركبــــات" %}
+        {% trans "We at Quality Perfection Center are committed to applying environmental safety standards by using
+        environmentally friendly materials and managing waste in safe ways. We also participate in community initiatives
+        to support awareness of traffic safety and the preservation of vehicles" %}
       </p>
     </div>
     <!-- ================= END MAIN CONTENR SOCIAL ================== -->
@@ -461,7 +462,7 @@
 
           <!-- START TEXT CONTENT -->
           <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
-            {% trans "قصص عملاؤنا" %}
+            {% trans "Our Clients' Stories" %}
           </h2>
           <!-- END TEXT CONTENT -->
           <!--  START LINES LEFT -->
@@ -474,7 +475,7 @@
         <!-- ============ END HEADER TITLE =============== -->
         <!-- =========== START INFO TITLE =============== -->
         <h2 class="info-title text-[24px] sm:text-[32px] lg:text-[44px] font-bold text-surface-dark leading-normal!">
-          {% trans "قصص النجاح" %}
+          {% trans "Success Stories" %}
         </h2>
 
         <!-- =========== END INFO TITLE =============== -->
@@ -548,11 +549,12 @@
       </div>
       <div data-aos="fade-right"
         class="details-content bg-surface-light max-[1199px]:text-center max-[550px]:py-10! max-[768px]:py-15! max-[1199px]:py-20! py-29! max-[1199px]:px-5! px-8! w-full max-[1199px]:max-w-[90%]  max-w-175 max-[1199px]:m-auto! max-[1199px]:-mt-30! relative z-3 -m-30!">
-        <h2 class="text-[20px] sm:text-[27px] md:text-[44px] font-bold text-surface-dark">{% trans "الرؤية المستقبلية
-          والتوسع" %}
+        <h2 class="text-[20px] sm:text-[27px] md:text-[44px] font-bold text-surface-dark">{% trans "Future Vision &
+          Expansion" %}
         </h2>
-        <p class="text-[17px] sm:text-[20px] font-light text-surface-dark">{% trans "نخطط لافتتاح فروع جديدة داخل وخارج
-          مدينة الرياض، م إدخـــال خدمات إلكترونيـــة ذكية تدعم تجربة العميل وتواكب التطور التقني" %}</p>
+        <p class="text-[17px] sm:text-[20px] font-light text-surface-dark">{% trans "We plan to open new branches inside
+          and outside the city of Riyadh, with the introduction of smart electronic services that support the customer
+          experience and keep pace with technical development" %}</p>
       </div>
     </div>
     <!-- =============== END ALL CONTENT INFO =============== -->
@@ -570,11 +572,12 @@
       <div class="all-content-customer max-[1024px]::flex items-center justify-between">
         <div class="content-info transform max-[1272px]:translate-y-0 -translate-y-51.25" data-aos="fade-right">
           <h2 class=" text-[20px] sm:text-[27px] xl:text-[40px] font-bold text-surface-dark">
-            {% trans "تجربة العميل وخدمات ما بعد الصيانه" %}
+            {% trans "Customer Experience and After-Sales Services" %}
           </h2>
           <p class="text-[16px] sm:text-[20px] font-light text-surface-dark max-[1272px]:max-w-full max-w-167.5">
-            {% trans "نحـــرص علـــى جعـــل تجربة العميـــل معنا مميزة وســـهلة مـــن البداية حتى النهاية، مع توفير خدمة
-            التذكير الآلي ومتابعة الصيانة المستقبلية" %}
+            {% trans "Because our service does not end with delivery, we care about the smallest details through
+            follow-up and periodic maintenance services and a specialized team to respond to inquiries and provide
+            technical advice around the clock" %}
           </p>
         </div>
         <div data-aos="fade-up"
@@ -620,11 +623,10 @@
       <div class="p-8">
         <img src="{% static 'images/service-01.png' %}" class="w-full rounded-[14px] h-65 sm:h-75 mb-4!" />
         <h1 class="text-[20px] font-bold text-surface-dark mb-2!">
-          {% trans "الميكانيكا العامة" %}</h1>
+          {% trans "General Mechanics" %}</h1>
         <p class="text-[16px] font-light text-surface-dark ">
-          {% trans "صيانـــــــة شاملـــــة تشمــــــل أنظمــــــة المحـــــــرك،
-          الفرامــــلالعــــــــــــــــــــــزم، التكييــــــــــــــــــــــف، ونظـــــــــــــــــــم
-          التعليــــــــــــــــــــــق" %}</p>
+          {% trans "Comprehensive maintenance including engine systems, automatic transmission, air conditioning, and
+          suspension systems" %}</p>
       </div>
 
     </div>
@@ -653,7 +655,7 @@
               class="flex items-center gap-3.5 hover:text-crimson-red transition">
               <img src="{% static 'icons/location.svg' %}" alt="location" loading="lazy" class="w-6 h-6" />
               <span class="text-[14px] font-normal md:text-[18px]">
-                {% trans "الرياض - حي السلي" %}
+                {% trans "Riyadh - Al-Sulai District" %}
               </span>
             </a>
 
@@ -677,7 +679,7 @@
           <!-- ================== START @ COPY ================ -->
           <div
             class="text-surface-white text-center py-8! border-t border-surface-white-10 w-full text-[14px] font-normal">
-            {% trans "جميع الحقوق محفوظة © 2024" %}
+            {% trans "All Rights Reserved © 2024" %}
           </div>
           <!-- ================== END @ COPY ================ -->
         </div>
