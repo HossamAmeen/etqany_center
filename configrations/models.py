@@ -1,6 +1,7 @@
-from django.utils import timezone
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+
 
 class SuccessStory(models.Model):
     name = models.CharField(_("name"), max_length=100)
@@ -34,3 +35,23 @@ class Logo(models.Model):
     class Meta:
         verbose_name = _("Logo")
         verbose_name_plural = _("Logos")
+
+
+class Service(models.Model):
+    title = models.CharField(_("title"), max_length=200, blank=True)
+    title_ar = models.CharField(_("title_ar"),
+                                max_length=200, null=True, blank=True)
+    description = models.TextField(_("description"), blank=True)
+    description_ar = models.TextField(_("description_ar"),
+                                      null=True, blank=True)
+    image = models.ImageField(upload_to='services/icons/',
+                              null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _("Service")
+        verbose_name_plural = _("Services")
