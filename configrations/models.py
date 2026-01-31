@@ -55,3 +55,23 @@ class Service(models.Model):
     class Meta:
         verbose_name = _("Service")
         verbose_name_plural = _("Services")
+
+
+class WhyChooseUs(models.Model):
+    title = models.CharField(_("title"), max_length=200, blank=True)
+    title_ar = models.CharField(_("title_ar"),
+                                max_length=200, null=True, blank=True)
+    description = models.TextField(_("description"), blank=True)
+    description_ar = models.TextField(_("description_ar"),
+                                      null=True, blank=True)
+    image = models.ImageField(upload_to='why_choose_us/icons/',
+                              null=True, blank=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _("Why Choose Us")
+        verbose_name_plural = _("Why Choose Us")
