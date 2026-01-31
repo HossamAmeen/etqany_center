@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-31 16:18+0200\n"
+"POT-Creation-Date: 2026-01-31 16:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,9 @@ msgstr ""
 
 #: configrations/admin.py:19 configrations/admin.py:38
 #: configrations/admin.py:56 configrations/admin.py:74
-#: configrations/models.py:13 configrations/models.py:26
+#: configrations/admin.py:91 configrations/models.py:13
+#: configrations/models.py:26 configrations/models.py:47
+#: configrations/models.py:67 configrations/models.py:86
 msgid "image"
 msgstr "الصورة"
 
@@ -29,7 +31,8 @@ msgid "content"
 msgstr "المحتوى"
 
 #: configrations/admin.py:47 configrations/admin.py:65
-#: configrations/models.py:44 configrations/models.py:64
+#: configrations/admin.py:82 configrations/models.py:44
+#: configrations/models.py:64 configrations/models.py:83
 msgid "description"
 msgstr "الوصف"
 
@@ -42,12 +45,12 @@ msgid "name_ar"
 msgstr "الاسم بالعربية"
 
 #: configrations/models.py:9 configrations/models.py:41
-#: configrations/models.py:61
+#: configrations/models.py:61 configrations/models.py:80
 msgid "title"
 msgstr "العنوان"
 
 #: configrations/models.py:10 configrations/models.py:42
-#: configrations/models.py:62
+#: configrations/models.py:62 configrations/models.py:81
 msgid "title_ar"
 msgstr "العنوان بالعربية"
 
@@ -57,11 +60,13 @@ msgstr "المحتوى بالعربية"
 
 #: configrations/models.py:14 configrations/models.py:29
 #: configrations/models.py:49 configrations/models.py:69
+#: configrations/models.py:88
 msgid "is_active"
 msgstr "نشيط"
 
 #: configrations/models.py:15 configrations/models.py:30
 #: configrations/models.py:50 configrations/models.py:70
+#: configrations/models.py:89
 msgid "created_at"
 msgstr "تم الإنشاء في"
 
@@ -82,6 +87,7 @@ msgid "Logos"
 msgstr "الشعارات"
 
 #: configrations/models.py:45 configrations/models.py:65
+#: configrations/models.py:84
 msgid "description_ar"
 msgstr "الوصف بالعربية"
 
@@ -100,6 +106,14 @@ msgstr "ميزة"
 #: configrations/models.py:77
 msgid "Advantages"
 msgstr "المميزات"
+
+#: configrations/models.py:95
+msgid "Goal"
+msgstr "الهدف"
+
+#: configrations/models.py:96
+msgid "Goals"
+msgstr "الاهداف"
 
 #: core/settings.py:145
 msgid "English"

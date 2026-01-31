@@ -40,7 +40,7 @@ class LogoAdmin(admin.ModelAdmin):
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description_summary', 'display_image')
+    list_display = ('title', 'description_summary', 'display_image', 'created_at')
 
     def description_summary(self, obj):
         return obj.description[:50] + '...' if len(obj.description) > 50 else obj.description # noqa
@@ -58,7 +58,7 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Advantage )
 class AdvantageAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description_summary', 'display_image')
+    list_display = ('title', 'description_summary', 'display_image', 'created_at')
 
     def description_summary(self, obj):
         return obj.description[:50] + '...' if len(obj.description) > 50 else obj.description # noqa
@@ -75,7 +75,7 @@ class AdvantageAdmin(admin.ModelAdmin):
 
 @admin.register(Goal)
 class GoalAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description_summary', 'display_image')
+    list_display = ('title', 'description_summary', 'display_image', 'created_at')
 
     def description_summary(self, obj):
         return obj.description[:50] + '...' if len(obj.description) > 50 else obj.description # noqa

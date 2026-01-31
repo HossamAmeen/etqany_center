@@ -44,7 +44,7 @@ class Service(models.Model):
     description = models.TextField(_("description"), blank=True)
     description_ar = models.TextField(_("description_ar"),
                                       null=True, blank=True)
-    image = models.ImageField(upload_to='services/icons/',
+    image = models.ImageField(_("image"), upload_to='services/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
@@ -64,7 +64,7 @@ class Advantage (models.Model):
     description = models.TextField(_("description"), blank=True)
     description_ar = models.TextField(_("description_ar"),
                                       null=True, blank=True)
-    image = models.ImageField(upload_to='why_choose_us/icons/',
+    image = models.ImageField(_("image"), upload_to='why_choose_us/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
@@ -83,7 +83,7 @@ class Goal(models.Model):
     description = models.TextField(_("description"), blank=True)
     description_ar = models.TextField(_("description_ar"),
                                       null=True, blank=True)
-    image = models.ImageField(upload_to='goals/icons/',
+    image = models.ImageField(_("image"), upload_to='goals/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
