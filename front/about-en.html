@@ -1,29 +1,99 @@
 <!doctype html>
-<html dir="rtl" lang="ar">
+<html dir="ltr" lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quality Perfection about</title>
-  <script src="./assets/main-CbDQOjqC.js"></script>
-  <link rel="stylesheet" href="./assets/style-CklDxEoJ.css">
+  <script src="./assets/main-BI6zJ0SQ.js"></script>
+  <link rel="stylesheet" href="./assets/style-CQRcHHq-.css">
 </head>
 
 <body>
-      <!-- ================== START LOADER ================== -->
+  <!-- ================== START LOADER ================== -->
   <div id="loader" class="fixed inset-0 bg-surface-white flex items-center justify-center z-2000">
     <div class="w-16 h-16 border-4 border-crimson-red border-t-transparent rounded-full spinner"></div>
   </div>
   <!-- ================== END LOADER ================== -->
   <!-- ================== START SCROLL TO TOP BUTTON ================== -->
-   <button id="scrollTopBtn"
+  <button id="scrollTopBtn"
     class="fixed bottom-6 z-50 w-12 h-12 text-[27px] rounded-full bg-gradient-red-to-blue -right-20 text-surface-white flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 ease-in-out "
     aria-label="Scroll to top">
     <img src="icons/arrow.svg" alt="arrow button" class="-rotate-90">
   </button>
   <!-- ================= END SCROLL TO TOP BUTTON =================== -->
   <div class="flex-height-screen">
-    <div id="navbar"></div>
+    <!-- ================== START NAVBAR ======================== -->
+    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!" dir="ltr">
+      <div class="container-media">
+        <div class="flex items-center justify-between py-4! md:py-1!">
+          <!-- Logo -->
+          <a href="index-en.html" class="flex items-center gap-2 text-white font-bold ms-auto" data-aos="fade-right">
+            <img src="images/logo.svg" alt="Quality Perfection Logo" class="w-30 md:w-47.75 md:h-[73.4px]" />
+          </a>
+
+          <!-- Burger -->
+          <div class="all-mobile-menu items-center gap-5 max-[1169px]:flex hidden" data-aos="fade-left">
+            <!-- ================ START PHONE NUMBER ================= -->
+            <a href="tel:+966567070870" class="relative w-10 h-10 block">
+              <span class="ripple absolute inset-0"></span>
+
+              <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                <img src="icons/phone.svg" alt="Call" class="w-4 h-4" />
+              </div>
+            </a>
+            <!-- ================ END PHONE NUMBER ================= -->
+            <a href="about.html" class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">AR</a>
+
+            <button id="menuBtn"
+              class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
+              ☰
+            </button>
+          </div>
+          <!-- Desktop Right -->
+          <div class="max-[1169px]:hidden flex items-center justify-center gap-4 w-full">
+            <ul data-aos="fade-down"
+              class="flex gap-8 text-surface-white text-[18px] font-normal ml-auto! justify-center items-center"
+              dir="rtl">
+              <li><a href="index-en.html" class="nav-link">الرئيسية</a></li>
+              <li><a href="about-en.html" class="nav-link">من نحن</a></li>
+              <li><a href="#services-section" class="nav-link">خدماتنا</a></li>
+              <li><a href="certificates-en.html" class="nav-link">الشهادات</a></li>
+              <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+              <a href="about.html" class="switchLang_1  ms-auto cursor-pointer uppercase">AR</a>
+            </ul>
+
+            <!-- ================ START PHONE NUMBER ================= -->
+            <a data-aos="fade-left" href="tel:+966567070870" class="flex items-center gap-4 ml-auto!">
+              <div class="relative w-12 h-12">
+                <span class="ripple absolute inset-0"></span>
+
+                <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                  <img src="icons/phone.svg" alt="Phone" class="w-6 h-6" />
+                </div>
+              </div>
+
+              <span class="text-[18px] font-normal text-surface-white">+966 56 707 0870</span>
+            </a>
+            <!-- ================ END PHONE NUMBER ================= -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ONE Mobile Dropdown Menu -->
+      <div id="mobileMenu"
+        class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out bg-gradient-dark">
+        <ul class="flex flex-col items-end gap-6 py-4! text-surface-white text-[18px] font-normal pb-10! px-5!">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <li><a href="#services-section" class="nav-link">خدماتنا</a></li>
+          <li><a href="certificates.html" class="nav-link">الشهادات</a></li>
+          <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ================== END NAVBAR ======================== -->
+
     <!-- ================ START HEADER PAGE =================== -->
     <header>
       <!-- =============== START HEADER PAGE ==================== -->
@@ -89,7 +159,7 @@
               العمل المتواصل، أثبتنا أن النجاح لا يتحقق الا بالالتزام، الإتقان، والحرص الدائم على التطوير.
 
             </p>
-             <a href="about.html" class="btn mt-6!">
+            <a href="about.html" class="btn mt-6!">
               <img src="icons/arrow.svg" alt="arrow" class="inline-block ml-2" /> المزيد
             </a>
           </div>
@@ -182,7 +252,8 @@
         <!-- =================== START CONTAINER ================ -->
         <div class="container-media">
           <!-- ============== START SECTION TILTE ================ -->
-          <div data-aos="fade-down" class="section-title flex justify-center items-center text-center flex-col gap-4 mb-13! md:mb-18!">
+          <div data-aos="fade-down"
+            class="section-title flex justify-center items-center text-center flex-col gap-4 mb-13! md:mb-18!">
             <!-- ============ START HEADER TITLE =============== -->
             <div class="header-title flex items-center justify-center">
               <!--  START LINES RIGHT -->
@@ -213,71 +284,84 @@
           </div>
           <!-- ============== END SECTION TILTE ================ -->
           <!-- ============= START ALL CARD GOALS ============= -->
-          <div  data-aos="flip-down" class="all-cards-goals grid max-[480px]:grid-cols-1 max-[767px]:grid-cols-2 grid-cols-3 gap-5">
+          <div data-aos="flip-down"
+            class="all-cards-goals grid max-[480px]:grid-cols-1 max-[767px]:grid-cols-2 grid-cols-3 gap-5">
             <!-- =============== START CARD GOAL ONE ================= -->
             <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8!">
 
-                <img src="images/our-goals/01.svg" alt="goal 01" class="w-17.5 h-17.5  object-cover" loading="lazy"
-                  width="70px" height="70px">
-<div class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px]  ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
-                  01
-                </div>
-                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">توسيع شبكة خدماتنا لتغطية جميع مناطق المملكة</p>
+              <img src="images/our-goals/01.svg" alt="goal 01" class="w-17.5 h-17.5  object-cover" loading="lazy"
+                width="70px" height="70px">
+              <div
+                class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px]  ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
+                01
+              </div>
+              <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">توسيع شبكة
+                خدماتنا لتغطية جميع مناطق المملكة</p>
             </div>
             <!-- =============== END CARD GOAL ONE ================= -->
-                <!-- =============== START CARD GOAL ONE ================= -->
+            <!-- =============== START CARD GOAL ONE ================= -->
             <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8!">
 
-                <img src="images/our-goals/02.svg" alt="goal 02" class="w-17.5 h-17.5  object-cover" loading="lazy"
-                  width="70px" height="70px">
-<div class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
-                  02
-                </div>
-                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">تعزيز التحول الرقمي في إدارة الصيانة وخدمة العملاء</p>
+              <img src="images/our-goals/02.svg" alt="goal 02" class="w-17.5 h-17.5  object-cover" loading="lazy"
+                width="70px" height="70px">
+              <div
+                class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
+                02
+              </div>
+              <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">تعزيز التحول
+                الرقمي في إدارة الصيانة وخدمة العملاء</p>
             </div>
             <!-- =============== END CARD GOAL ONE ================= -->
 
-                <!-- =============== START CARD GOAL ONE ================= -->
-            <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4!  p-8! max-[480px]:col-span-1 max-[767px]:col-span-2">
+            <!-- =============== START CARD GOAL ONE ================= -->
+            <div
+              class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4!  p-8! max-[480px]:col-span-1 max-[767px]:col-span-2">
 
-                <img src="images/our-goals/03.svg" alt="goal 03" class="w-17.5 h-17.5  object-cover" loading="lazy"
-                  width="70px" height="70px">
-<div class="outlined-number absolute  max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5  max-[1023px]:top-0 -top-7.5">
-                  03
-                </div>
-                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">تقديم حلول مبتكرة في مجال صيانة السيارات.</p>
+              <img src="images/our-goals/03.svg" alt="goal 03" class="w-17.5 h-17.5  object-cover" loading="lazy"
+                width="70px" height="70px">
+              <div
+                class="outlined-number absolute  max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5  max-[1023px]:top-0 -top-7.5">
+                03
+              </div>
+              <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">تقديم حلول
+                مبتكرة في مجال صيانة السيارات.</p>
             </div>
             <!-- =============== END CARD GOAL ONE ================= -->
 
 
-            <div class="grid max-[480px]:grid-cols-1 grid-cols-2 w-full max-[1023px]:max-w-full max-w-200 mx-auto! max-[480px]:col-span-1 max-[767px]:col-span-2 col-span-3 gap-5 ">
-      <!-- =============== START CARD GOAL ONE ================= -->
-            <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8!  ">
+            <div
+              class="grid max-[480px]:grid-cols-1 grid-cols-2 w-full max-[1023px]:max-w-full max-w-200 mx-auto! max-[480px]:col-span-1 max-[767px]:col-span-2 col-span-3 gap-5 ">
+              <!-- =============== START CARD GOAL ONE ================= -->
+              <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8!  ">
 
                 <img src="images/our-goals/04.svg" alt="goal 04" class="w-17.5 h-17.5  object-cover" loading="lazy"
                   width="70px" height="70px">
-<div class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
+                <div
+                  class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
                   04
                 </div>
-                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">تحسين تجربة العميل من خلال خدمات ذكية وسريعة. </p>
-            </div>
-            <!-- =============== END CARD GOAL ONE ================= -->
+                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">تحسين تجربة
+                  العميل من خلال خدمات ذكية وسريعة. </p>
+              </div>
+              <!-- =============== END CARD GOAL ONE ================= -->
 
-                <!-- =============== START CARD GOAL ONE ================= -->
-            <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8!">
+              <!-- =============== START CARD GOAL ONE ================= -->
+              <div class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8!">
 
                 <img src="images/our-goals/05.svg" alt="goal 05" class="w-17.5 h-17.5  object-cover" loading="lazy"
                   width="70px" height="70px">
-<div class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
+                <div
+                  class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px] ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
                   05
                 </div>
-                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">بناء علاقات شراكة استراتيجية طويلة الأمد مع شركات التأمين والنقل</p>
-            </div>
-            <!-- =============== END CARD GOAL ONE ================= -->
+                <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">بناء علاقات
+                  شراكة استراتيجية طويلة الأمد مع شركات التأمين والنقل</p>
+              </div>
+              <!-- =============== END CARD GOAL ONE ================= -->
 
             </div>
 
-          
+
 
           </div>
           <!-- ============= END ALL CARD GOALS ============= -->
@@ -295,7 +379,8 @@
         <!-- ================= START CONTAINER ================ -->
         <div class="container-media">
           <!-- ============== START SECTION TILTE ================ -->
-          <div  data-aos="fade-up" class="section-title flex justify-center items-center text-center flex-col  mb-13! md:mb-18!">
+          <div data-aos="fade-up"
+            class="section-title flex justify-center items-center text-center flex-col  mb-13! md:mb-18!">
             <!-- ============ START HEADER TITLE =============== -->
             <div class="header-title flex items-center justify-center">
               <!--  START LINES RIGHT -->
@@ -328,13 +413,13 @@
           <!-- ================= START CONTENT VALUES =============== -->
           <div class="content-values grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-16">
             <!-- =============== START IMAGE VALUE ================ -->
-            <div class="image-value"  data-aos="fade-right">
+            <div class="image-value" data-aos="fade-right">
               <img src="images/our-values/our-values-image.png" alt="our values image"
                 class="w-full h-full object-cover" loading="lazy">
             </div>
             <!-- =============== END IMAGE VALUE ================ -->
             <!-- ============== START ALL CARDS ITEMS ============= -->
-            <div class="all-cards-items flex flex-col w-full gap-10"  data-aos="fade-left">
+            <div class="all-cards-items flex flex-col w-full gap-10" data-aos="fade-left">
               <!-- ============== START CARD ITEM ================ -->
               <div class="card-item flex items-start gap-4 ">
                 <img src="images/our-values/01.svg" alt="الاتقان" class="w-8 h-8 object-cover mt-1.5!" width="32px"
@@ -416,7 +501,58 @@
 
 
     </main>
-    <div id="footer" class="mt-auto!"></div>
+    <!-- ================= START FOOTER ================ -->
+    <div class="mt-auto!" id="contact">
+
+      <footer class="bg-main-gradient">
+        <div class="container-media">
+          <!-- ================= START MAIN FOOTER ================ -->
+          <div class="main-footer flex justify-center items-center w-full flex-col gap-8 pt-13.5!" data-aos="fade-up">
+            <!-- ============== START LOGO FOOTER ============= -->
+            <a href="index-en.html" class="logo-footer">
+              <img src="images/logo-footer.svg" alt="Quality Perfection Logo" class="logo-footer-img" loading="lazy" />
+            </a>
+            <!-- ============== END LOGO FOOTER ============= -->
+            <!-- ============== START CONTACT INFO ============= -->
+            <div class="flex items-center gap-y-5 gap-x-8! md:gap-x-10! flex-wrap text-surface-white py-1!">
+              <a href="https://www.google.com/maps/search/?api=1&query=الرياض+حي+السلي" target="_blank"
+                class="flex items-center gap-3.5 hover:text-crimson-red transition">
+                <img src="icons/location.svg" alt="location" loading="lazy" class="w-6 h-6" />
+                <span class="text-[14px] font-normal md:text-[18px]">
+                  الرياض - حي السلي
+                </span>
+              </a>
+
+              <a href="tel:+966567070870" class="flex items-center gap-3.5 hover:text-crimson-red transition">
+                <img src="icons/phone-solid.svg" alt="phone" loading="lazy" class="w-6 h-6" />
+                <span class="text-[14px] font-normal md:text-[18px]">
+                  +966 56 707 0870
+                </span>
+              </a>
+
+              <a href="mailto:info@qualityperfection.sa"
+                class="flex items-center gap-3.5 hover:text-crimson-red transition">
+                <img src="icons/email.svg" alt="email" loading="lazy" class="w-6 h-6" />
+                <span class="text-[14px] font-normal md:text-[18px]">
+                  info@qualityperfection.sa
+                </span>
+              </a>
+            </div>
+            <!-- ============== END CONTACT INFO ============= -->
+
+            <!-- ================== START @ COPY ================ -->
+            <div
+              class="text-surface-white text-center py-8! border-t border-surface-white-10 w-full text-[14px] font-normal">
+              جميع الحقوق محفوظة © 2024
+            </div>
+            <!-- ================== END @ COPY ================ -->
+          </div>
+          <!-- ================= END MAIN FOOTER ================ -->
+        </div>
+      </footer>
+
+    </div>
+    <!-- ================= END FOOTER ================ -->
   </div>
 </body>
 
