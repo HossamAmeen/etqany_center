@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-31 18:31+0200\n"
+"POT-Creation-Date: 2026-01-31 18:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,6 +48,22 @@ msgstr "رسالتنا"
 msgid "Our vision"
 msgstr "رؤيتنا"
 
+#: configrations/admin.py:112
+msgid "Technical innovation"
+msgstr ""
+
+#: configrations/admin.py:115 configrations/models.py:115
+msgid "Social responsibility"
+msgstr ""
+
+#: configrations/admin.py:118 configrations/models.py:117
+msgid "Customer experience"
+msgstr ""
+
+#: configrations/admin.py:126 configrations/models.py:100
+msgid "certificate_image"
+msgstr "صورة شهاده الجوده"
+
 #: configrations/models.py:7 configrations/models.py:27
 msgid "name"
 msgstr ""
@@ -86,7 +102,7 @@ msgstr ""
 msgid "Success Story"
 msgstr ""
 
-#: configrations/models.py:22 front/index-en.html:469 front/index.html:469
+#: configrations/models.py:22 front/index-en.html:482 front/index.html:482
 msgid "Success Stories"
 msgstr ""
 
@@ -127,10 +143,6 @@ msgstr ""
 msgid "Goals"
 msgstr ""
 
-#: configrations/models.py:100
-msgid "certificate_image"
-msgstr "صورة شهاده الجوده"
-
 #: configrations/models.py:103
 msgid "certificate_description_ar"
 msgstr "وصف شهاده الجوده باللغه العربية"
@@ -151,11 +163,43 @@ msgstr "رؤيتنا"
 msgid "Our_vision_ar"
 msgstr "رؤيتنا باللغه العربية"
 
+#: configrations/models.py:109
+msgid "email"
+msgstr ""
+
+#: configrations/models.py:110
+msgid "phone_number"
+msgstr ""
+
+#: configrations/models.py:111
+msgid "address"
+msgstr ""
+
+#: configrations/models.py:112
+msgid "address_ar"
+msgstr ""
+
 #: configrations/models.py:113
+msgid "Technical_innovation"
+msgstr ""
+
+#: configrations/models.py:114
+msgid "Technical_innovation_ar"
+msgstr ""
+
+#: configrations/models.py:116
+msgid "Social responsibility_ar"
+msgstr ""
+
+#: configrations/models.py:118
+msgid "Customer experience_ar"
+msgstr ""
+
+#: configrations/models.py:124
 msgid "Configuration"
 msgstr "التكوين"
 
-#: configrations/models.py:114
+#: configrations/models.py:125
 msgid "Configurations"
 msgstr "التكوينات"
 
@@ -191,159 +235,106 @@ msgstr ""
 msgid "Quality Perfection"
 msgstr "Quality Perfection"
 
-#: front/index-en.html:34 front/index-en.html:632 front/index.html:34
-#: front/index.html:632
+#: front/index-en.html:35 front/index-en.html:652 front/index.html:35
+#: front/index.html:652
 msgid "Quality Perfection Logo"
 msgstr "Quality Perfection Logo"
 
-#: front/index-en.html:65 front/index-en.html:98 front/index.html:65
-#: front/index.html:98
+#: front/index-en.html:66 front/index-en.html:99 front/index.html:66
+#: front/index.html:99
 msgid "Home"
 msgstr ""
 
-#: front/index-en.html:66 front/index-en.html:99 front/index-en.html:210
-#: front/index.html:66 front/index.html:99 front/index.html:210
+#: front/index-en.html:67 front/index-en.html:100 front/index-en.html:216
+#: front/index.html:67 front/index.html:100 front/index.html:216
 #, fuzzy
 #| msgid "about us"
 msgid "About Us"
 msgstr "About Us"
 
-#: front/index-en.html:67 front/index-en.html:100 front/index-en.html:236
-#: front/index.html:67 front/index.html:100 front/index.html:236
+#: front/index-en.html:68 front/index-en.html:101 front/index-en.html:242
+#: front/index.html:68 front/index.html:101 front/index.html:242
 msgid "Our Services"
-msgstr ""
-
-#: front/index-en.html:68 front/index-en.html:101 front/index.html:68
-#: front/index.html:101
-msgid "Certificates"
 msgstr ""
 
 #: front/index-en.html:69 front/index-en.html:102 front/index.html:69
 #: front/index.html:102
+msgid "Certificates"
+msgstr ""
+
+#: front/index-en.html:70 front/index-en.html:103 front/index.html:70
+#: front/index.html:103
 msgid "Contact Us"
 msgstr ""
 
-#: front/index-en.html:144 front/index.html:144
+#: front/index-en.html:145 front/index.html:145
 #, fuzzy
 #| msgid "Quality Perfection"
 msgid "Quality Perfection Center"
 msgstr "Quality Perfection"
 
-#: front/index-en.html:146 front/index.html:146
+#: front/index-en.html:147 front/index.html:147
 msgid "Trust since 2008"
 msgstr ""
 
-#: front/index-en.html:180 front/index.html:180
+#: front/index-en.html:181 front/index.html:181
 msgid "About Company"
 msgstr ""
 
-#: front/index-en.html:193 front/index.html:193
+#: front/index-en.html:194 front/index.html:194
 #, fuzzy
 #| msgid "Quality Perfection"
 msgid "Brief about Quality Perfection Center"
 msgstr "Quality Perfection"
 
-#: front/index-en.html:199 front/index.html:199
-msgid ""
-"Since the establishment of the Quality Perfection Center in 2008, our name "
-"has become synonymous with quality and trust in the world of comprehensive "
-"car maintenance. We started with an ambitious vision to provide services "
-"that exceed customer expectations, and we succeeded in building a wide base "
-"of individual customers, companies, and government institutions. During more "
-"than fifteen years of continuous work, we have proven that success is only "
-"determined by commitment, perfection, and constant keenness for development."
-msgstr ""
-
-#: front/index-en.html:203 front/index.html:203
+#: front/index-en.html:209 front/index.html:209
 msgid "Read More"
 msgstr ""
 
-#: front/index-en.html:250 front/index.html:250
+#: front/index-en.html:256 front/index.html:256
 msgid "Center's Services"
 msgstr ""
 
-#: front/index-en.html:254 front/index.html:254
+#: front/index-en.html:260 front/index.html:260
 msgid ""
 "We offer at Quality Perfection Center a wide range of integrated services"
 msgstr ""
 
-#: front/index-en.html:331 front/index.html:331
+#: front/index-en.html:337 front/index.html:337
 msgid "Technical Innovation & Digital Transformation"
 msgstr ""
 
-#: front/index-en.html:335 front/index.html:335
-msgid ""
-"We use the latest electronic inspection systems and intelligent analysis "
-"tools to provide an accurate and rapid diagnosis of technical problems. We "
-"also provide an online appointment booking service and a car status follow-"
-"up service, which facilitates the customer experience and saves time and "
-"effort"
-msgstr ""
-
-#: front/index-en.html:364 front/index.html:364
+#: front/index-en.html:373 front/index.html:373
 #, fuzzy
 #| msgid "Quality Perfection"
 msgid "Why Quality Perfection Center"
 msgstr "Quality Perfection"
 
-#: front/index-en.html:377 front/index.html:377
+#: front/index-en.html:386 front/index.html:386
 msgid "What Distinguishes Us"
 msgstr ""
 
-#: front/index-en.html:414 front/index.html:414
+#: front/index-en.html:423 front/index.html:423
 msgid "Social & Environmental Responsibility"
 msgstr ""
 
-#: front/index-en.html:417 front/index.html:417
-msgid ""
-"We at Quality Perfection Center are committed to applying environmental "
-"safety standards by using environmentally friendly materials and managing "
-"waste in safe ways. We also participate in community initiatives to support "
-"awareness of traffic safety and the preservation of vehicles"
-msgstr ""
-
-#: front/index-en.html:456 front/index.html:456
+#: front/index-en.html:469 front/index.html:469
 msgid "Our Clients' Stories"
 msgstr ""
 
-#: front/index-en.html:543 front/index.html:543
-msgid "Future Vision & Expansion"
-msgstr ""
-
-#: front/index-en.html:544 front/index.html:544
-msgid ""
-"We plan to open new branches inside and outside the city of Riyadh, with the "
-"introduction of smart electronic services that support the customer "
-"experience and keep pace with technical development"
-msgstr ""
-
-#: front/index-en.html:562 front/index.html:562
+#: front/index-en.html:578 front/index.html:578
 msgid "Customer Experience and After-Sales Services"
 msgstr ""
 
-#: front/index-en.html:565 front/index.html:565
-msgid ""
-"Because our service does not end with delivery, we care about the smallest "
-"details through follow-up and periodic maintenance services and a "
-"specialized team to respond to inquiries and provide technical advice around "
-"the clock"
-msgstr ""
-
-#: front/index-en.html:611 front/index.html:611
+#: front/index-en.html:630 front/index.html:630
 msgid "General Mechanics"
 msgstr ""
 
-#: front/index-en.html:613 front/index.html:613
-msgid ""
-"Comprehensive maintenance including engine systems, automatic transmission, "
-"air conditioning, and suspension systems"
-msgstr ""
-
-#: front/index-en.html:642 front/index.html:642
+#: front/index-en.html:662 front/index.html:662
 msgid "Riyadh - Al-Sulai District"
 msgstr "الرياض - منطقة الصالح"
 
-#: front/index-en.html:666 front/index.html:666
+#: front/index-en.html:686 front/index.html:686
 msgid "All Rights Reserved © 2024"
 msgstr "جميع الحقوق محفوظة © 2024"
 

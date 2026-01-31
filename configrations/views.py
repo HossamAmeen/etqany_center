@@ -1,3 +1,4 @@
+from configrations.models import Configuration
 from django.shortcuts import render
 
 from configrations.models import SuccessStory, Logo, Service, Advantage, Goal
@@ -9,4 +10,5 @@ def index(request):
     services = Service.objects.filter(is_active=True).order_by('-id')
     advantages = Advantage.objects.filter(is_active=True).order_by('-id')
     goals = Goal.objects.filter(is_active=True).order_by('-id')
-    return render(request, 'index.html', {'stories': stories, 'logos': logos, 'services': services, 'advantages': advantages, 'goals': goals})
+    configurations = Configuration.objects.filter().order_by('-id')
+    return render(request, 'index.html', {'stories': stories, 'logos': logos, 'services': services, 'advantages': advantages, 'goals': goals, 'configurations': configurations})

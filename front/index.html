@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  {% with config=configurations.first %}
   <!-- ================== START LOADER ================== -->
   <div id="loader" class="fixed inset-0 bg-surface-white flex items-center justify-center z-2000">
     <div class="w-16 h-16 border-4 border-crimson-red border-t-transparent rounded-full spinner"></div>
@@ -196,7 +197,12 @@
             </div>
             <!-- ============== END SECTION TILTE ================ -->
             <p class="text-[20px] font-light text-surface-dark leading-9! mt-1!">
-              {% trans "Since the establishment of the Quality Perfection Center in 2008, our name has become synonymous with quality and trust in the world of comprehensive car maintenance. We started with an ambitious vision to provide services that exceed customer expectations, and we succeeded in building a wide base of individual customers, companies, and government institutions. During more than fifteen years of continuous work, we have proven that success is only determined by commitment, perfection, and constant keenness for development." %}
+              {% trans "Since the establishment of the Quality Perfection Center in 2008, our name has become synonymous
+              with quality and trust in the world of comprehensive car maintenance. We started with an ambitious vision
+              to provide services that exceed customer expectations, and we succeeded in building a wide base of
+              individual customers, companies, and government institutions. During more than fifteen years of continuous
+              work, we have proven that success is only determined by commitment, perfection, and constant keenness for
+              development." %}
 
             </p>
             <a href="about.html" class="btn mt-6!">
@@ -332,7 +338,10 @@
           </h1>
           <p
             class="text-[16px] md:text-[20px] font-light text-surface-white leading-8! max-[1199px]:max-w-full w-full max-w-137.5">
-            {% trans "We use the latest electronic inspection systems and intelligent analysis tools to provide an accurate and rapid diagnosis of technical problems. We also provide an online appointment booking service and a car status follow-up service, which facilitates the customer experience and saves time and effort" %}
+            {% if LANGUAGE_CODE == 'ar' %}{{ config.Technical_innovation_ar|default:"نســـتخدم أحدث أنظمة الفحص
+            الإلكتروني وأدوات التحليل الذكي لتقديم تشـــخيص دقيق وســـريع للمشـــاكل فنية" }}{% else %}{{
+            config.Technical_innovation|default:"We use the latest electronic inspection systems and intelligent
+            analysis tools to provide an accurate and rapid diagnosis of technical problems" }}{% endif %}
           </p>
         </div>
         <!-- ================= END MAIN CONTENR SOCIAL ================== -->
@@ -414,7 +423,11 @@
         {% trans "Social & Environmental Responsibility" %}
       </h1>
       <p class="text-[16px] md:text-[20px] font-normal text-surface-white leading-8!">
-        {% trans "We at Quality Perfection Center are committed to applying environmental safety standards by using environmentally friendly materials and managing waste in safe ways. We also participate in community initiatives to support awareness of traffic safety and the preservation of vehicles" %}
+        {% if LANGUAGE_CODE == 'ar' %}{{ config.Social_responsibility_ar|default:"نلتـــزم فـــي مركز جودة الإتقان
+        بتطبيق معاييـــر السلامة البيئية من خلال اســـتخدام مـــواد صديقة للبيئـــة وإدارة النفايات بطرق آمنة" }}{% else
+        %}{{ config.Social_responsibility|default:"We at Quality Perfection Center are committed to applying
+        environmental safety standards by using environmentally friendly materials and managing waste in safe ways" }}{%
+        endif %}
       </p>
     </div>
     <!-- ================= END MAIN CONTENR SOCIAL ================== -->
@@ -540,8 +553,11 @@
       </div>
       <div data-aos="fade-right"
         class="details-content bg-surface-light max-[1199px]:text-center max-[550px]:py-10! max-[768px]:py-15! max-[1199px]:py-20! py-29! max-[1199px]:px-5! px-8! w-full max-[1199px]:max-w-[90%]  max-w-175 max-[1199px]:m-auto! max-[1199px]:-mt-30! relative z-3 -m-30!">
-        <h2 class="text-[20px] sm:text-[27px] md:text-[44px] font-bold text-surface-dark">{% trans "Future Vision & Expansion" %}</h2>
-        <p class="text-[17px] sm:text-[20px] font-light text-surface-dark">{% trans "We plan to open new branches inside and outside the city of Riyadh, with the introduction of smart electronic services that support the customer experience and keep pace with technical development" %}</p>
+        <h2 class="text-[20px] sm:text-[27px] md:text-[44px] font-bold text-surface-dark">{% trans "Future Vision &
+          Expansion" %}</h2>
+        <p class="text-[17px] sm:text-[20px] font-light text-surface-dark">{% trans "We plan to open new branches inside
+          and outside the city of Riyadh, with the introduction of smart electronic services that support the customer
+          experience and keep pace with technical development" %}</p>
       </div>
     </div>
     <!-- =============== END ALL CONTENT INFO =============== -->
@@ -562,7 +578,10 @@
             {% trans "Customer Experience and After-Sales Services" %}
           </h2>
           <p class="text-[16px] sm:text-[20px] font-light text-surface-dark max-[1272px]:max-w-full max-w-167.5">
-            {% trans "Because our service does not end with delivery, we care about the smallest details through follow-up and periodic maintenance services and a specialized team to respond to inquiries and provide technical advice around the clock" %}
+            {% if LANGUAGE_CODE == 'ar' %}{{ config.Customer_experience_ar|default:"لأن خدمتنا لاتنتهي عند التسليم، نهتم
+            بأدق التفاصيل من خلال خدمات المتابعة والصيانة الدورية" }}{% else %}{{
+            config.Customer_experience|default:"Because our service does not end with delivery, we care about the
+            smallest details through follow-up and periodic maintenance services" }}{% endif %}
           </p>
         </div>
         <div data-aos="fade-up"
@@ -610,7 +629,8 @@
         <h1 class="text-[20px] font-bold text-surface-dark mb-2!">
           {% trans "General Mechanics" %}</h1>
         <p class="text-[16px] font-light text-surface-dark ">
-          {% trans "Comprehensive maintenance including engine systems, automatic transmission, air conditioning, and suspension systems" %}</p>
+          {% trans "Comprehensive maintenance including engine systems, automatic transmission, air conditioning, and
+          suspension systems" %}</p>
       </div>
 
     </div>
@@ -678,6 +698,8 @@
 
 
 
+  {% endif %}
+  {% endwith %}
   <script>
     // MODAL SERVICES
     const modal = document.getElementById("serviceModal");
@@ -686,6 +708,7 @@
 
     document.querySelectorAll(".card-service").forEach(card => {
       card.addEventListener("click", () => {
+        if (!modal) return;
         modal.classList.remove("hidden");
         requestAnimationFrame(() => {
           modalBox.classList.remove("-translate-y-10", "opacity-0");
@@ -695,6 +718,7 @@
     });
 
     function closeModal() {
+      if (!modalBox) return;
       modalBox.classList.add("-translate-y-10", "opacity-0");
       modalBox.classList.remove("translate-y-0", "opacity-100");
 
@@ -703,14 +727,41 @@
       }, 300);
     }
 
-    closeBtn.addEventListener("click", closeModal);
-    modal.addEventListener("click", e => {
-      if (e.target === modal) closeModal();
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    if (modal) {
+      modal.addEventListener("click", e => {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    // ADD SWIPER INITIALIZATION
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof Swiper !== 'undefined') {
+        new Swiper(".service-swiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: ".main-services .swiper-button-next",
+            prevEl: ".main-services .swiper-button-prev",
+          },
+          breakpoints: {
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+        });
+
+        new Swiper(".swiper-stories", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: ".all-stories .swiper-button-next",
+            prevEl: ".all-stories .swiper-button-prev",
+          },
+        });
+      }
     });
   </script>
-
-
-
 </body>
 
 </html>
