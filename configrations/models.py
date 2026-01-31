@@ -57,7 +57,7 @@ class Service(models.Model):
         verbose_name_plural = _("Services")
 
 
-class WhyChooseUs(models.Model):
+class Advantage (models.Model):
     title = models.CharField(_("title"), max_length=200, blank=True)
     title_ar = models.CharField(_("title_ar"),
                                 max_length=200, null=True, blank=True)

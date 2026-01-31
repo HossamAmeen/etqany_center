@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 
-from .models import Logo, SuccessStory, Service, WhyChooseUs
+from .models import Logo, SuccessStory, Service, Advantage 
 
 
 @admin.register(SuccessStory)
@@ -57,8 +57,8 @@ class ServiceAdmin(admin.ModelAdmin):
     display_image.short_description = _('image')
 
 
-@admin.register(WhyChooseUs)
-class WhyChooseUsAdmin(admin.ModelAdmin):
+@admin.register(Advantage )
+class AdvantageAdmin(admin.ModelAdmin):
     list_display = ('title', 'description_summary', 'display_image')
 
     def description_summary(self, obj):
