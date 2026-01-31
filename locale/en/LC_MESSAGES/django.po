@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: configrations/admin.py:19 configrations/admin.py:38
 #: configrations/admin.py:56 configrations/admin.py:74
@@ -24,217 +24,217 @@ msgstr ""
 #: configrations/models.py:26 configrations/models.py:47
 #: configrations/models.py:67 configrations/models.py:86
 msgid "image"
-msgstr "الصورة"
+msgstr ""
 
 #: configrations/admin.py:23 configrations/models.py:11
 msgid "content"
-msgstr "المحتوى"
+msgstr ""
 
 #: configrations/admin.py:47 configrations/admin.py:65
 #: configrations/admin.py:82 configrations/models.py:44
 #: configrations/models.py:64 configrations/models.py:83
 msgid "description"
-msgstr "الوصف"
+msgstr ""
 
 #: configrations/models.py:7 configrations/models.py:27
 msgid "name"
-msgstr "الاسم"
+msgstr ""
 
 #: configrations/models.py:8 configrations/models.py:28
 msgid "name_ar"
-msgstr "الاسم بالعربية"
+msgstr ""
 
 #: configrations/models.py:9 configrations/models.py:41
 #: configrations/models.py:61 configrations/models.py:80
 msgid "title"
-msgstr "العنوان"
+msgstr ""
 
 #: configrations/models.py:10 configrations/models.py:42
 #: configrations/models.py:62 configrations/models.py:81
 msgid "title_ar"
-msgstr "العنوان بالعربية"
+msgstr ""
 
 #: configrations/models.py:12
 msgid "content_ar"
-msgstr "المحتوى بالعربية"
+msgstr ""
 
 #: configrations/models.py:14 configrations/models.py:29
 #: configrations/models.py:49 configrations/models.py:69
 #: configrations/models.py:88
 msgid "is_active"
-msgstr "نشيط"
+msgstr ""
 
 #: configrations/models.py:15 configrations/models.py:30
 #: configrations/models.py:50 configrations/models.py:70
 #: configrations/models.py:89
 msgid "created_at"
-msgstr "تم الإنشاء في"
+msgstr ""
 
 #: configrations/models.py:21
 msgid "Success Story"
-msgstr "قصة نجاح"
+msgstr ""
 
 #: configrations/models.py:22
 msgid "Success Stories"
-msgstr "قصص نجاح"
+msgstr ""
 
 #: configrations/models.py:36
 msgid "Logo"
-msgstr "الشعار"
+msgstr ""
 
 #: configrations/models.py:37
 msgid "Logos"
-msgstr "الشعارات"
+msgstr ""
 
 #: configrations/models.py:45 configrations/models.py:65
 #: configrations/models.py:84
 msgid "description_ar"
-msgstr "الوصف بالعربية"
+msgstr ""
 
 #: configrations/models.py:56
 msgid "Service"
-msgstr "الخدمة"
+msgstr ""
 
 #: configrations/models.py:57
 msgid "Services"
-msgstr "الخدمات"
+msgstr ""
 
 #: configrations/models.py:76
 msgid "Advantage"
-msgstr "ميزة"
+msgstr ""
 
 #: configrations/models.py:77
 msgid "Advantages"
-msgstr "المميزات"
+msgstr ""
 
 #: configrations/models.py:95
 msgid "Goal"
-msgstr "الهدف"
+msgstr ""
 
 #: configrations/models.py:96
 msgid "Goals"
-msgstr "الاهداف"
+msgstr ""
 
 #: core/settings.py:146
 msgid "English"
-msgstr "الإنجليزية"
+msgstr ""
 
 #: core/settings.py:147
 msgid "Arabic"
-msgstr "العربية"
+msgstr ""
 
 #: core/settings.py:156
 msgid "Admin Console"
-msgstr "اللوحة الرئيسية للإدارة"
+msgstr ""
 
 #: core/settings.py:157
 msgid "Management System"
-msgstr "نظام إدارة"
+msgstr ""
 
 #: core/settings.py:158
 msgid "My Project"
-msgstr "المشروع"
+msgstr ""
 
 #: core/settings.py:159
 msgid "Welcome to the Admin Dashboard"
-msgstr "مرحبا في لوحة التحكم"
+msgstr ""
 
 #: core/settings.py:165
 msgid "Dashboard"
-msgstr "اللوحة الرئيسية"
+msgstr ""
 
 #: front/index.html:8
 msgid "Quality Perfection"
-msgstr "جودة الإتقان"
+msgstr "Quality Perfection"
 
 #: front/index.html:34 front/index.html:646
 msgid "Quality Perfection Logo"
-msgstr "شعار جودة الإتقان"
+msgstr "Quality Perfection Logo"
 
 #: front/index.html:65 front/index.html:98
 msgid "الرئيسية"
-msgstr "الرئيسية"
+msgstr "Home"
 
 #: front/index.html:66 front/index.html:99
 msgid "من نحن"
-msgstr "من نحن"
+msgstr "About Us"
 
 #: front/index.html:67 front/index.html:100 front/index.html:239
 msgid "خدماتنا"
-msgstr "خدماتنا"
+msgstr "Services"
 
 #: front/index.html:68 front/index.html:101
 msgid "الشهادات"
-msgstr "الشهادات"
+msgstr "Certificates"
 
 #: front/index.html:69 front/index.html:102
 msgid "اتصل بنا"
-msgstr "اتصل بنا"
+msgstr "Contact Us"
 
 #: front/index.html:144
 msgid "مركز جودة الاتقان"
-msgstr "مركز جودة الاتقان"
+msgstr "Quality Perfection Center"
 
 #: front/index.html:146
 msgid "ثقة تمتد منذ 2008"
-msgstr "ثقة تمتد منذ 2008"
+msgstr "Trust since 2008"
 
 #: front/index.html:180
 msgid "عن المركز"
-msgstr "عن المركز"
+msgstr "About the Center"
 
 #: front/index.html:193
 msgid "نبذه عن مركز جودة الاتقان"
-msgstr "نبذه عن مركز جودة الاتقان"
+msgstr "Brief about Quality Perfection Center"
 
 #: front/index.html:206
 msgid "المزيد"
-msgstr "المزيد"
+msgstr "More"
 
 #: front/index.html:213
 msgid "about us"
-msgstr "من نحن"
+msgstr "About Us"
 
 #: front/index.html:253
 msgid "خدمات المركز"
-msgstr "خدمات المركز"
+msgstr "Center Services"
 
 #: front/index.html:335
 msgid "الابتكار التقنى والتحول الرقمي"
-msgstr "الابتكار التقنى والتحول الرقمي"
+msgstr "Technical Innovation & Digital Transformation"
 
 #: front/index.html:370
 msgid "لماذا مركز جودة الاتقان"
-msgstr "لماذا مركز جودة الاتقان"
+msgstr "Why Quality Perfection Center"
 
 #: front/index.html:383
 msgid "ما يميزنا"
-msgstr "ما يميزنا"
+msgstr "What Distinguishes Us"
 
 #: front/index.html:420
 msgid "المسؤولية المجتمعية والبيئية"
-msgstr "المسؤولية المجتمعية والبيئية"
+msgstr "Social & Environmental Responsibility"
 
 #: front/index.html:464
 msgid "قصص عملاؤنا"
-msgstr "قصص عملاؤنا"
+msgstr "Our Customers' Stories"
 
 #: front/index.html:477
 msgid "قصص النجاح"
-msgstr "قصص النجاح"
+msgstr "Success Stories"
 
 #: front/index.html:573
 msgid "تجربة العميل وخدمات ما بعد الصيانه"
-msgstr "تجربة العميل وخدمات ما بعد الصيانه"
+msgstr "Customer Experience & After-Sales Services"
 
 #: front/index.html:623
 msgid "الميكانيكا العامة"
-msgstr "الميكانيكا العامة"
+msgstr "General Mechanics"
 
 #: front/index.html:656
 msgid "الرياض - حي السلي"
-msgstr "الرياض - حي السلي"
+msgstr "Riyadh - Al Sulai District"
 
 #: front/index.html:680
 msgid "جميع الحقوق محفوظة © 2024"
-msgstr "جميع الحقوق محفوظة © 2024"
+msgstr "All Rights Reserved © 2024"

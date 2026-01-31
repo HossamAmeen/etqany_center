@@ -24,11 +24,11 @@ from configrations import views as config_views
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),  # Required for the language selector
-    path('', config_views.index, name='index'),
 ]
 
 # Wrap your admin and other routes in i18n_patterns
 urlpatterns += i18n_patterns(
+    path('', config_views.index, name='index'),
     path('admin/', admin.site.urls),
     # If you have a custom dashboard view:
     # path('dashboard/', include('myapp.urls')),
