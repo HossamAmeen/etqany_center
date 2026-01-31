@@ -73,5 +73,5 @@ class Advantage (models.Model):
         return self.title
 
     class Meta:
-        verbose_name = _("Why Choose Us")
-        verbose_name_plural = _("Why Choose Us")
+        verbose_name = _("Advantage")
+        verbose_name_plural = _("Advantages")

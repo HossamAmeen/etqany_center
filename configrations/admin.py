@@ -24,7 +24,6 @@ class SuccessStoryAdmin(admin.ModelAdmin):
 
 admin.site.unregister(Group)
 
-
 @admin.register(Logo)
 class LogoAdmin(admin.ModelAdmin):
     list_display = ('name', 'name_ar', 'display_image', 'is_active', 'created_at')
