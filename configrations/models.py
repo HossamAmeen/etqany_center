@@ -106,6 +106,11 @@ class Configuration(models.Model):
     Our_vision = models.TextField(_("Our_vision"), blank=True)
     Our_vision_ar = models.TextField(_("Our_vision_ar"), null=True, blank=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    About_the_Center = models.TextField(_("About_the_Center"), blank=True)
+    About_the_Center_ar = models.TextField(_("About_the_Center_ar"), null=True, blank=True)
+    Future_vision = models.TextField(_("Future vision"), blank=True)
+    Future_vision_ar = models.TextField(_("Future vision_ar"), null=True, blank=True)
+
 
     def __str__(self):
         return "Site Configuration" 

@@ -93,7 +93,7 @@ class GoalAdmin(admin.ModelAdmin):
 
 @admin.register(Configuration)
 class ConfigurationAdmin(admin.ModelAdmin):
-    list_display = ('certificate_image', 'certificate_description_summary', 'Our_message_summary', 'Our_vision_summary', 'created_at')
+    list_display = ('certificate_image', 'certificate_description_summary', 'Our_message_summary', 'Our_vision_summary','Future_vision_summary', 'About_the_Center_summary', 'created_at')
 
     def certificate_description_summary(self, obj):
         return obj.certificate_description[:50] + '...' if len(obj.certificate_description) > 50 else obj.certificate_description # noqa
@@ -106,3 +106,12 @@ class ConfigurationAdmin(admin.ModelAdmin):
     def Our_vision_summary(self, obj):
         return obj.Our_vision[:50] + '...' if len(obj.Our_vision) > 50 else obj.Our_vision # noqa
     Our_vision_summary.short_description = _('Our vision')
+
+    def Future_vision_summary(self, obj):
+        return obj.Future_vision[:50] + '...' if len(obj.Future_vision) > 50 else obj.Future_vision # noqa
+    Future_vision_summary.short_description = _('Future vision')
+
+    def About_the_Center_summary(self, obj):
+        return obj.About_the_Center[:50] + '...' if len(obj.About_the_Center) > 50 else obj.About_the_Center # noqa
+    About_the_Center_summary.short_description = _('About the Center')
+
