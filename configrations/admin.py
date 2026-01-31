@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 
-from .models import Logo, SuccessStory, Service, Advantage 
+from .models import Logo, SuccessStory, Service, Advantage , Goal
 
 
 @admin.register(SuccessStory)
@@ -58,6 +58,23 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Advantage )
 class AdvantageAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description_summary', 'display_image')
+
+    def description_summary(self, obj):
+        return obj.description[:50] + '...' if len(obj.description) > 50 else obj.description # noqa
+    description_summary.short_description = _('description')
+
+    def display_image(self, obj):
+        if obj.image:
+            return format_html(
+                '<img src="{}" width="50" height="50" '
+                'style="object-fit: cover; border-radius: 5px;" />',
+                obj.image.url)
+        return "No Image"
+    display_image.short_description = _('image')
+
+@admin.register(Goal)
+class GoalAdmin(admin.ModelAdmin):
     list_display = ('title', 'description_summary', 'display_image')
 
     def description_summary(self, obj):
