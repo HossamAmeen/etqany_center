@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 
-from .models import Logo, SuccessStory, Service, Advantage , Goal
+from .models import Logo, SuccessStory, Service, Advantage , Goal, Configuration
 
 
 @admin.register(SuccessStory)
@@ -89,3 +89,20 @@ class GoalAdmin(admin.ModelAdmin):
                 obj.image.url)
         return "No Image"
     display_image.short_description = _('image')
+
+
+@admin.register(Configuration)
+class ConfigurationAdmin(admin.ModelAdmin):
+    list_display = ('certificate_image', 'certificate_description_summary', 'Our_message_summary', 'Our_vision_summary', 'created_at')
+
+    def certificate_description_summary(self, obj):
+        return obj.certificate_description[:50] + '...' if len(obj.certificate_description) > 50 else obj.certificate_description # noqa
+    certificate_description_summary.short_description = _('certificate_description')
+
+    def Our_message_summary(self, obj):
+        return obj.Our_message[:50] + '...' if len(obj.Our_message) > 50 else obj.Our_message # noqa
+    Our_message_summary.short_description = _('Our message')
+
+    def Our_vision_summary(self, obj):
+        return obj.Our_vision[:50] + '...' if len(obj.Our_vision) > 50 else obj.Our_vision # noqa
+    Our_vision_summary.short_description = _('Our vision')

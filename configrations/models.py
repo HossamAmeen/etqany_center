@@ -94,3 +94,21 @@ class Goal(models.Model):
     class Meta:
         verbose_name = _("Goal")
         verbose_name_plural = _("Goals")
+
+
+class Configuration(models.Model):
+    certificate_image = models.ImageField(_("certificate_image"),
+                                          upload_to='configurations/', null=True, blank=True)
+    certificate_description = models.TextField(_("certificate_description"), blank=True)
+    certificate_description_ar = models.TextField(_("certificate_description_ar"), null=True, blank=True)
+    Our_message = models.TextField(_("Our_message"), blank=True)
+    Our_message_ar = models.TextField(_("Our_message_ar"), null=True, blank=True)
+    Our_vision = models.TextField(_("Our_vision"), blank=True)
+    Our_vision_ar = models.TextField(_("Our_vision_ar"), null=True, blank=True)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+
+    def __str__(self):
+        return "Site Configuration" 
+    class Meta:
+        verbose_name = _("Configuration")
+        verbose_name_plural = _("Configurations")
