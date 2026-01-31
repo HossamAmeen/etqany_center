@@ -93,7 +93,7 @@ class GoalAdmin(admin.ModelAdmin):
 
 @admin.register(Configuration)
 class ConfigurationAdmin(admin.ModelAdmin):
-    list_display = ('certificate_image', 'certificate_description_summary', 'Our_message_summary', 'Our_vision_summary', 'created_at', 'email', 'phone_number', 'address', 'Technical_innovation_summary', 'Social_responsibility_summary', 'Customer_experience_summary') # noqa
+    list_display = ('modified_at', 'certificate_description_summary', 'Our_message_summary', 'Our_vision_summary', 'created_at', 'email', 'phone_number', 'address', 'Technical_innovation_summary', 'Social_responsibility_summary', 'Customer_experience_summary') # noqa
 
     def certificate_description_summary(self, obj):
         return obj.certificate_description[:50] + '...' if len(obj.certificate_description) > 50 else obj.certificate_description # noqa
@@ -110,20 +110,15 @@ class ConfigurationAdmin(admin.ModelAdmin):
     def Technical_innovation_summary(self, obj):
         return obj.Our_vision[:50] + '...' if len(obj.Our_vision) > 50 else obj.Our_vision # noqa
     Technical_innovation_summary.short_description = _('Technical innovation')
+
     def Social_responsibility_summary(self, obj):
         return obj.Social_responsibility[:50] + '...' if len(obj.Social_responsibility) > 50 else obj.Social_responsibility # noqa
     Social_responsibility_summary.short_description = _('Social responsibility')
+
     def Customer_experience_summary(self, obj):
         return obj.Customer_experience[:50] + '...' if len(obj.Customer_experience) > 50 else obj.Customer_experience # noqa
     Customer_experience_summary.short_description = _('Customer experience')
-    def certificate_image(self, obj):
-        if obj.certificate_image:
-            return format_html(
-                '<img src="{}" width="50" height="50" '
-                'style="object-fit: cover; border-radius: 5px;" />',
-                obj.certificate_image.url)
-        return "No Image"
-    certificate_image.short_description = _('certificate_image')
+
     def Future_vision_summary(self, obj):
         return obj.Future_vision[:50] + '...' if len(obj.Future_vision) > 50 else obj.Future_vision # noqa
     Future_vision_summary.short_description = _('Future vision')

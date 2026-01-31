@@ -29,9 +29,8 @@ urlpatterns = [
 # Wrap your admin and other routes in i18n_patterns
 urlpatterns += i18n_patterns(
     path('', config_views.index, name='index'),
+    path('certificate/', config_views.certificates, name='certificates'),
     path('admin/', admin.site.urls),
-    # If you have a custom dashboard view:
-    # path('dashboard/', include('myapp.urls')),
 )
 
 if settings.DEBUG:

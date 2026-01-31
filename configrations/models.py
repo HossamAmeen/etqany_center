@@ -106,6 +106,7 @@ class Configuration(models.Model):
     Our_vision = models.TextField(_("Our_vision"), blank=True)
     Our_vision_ar = models.TextField(_("Our_vision_ar"), null=True, blank=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
+    modified_at = models.DateTimeField(_("modified_at"), auto_now=True)
     email = models.EmailField(_("email"), max_length=254, blank=True)
     phone_number = models.CharField(_("phone_number"), max_length=20, blank=True)
     address = models.CharField(_("address"), max_length=255, blank=True)
@@ -123,7 +124,7 @@ class Configuration(models.Model):
 
 
     def __str__(self):
-        return "Site Configuration" 
+        return self.modified_at.strftime("%Y-%m-%d %H:%M:%S")
     class Meta:
         verbose_name = _("Configuration")
         verbose_name_plural = _("Configurations")
