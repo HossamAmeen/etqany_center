@@ -116,6 +116,10 @@ class Configuration(models.Model):
     Social_responsibility_ar = models.TextField(_("Social responsibility_ar"), null=True, blank=True)
     Customer_experience = models.TextField(_("Customer experience"), blank=True)
     Customer_experience_ar = models.TextField(_("Customer experience_ar"), null=True, blank=True)
+    About_the_Center = models.TextField(_("About_the_Center"), blank=True)
+    About_the_Center_ar = models.TextField(_("About_the_Center_ar"), null=True, blank=True)
+    Future_vision = models.TextField(_("Future vision"), blank=True)
+    Future_vision_ar = models.TextField(_("Future vision_ar"), null=True, blank=True)
 
 
     def __str__(self):

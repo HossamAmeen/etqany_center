@@ -124,3 +124,11 @@ class ConfigurationAdmin(admin.ModelAdmin):
                 obj.certificate_image.url)
         return "No Image"
     certificate_image.short_description = _('certificate_image')
+    def Future_vision_summary(self, obj):
+        return obj.Future_vision[:50] + '...' if len(obj.Future_vision) > 50 else obj.Future_vision # noqa
+    Future_vision_summary.short_description = _('Future vision')
+
+    def About_the_Center_summary(self, obj):
+        return obj.About_the_Center[:50] + '...' if len(obj.About_the_Center) > 50 else obj.About_the_Center # noqa
+    About_the_Center_summary.short_description = _('About the Center')
+
