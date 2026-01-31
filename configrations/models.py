@@ -46,8 +46,8 @@ class Service(models.Model):
                                       null=True, blank=True)
     image = models.ImageField(upload_to='services/icons/',
                               null=True, blank=True)
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(_("is_active"), default=True)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
 
     def __str__(self):
         return self.title
@@ -66,8 +66,8 @@ class WhyChooseUs(models.Model):
                                       null=True, blank=True)
     image = models.ImageField(upload_to='why_choose_us/icons/',
                               null=True, blank=True)
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(_("is_active"), default=True)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
 
     def __str__(self):
         return self.title
