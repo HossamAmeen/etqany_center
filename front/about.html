@@ -1,0 +1,543 @@
+{% load static %}
+{% load i18n %}
+<!doctype html>
+<html dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}" lang="{{ request.LANGUAGE_CODE }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% trans "Quality Perfection about" %}</title>
+  <script src="{% static 'assets/main-BI6zJ0SQ.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'assets/style-CQRcHHq-.css' %}">
+</head>
+
+<body>
+  <!-- ================== START LOADER ================== -->
+  <div id="loader" class="fixed inset-0 bg-surface-white flex items-center justify-center z-2000">
+    <div class="w-16 h-16 border-4 border-crimson-red border-t-transparent rounded-full spinner"></div>
+  </div>
+  <!-- ================== END LOADER ================== -->
+  <!-- ================== START SCROLL TO TOP BUTTON ================== -->
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 z-50 w-12 h-12 text-[27px] rounded-full bg-gradient-red-to-blue -right-20 text-surface-white flex items-center justify-center shadow-lg cursor-pointer transition-all duration-300 ease-in-out "
+    aria-label="Scroll to top">
+    <img src="{% static 'icons/arrow.svg' %}" alt="arrow button" class="-rotate-90">
+  </button>
+  <!-- ================= END SCROLL TO TOP BUTTON =================== -->
+  <div class="flex-height-screen">
+    <!-- ================== START NAVBAR ======================== -->
+    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!" dir="ltr">
+      <div class="container-media">
+        <div class="flex items-center justify-between py-4! md:py-1!">
+          <!-- Logo -->
+          <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-auto"
+            data-aos="fade-right">
+            <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo"
+              class="w-30 md:w-47.75 md:h-[73.4px]" />
+          </a>
+
+          <!-- Burger -->
+          <div class="all-mobile-menu items-center gap-5 max-[1169px]:flex hidden" data-aos="fade-left">
+            <!-- ================ START PHONE NUMBER ================= -->
+            <a href="tel:{{ configurations.phone_number }}" class="relative w-10 h-10 block">
+              <span class="ripple absolute inset-0"></span>
+
+              <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
+              </div>
+            </a>
+            <!-- ================ END PHONE NUMBER ================= -->
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <a href="/en{{ request.path|slice:'3:' }}"
+              class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">EN</a>
+            {% else %}
+            <a href="/ar{{ request.path|slice:'3:' }}"
+              class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">AR</a>
+            {% endif %}
+
+            <button id="menuBtn"
+              class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
+              ☰
+            </button>
+          </div>
+          <!-- Desktop Right -->
+          <div class="max-[1169px]:hidden flex items-center justify-center gap-4 w-full">
+            <ul data-aos="fade-down"
+              class="flex gap-8 text-surface-white text-[18px] font-normal ml-auto! justify-center items-center"
+              dir="rtl">
+              <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
+              <li><a href="{% url 'about' %}" class="nav-link">{% trans "about us" %}</a></li>
+              <li><a
+                  href="{% if request.path == '/' or request.path == '/ar/' or request.path == '/en/' %}#services-section{% else %}{% url 'index' %}#services-section{% endif %}"
+                  class="nav-link">{% trans "services" %}</a></li>
+              <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
+              <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
+              {% if request.LANGUAGE_CODE == 'ar' %}
+              <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">EN</a>
+              {% else %}
+              <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">AR</a>
+              {% endif %}
+            </ul>
+
+            <!-- ================ START PHONE NUMBER ================= -->
+            <a data-aos="fade-left" href="tel:{{ configurations.phone_number }}"
+              class="flex items-center gap-4 ml-auto!">
+              <div class="relative w-12 h-12">
+                <span class="ripple absolute inset-0"></span>
+
+                <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                  <img src="{% static 'icons/phone.svg' %}" alt="Phone" class="w-6 h-6" />
+                </div>
+              </div>
+
+              <span class="text-[18px] font-normal text-surface-white">{{ configurations.phone_number }}</span>
+            </a>
+            <!-- ================ END PHONE NUMBER ================= -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ONE Mobile Dropdown Menu -->
+      <div id="mobileMenu"
+        class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out bg-gradient-dark">
+        <ul class="flex flex-col items-end gap-6 py-4! text-surface-white text-[18px] font-normal pb-10! px-5!">
+          <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
+          <li><a href="{% url 'about' %}" class="nav-link">{% trans "about us" %}</a></li>
+          <li><a
+              href="{% if request.path == '/' or request.path == '/ar/' or request.path == '/en/' %}#services-section{% else %}{% url 'index' %}#services-section{% endif %}"
+              class="nav-link">{% trans "services" %}</a></li>
+          <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
+          <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ================== END NAVBAR ======================== -->
+
+    <!-- ================ START HEADER PAGE =================== -->
+    <header>
+      <!-- =============== START HEADER PAGE ==================== -->
+      <div class="header-page relative bg-cover bg-center bg-no-repeat pb-17! pt-25! md:pt-25! md:pb-30!"
+        style="background-image: url('{% static 'images/banner-page.png' %}');">
+        <div class="container-media" data-aos="fade-up">
+          <h1 class="text-[30px] sm:text-[35px] md:text-[60px]  font-bold text-white">{% trans "about us" %}</h1>
+          <div class="bread-crumb text-[16px] font-light text-gray-medium flex items-center gap-2">
+            <a href="{% url 'index' %}" class="hover:text-crimson-red transition duration-200">{% trans "home" %}
+            </a>
+            /
+            <p>{% trans "about us" %}</p>
+          </div>
+        </div>
+      </div>
+      <!-- =============== END HEADER PAGE ==================== -->
+    </header>
+    <!-- ================ END HEADER PAGE =================== -->
+
+    <main>
+      <!-- =================== START SECTION ABOUT =================== -->
+      <section class="about py-21.25! md:padding-y-120 bg-surface-lightest">
+        <!-- ================= START CONTAINER ================= -->
+        <div class="container-media flex flex-col-reverse lg:grid  lg:grid-cols-[1.4fr_2fr] gap-8 md:gap-0">
+          <!-- ================ START CONTENT ABOUT =============== -->
+          <div class="content-about" data-aos="fade-up">
+            <!-- ============== START SECTION TILTE ================ -->
+            <div class="section-title flex justify-start items-start text-center flex-col gap-4">
+              <!-- ============ START HEADER TITLE =============== -->
+              <div class="header-title flex items-center justify-center">
+                <!--  START LINES RIGHT -->
+                <div class="flex flex-col justify-center mr-2">
+                  <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+                  <div class="w-6 h-0.5 bg-crimson-red mt-1.5!"></div>
+                </div>
+                <!--  END LINES RIGHT -->
+
+                <!-- START TEXT CONTENT -->
+                <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
+                  {% trans "About the Center" %}
+                </h2>
+                <!-- END TEXT CONTENT -->
+                <!--  START LINES LEFT -->
+                <div class="flex flex-col justify-center ml-2">
+                  <div class="w-6 h-0.5 bg-crimson-red -mb-2.5!"></div>
+                  <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+                </div>
+                <!--  END LINES LEFT -->
+              </div>
+              <!-- ============ END HEADER TITLE =============== -->
+              <!-- =========== START INFO TITLE =============== -->
+              <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-dark">
+                {% trans "About the Center for Quality Excellence" %}
+              </h2>
+              <!-- =========== END INFO TITLE =============== -->
+            </div>
+            <!-- ============== END SECTION TILTE ================ -->
+            <p class="text-[20px] font-light text-surface-dark leading-10! mt-3!">
+              {% if request.LANGUAGE_CODE == 'ar' %}
+              {{ configurations.About_the_Center_ar }}
+              {% else %}
+              {{ configurations.About_the_Center }}
+              {% endif %}
+            </p>
+            <a href="{% url 'about' %}" class="btn mt-6!">
+              <img src="{% static 'icons/arrow.svg' %}" alt="arrow" class="inline-block ml-2" /> {% trans "more" %}
+            </a>
+          </div>
+          <!-- ================ END CONTENT ABOUT =============== -->
+
+          <!-- ================= START IMAGE ABOUT ================= -->
+          <div class="image-about  md:pt-16! md:ms-15!" data-aos="fade-down">
+            <img src="{% static 'images/about-image.png' %}" alt="about us" class="w-full h-full object-cover"
+              loading="lazy" />
+            <!-- ================= END IMAGE ABOUT ================= -->
+
+          </div>
+          <!-- ================= END CONTAINER ================= -->
+
+      </section>
+      <!-- =================== END SECTION ABOUT =================== -->
+      <!-- ================== START SECTION  VISION MISSION ================== -->
+      <section class="vision-mission py-21.25! md:padding-y-120" data-aos="fade-up">
+        <!-- ================= START CONTAINER ================= -->
+        <div class="container-media">
+          <!-- ============== START SECTION TILTE ================ -->
+          <div class="section-title flex justify-center items-center text-center flex-col gap-4 mb-13! md:mb-18!">
+            <!-- ============ START HEADER TITLE =============== -->
+            <div class="header-title flex items-center justify-center">
+              <!--  START LINES RIGHT -->
+              <div class="flex flex-col justify-center mr-2">
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+                <div class="w-6 h-0.5 bg-crimson-red mt-1.5!"></div>
+              </div>
+              <!--  END LINES RIGHT -->
+
+              <!-- START TEXT CONTENT -->
+              <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
+                {% trans "vision and mission" %}
+              </h2>
+              <!-- END TEXT CONTENT -->
+              <!--  START LINES LEFT -->
+              <div class="flex flex-col justify-center ml-2">
+                <div class="w-6 h-0.5 bg-crimson-red -mb-2.5!"></div>
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+              </div>
+              <!--  END LINES LEFT -->
+            </div>
+            <!-- ============ END HEADER TITLE =============== -->
+            <!-- =========== START INFO TITLE =============== -->
+            <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-dark">
+              {% trans "vision and mission" %}
+            </h2>
+            <!-- =========== END INFO TITLE =============== -->
+          </div>
+          <!-- ============== END SECTION TILTE ================ -->
+          <!-- ============== START ALL CARDS VISION ============== -->
+          <div class="all-cards-vision grid  max-[767px]:grid-cols-1 grid-cols-2 gap-15">
+            <!-- ============ START CARD VISION ONE ============= -->
+            <div class="card-vision-one flex max-[500px]:flex-col  items-start gap-5">
+              <img src="{% static 'images/vision-mission/01.svg' %}" alt="eye" class="w-16 h-16 object-cover mt-2.5!"
+                width="64px" height="64px" loading="lazy" />
+              <div class="content-card-vision">
+                <h2 class="text-[20px] sm:text-[24px] font-bold text-surface-dark mb-3!">{% trans "our vision" %}</h2>
+                <p class="text-[18px] font-light text-surface-dark max-w-95 w-full">
+                  {% if request.LANGUAGE_CODE == 'ar' %}
+                  {{ configurations.Our_vision_ar }}
+                  {% else %}
+                  {{ configurations.Our_vision }}
+                  {% endif %}
+                </p>
+              </div>
+            </div>
+            <!-- ============ END CARD VISION ONE ============= -->
+
+            <!-- ============ START CARD VISION ONE ============= -->
+            <div class="card-vision-one flex max-[500px]:flex-col items-start gap-5">
+              <img src="{% static 'images/vision-mission/02.svg' %}" alt="message"
+                class="w-16 h-16 object-cover mt-2.5!" width="64px" height="64px" loading="lazy" />
+              <div class="content-card-vision">
+                <h2 class="text-[20px] sm:text-[24px] font-bold text-surface-dark mb-3!">{% trans "our message" %}</h2>
+                <p class="text-[18px] font-light text-surface-dark max-w-95 w-full">
+                  {% if request.LANGUAGE_CODE == 'ar' %}
+                  {{ configurations.Our_message_ar }}
+                  {% else %}
+                  {{ configurations.Our_message }}
+                  {% endif %}
+                </p>
+              </div>
+            </div>
+            <!-- ============ END CARD VISION ONE ============= -->
+
+          </div>
+          <!-- ============== END ALL CARDS VISION ============== -->
+
+        </div>
+        <!-- ================= END CONTAINER ================= -->
+
+      </section>
+      <!-- ================== END SECTION  VISION MISSION ================== -->
+
+      <!-- ================== START OUR GOALS ================== -->
+      <section class="our-goals py-21.25! md:padding-y-120 relative bg-cover bg-center bg-no-repeat" style="
+            background-image: url('{% static 'images/our-goals/bg-our-goals.png' %}');
+          ">
+        <!-- =================== START CONTAINER ================ -->
+        <div class="container-media">
+          <!-- ============== START SECTION TILTE ================ -->
+          <div data-aos="fade-down"
+            class="section-title flex justify-center items-center text-center flex-col gap-4 mb-13! md:mb-18!">
+            <!-- ============ START HEADER TITLE =============== -->
+            <div class="header-title flex items-center justify-center">
+              <!--  START LINES RIGHT -->
+              <div class="flex flex-col justify-center mr-2">
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+                <div class="w-6 h-0.5 bg-crimson-red mt-1.5!"></div>
+              </div>
+              <!--  END LINES RIGHT -->
+
+              <!-- START TEXT CONTENT -->
+              <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
+                {% trans "center goals" %}
+              </h2>
+              <!-- END TEXT CONTENT -->
+              <!--  START LINES LEFT -->
+              <div class="flex flex-col justify-center ml-2">
+                <div class="w-6 h-0.5 bg-crimson-red -mb-2.5!"></div>
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+              </div>
+              <!--  END LINES LEFT -->
+            </div>
+            <!-- ============ END HEADER TITLE =============== -->
+            <!-- =========== START INFO TITLE =============== -->
+            <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-white">
+              {% trans "our goals" %}
+            </h2>
+            <!-- =========== END INFO TITLE =============== -->
+          </div>
+          <!-- ============== END SECTION TILTE ================ -->
+          <!-- ============= START ALL CARD GOALS ============= -->
+          <div data-aos="flip-down"
+            class="all-cards-goals grid max-[480px]:grid-cols-1 max-[767px]:grid-cols-2 grid-cols-3 gap-5">
+            {% for goal in goals %}
+            <!-- =============== START CARD GOAL ONE ================= -->
+            <div
+              class="card-goal-one border border-surface-gray rounded-md relative max-[767px]:p-4! p-8! {% if forloop.counter == 3 %}max-[480px]:col-span-1 max-[767px]:col-span-2{% endif %}">
+
+              {% if goal.image %}
+              <img src="{{ goal.image.url }}" alt="{{ goal.title }}" class="w-17.5 h-17.5  object-cover" loading="lazy"
+                width="70px" height="70px">
+              {% else %}
+              <img src="{% static 'images/our-goals/01.svg' %}" alt="goal" class="w-17.5 h-17.5  object-cover"
+                loading="lazy" width="70px" height="70px">
+              {% endif %}
+              <div
+                class="outlined-number absolute max-[1023px]:text-[65px] text-[100px] font-bold tracking-[2px]  ltr:right-7.5 rtl:left-7.5 max-[480px]:-top-2.5 max-[1023px]:top-0 -top-7.5">
+                0{{ forloop.counter }}
+              </div>
+              <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">
+                {% if request.LANGUAGE_CODE == 'ar' %}
+                {{ goal.description_ar|default:goal.title_ar }}
+                {% else %}
+                {{ goal.description|default:goal.title }}
+                {% endif %}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+          <!-- ============= END ALL CARD GOALS ============= -->
+
+
+        </div>
+        <!-- =================== END CONTAINER ================ -->
+
+      </section>
+      <!-- ================== END OUR GOALS ================== -->
+
+
+      <!-- ================== START SECTION OUR VALUES =============== -->
+      <section class="our-values py-21.25! md:padding-y-120 bg-surface-lightest">
+        <!-- ================= START CONTAINER ================ -->
+        <div class="container-media">
+          <!-- ============== START SECTION TILTE ================ -->
+          <div data-aos="fade-up"
+            class="section-title flex justify-center items-center text-center flex-col  mb-13! md:mb-18!">
+            <!-- ============ START HEADER TITLE =============== -->
+            <div class="header-title flex items-center justify-center">
+              <!--  START LINES RIGHT -->
+              <div class="flex flex-col justify-center mr-2">
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+                <div class="w-6 h-0.5 bg-crimson-red mt-1.5!"></div>
+              </div>
+              <!--  END LINES RIGHT -->
+
+              <!-- START TEXT CONTENT -->
+              <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
+                {% trans "our values" %}
+              </h2>
+              <!-- END TEXT CONTENT -->
+              <!--  START LINES LEFT -->
+              <div class="flex flex-col justify-center ml-2">
+                <div class="w-6 h-0.5 bg-crimson-red -mb-2.5!"></div>
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+              </div>
+              <!--  END LINES LEFT -->
+            </div>
+            <!-- ============ END HEADER TITLE =============== -->
+            <!-- =========== START INFO TITLE =============== -->
+            <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-dark">
+              {% trans "our values" %}
+            </h2>
+            <!-- =========== END INFO TITLE =============== -->
+          </div>
+          <!-- ============== END SECTION TILTE ================ -->
+          <!-- ================= START CONTENT VALUES =============== -->
+          <div class="content-values grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-16">
+            <!-- =============== START IMAGE VALUE ================ -->
+            <div class="image-value" data-aos="fade-right">
+              <img src="{% static 'images/our-values/our-values-image.png' %}" alt="our values image"
+                class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <!-- =============== END IMAGE VALUE ================ -->
+            <!-- ============== START ALL CARDS ITEMS ============= -->
+            <div class="all-cards-items flex flex-col w-full gap-10" data-aos="fade-left">
+              <!-- ============== START CARD ITEM ================ -->
+              <div class="card-item flex items-start gap-4 ">
+                <img src="{% static 'images/our-values/01.svg' %}" alt="الاتقان" class="w-8 h-8 object-cover mt-1.5!"
+                  width="32px" height="32px">
+                <div class="info-card-item">
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "excellence" %}</h2>
+                  <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
+                    {% trans "we strive for perfection in every detail of the service" %}. </p>
+                </div>
+              </div>
+              <!-- ============== END CARD ITEM ================ -->
+
+
+              <!-- ============== START CARD ITEM ================ -->
+              <div class="card-item flex items-start gap-4 ">
+                <img src="{% static 'images/our-values/02.svg' %}" alt="الشفافية" class="w-8 h-8 object-cover mt-1.5!"
+                  width="32px" height="32px">
+                <div class="info-card-item">
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "transparency" %}</h2>
+                  <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
+                    {% trans "we believe in the importance of honesty with the client at every stage" %}.</p>
+                </div>
+              </div>
+              <!-- ============== END CARD ITEM ================ -->
+
+
+
+              <!-- ============== START CARD ITEM ================ -->
+              <div class="card-item flex items-start gap-4 ">
+                <img src="{% static 'images/our-values/03.svg' %}" alt="الجودة" class="w-8 h-8 object-cover mt-1.5!"
+                  width="32px" height="32px">
+                <div class="info-card-item">
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "quality" %}</h2>
+                  <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
+                    {% trans "we adhere to the highest international standards in service" %}.</p>
+                </div>
+              </div>
+              <!-- ============== END CARD ITEM ================ -->
+
+
+              <!-- ============== START CARD ITEM ================ -->
+              <div class="card-item flex items-start gap-4 ">
+                <img src="{% static 'images/our-values/04.svg' %}" alt="المسؤولية" class="w-8 h-8 object-cover mt-1.5!"
+                  width="32px" height="32px">
+                <div class="info-card-item">
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "responsibility" %}</h2>
+                  <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
+                    {% trans "we take responsibility for our clients' cars as if they were our own" %}.</p>
+                </div>
+              </div>
+              <!-- ============== END CARD ITEM ================ -->
+
+
+              <!-- ============== START CARD ITEM ================ -->
+              <div class="card-item flex items-start gap-4 ">
+                <img src="{% static 'images/our-values/05.svg' %}" alt="الابتكار" class="w-8 h-8 object-cover mt-1.5!"
+                  width="32px" height="32px">
+                <div class="info-card-item">
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "innovation" %}</h2>
+                  <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
+                    {% trans "always adopting the latest technical solutions in the world of maintenance" %}.</p>
+                </div>
+              </div>
+              <!-- ============== END CARD ITEM ================ -->
+            </div>
+            <!-- ============== END ALL CARDS ITEMS ============= -->
+
+
+
+
+          </div>
+          <!-- ================= END CONTENT VALUES =============== -->
+
+        </div>
+        <!-- ================= END CONTAINER ================ -->
+
+      </section>
+      <!-- ================== END SECTION OUR VALUES =============== -->
+
+
+    </main>
+    <!-- ================= START FOOTER ================ -->
+    <div class="mt-auto!" id="contact">
+
+      <footer class="bg-main-gradient">
+        <div class="container-media">
+          <!-- ================= START MAIN FOOTER ================ -->
+          <div class="main-footer flex justify-center items-center w-full flex-col gap-8 pt-13.5!" data-aos="fade-up">
+            <!-- ============== START LOGO FOOTER ============= -->
+            <a href="{% url 'index' %}" class="logo-footer">
+              <img src="{% static 'images/logo-footer.svg' %}" alt="Quality Perfection Logo" class="logo-footer-img"
+                loading="lazy" />
+            </a>
+            <!-- ============== END LOGO FOOTER ============= -->
+            <!-- ============== START CONTACT INFO ============= -->
+            <div class="flex items-center gap-y-5 gap-x-8! md:gap-x-10! flex-wrap text-surface-white py-1!">
+              <a href="https://www.google.com/maps/search/?api=1&query={{ configurations.address }}" target="_blank"
+                class="flex items-center gap-3.5 hover:text-crimson-red transition">
+                <img src="{% static 'icons/location.svg' %}" alt="location" loading="lazy" class="w-6 h-6" />
+                <span class="text-[14px] font-normal md:text-[18px]">
+                  {% if request.LANGUAGE_CODE == 'ar' %}
+                  {{ configurations.address_ar }}
+                  {% else %}
+                  {{ configurations.address }}
+                  {% endif %}
+                </span>
+              </a>
+
+              <a href="tel:{{ configurations.phone_number }}"
+                class="flex items-center gap-3.5 hover:text-crimson-red transition">
+                <img src="{% static 'icons/phone-solid.svg' %}" alt="phone" loading="lazy" class="w-6 h-6" />
+                <span class="text-[14px] font-normal md:text-[18px]">
+                  {{ configurations.phone_number }}
+                </span>
+              </a>
+
+              <a href="mailto:{{ configurations.email }}"
+                class="flex items-center gap-3.5 hover:text-crimson-red transition">
+                <img src="{% static 'icons/email.svg' %}" alt="email" loading="lazy" class="w-6 h-6" />
+                <span class="text-[14px] font-normal md:text-[18px]">
+                  {{ configurations.email }}
+                </span>
+              </a>
+            </div>
+            <!-- ============== END CONTACT INFO ============= -->
+
+            <!-- ================== START @ COPY ================ -->
+            <div
+              class="text-surface-white text-center pt-8! border-t border-surface-white-10 w-full text-[14px] font-normal">
+              {% trans "all rights reserved © 2024" %}
+            </div>
+            <!-- ================== END @ COPY ================ -->
+          </div>
+          <!-- ================= END MAIN FOOTER ================ -->
+        </div>
+      </footer>
+
+    </div>
+    <!-- ================= END FOOTER ================ -->
+  </div>
+
+</body>
+
+</html>

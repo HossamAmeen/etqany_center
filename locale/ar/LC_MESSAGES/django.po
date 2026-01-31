@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-31 23:56+0200\n"
+"POT-Creation-Date: 2026-02-01 00:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,10 +37,8 @@ msgid "description"
 msgstr "الوصف"
 
 #: configrations/admin.py:100 configrations/models.py:102
-#, fuzzy
-#| msgid "description"
 msgid "certificate_description"
-msgstr "الوصف"
+msgstr "وصف الشهادة"
 
 #: configrations/admin.py:104
 msgid "Our message"
@@ -66,9 +64,9 @@ msgstr "تجربة العميل"
 msgid "Future vision"
 msgstr "الرؤية المستقبلية والتوسع"
 
-#: configrations/admin.py:128
+#: configrations/admin.py:128 front/about.html:155
 msgid "About the Center"
-msgstr "عن المركز"
+msgstr "نبذه عن المركز"
 
 #: configrations/models.py:7 configrations/models.py:27
 msgid "name"
@@ -155,7 +153,6 @@ msgid "certificate_image"
 msgstr "صورة الشهادة"
 
 #: configrations/models.py:103
-
 msgid "certificate_description_ar"
 msgstr "الوصف بالعربية"
 
@@ -258,6 +255,112 @@ msgstr "مرحبا في لوحة التحكم"
 #: core/settings.py:165
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
+
+#: front/about.html:9
+msgid "Quality Perfection about"
+msgstr "جودة الإتقان"
+
+#: front/about.html:68 front/about.html:104 front/about.html:124
+#: front/certificate.html:64 front/certificate.html:98
+#: front/certificate.html:119
+msgid "home"
+msgstr "الرئيسية"
+
+#: front/about.html:69 front/about.html:105 front/about.html:122
+#: front/about.html:127 front/certificate.html:65 front/certificate.html:99
+msgid "about us"
+msgstr "من نحن"
+
+#: front/about.html:72 front/about.html:108
+msgid "services"
+msgstr "الخدمات"
+
+#: front/about.html:73 front/about.html:109 front/certificate.html:67
+#: front/certificate.html:101 front/certificate.html:116
+#: front/certificate.html:122 front/certificate.html:148
+msgid "certificates"
+msgstr "الشهادات"
+
+#: front/about.html:74 front/about.html:110 front/certificate.html:68
+#: front/certificate.html:102
+msgid "contact us"
+msgstr "اتصل بنا"
+
+#: front/about.html:168
+msgid "About the Center for Quality Excellence"
+msgstr "نبذه عن المركز"
+
+#: front/about.html:181
+msgid "more"
+msgstr "المزيد"
+
+#: front/about.html:214 front/about.html:227
+msgid "vision and mission"
+msgstr "الرؤية والرسالة"
+
+#: front/about.html:239
+msgid "our vision"
+msgstr "رؤيتنا"
+
+#: front/about.html:256
+msgid "our message"
+msgstr "رسالتنا"
+
+#: front/about.html:297
+msgid "center goals"
+msgstr "أهداف المركز"
+
+#: front/about.html:310
+msgid "our goals"
+msgstr "أهدافنا"
+
+#: front/about.html:372 front/about.html:385
+msgid "our values"
+msgstr "مميزاتنا"
+
+#: front/about.html:405
+msgid "excellence"
+msgstr "التميز"
+
+#: front/about.html:407
+msgid "we strive for perfection in every detail of the service"
+msgstr "نسعى جاهدين لتحقيق الكمال في كل تفاصيل الخدمة"
+
+#: front/about.html:418
+msgid "transparency"
+msgstr "الشفافية"
+
+#: front/about.html:420
+msgid "we believe in the importance of honesty with the client at every stage"
+msgstr "نحن نؤمن بالأهمية للصدق مع العميل في كل مرحلة"
+
+#: front/about.html:432
+msgid "quality"
+msgstr "الجودة"
+
+#: front/about.html:434
+msgid "we adhere to the highest international standards in service"
+msgstr "نحن نتبع أعلى المعايير الدولية في الخدمة"
+
+#: front/about.html:445
+msgid "responsibility"
+msgstr "المسؤولية المجتمعية والبيئية"
+
+#: front/about.html:447
+msgid "we take responsibility for our clients' cars as if they were our own"
+msgstr "نحن نأخذ المسؤولية عن سيارات عملائنا كما لو كانت سياراتنا"
+
+#: front/about.html:458
+msgid "innovation"
+msgstr "الابتكار التقني"
+
+#: front/about.html:460
+msgid "always adopting the latest technical solutions in the world of maintenance"
+msgstr "نحن نتبع التطورات التقنية في مجال الصيانة"
+
+#: front/about.html:529
+msgid "all rights reserved © 2024"
+msgstr "جميع الحقوق محفوظة © 2024"
 
 #: front/backup/index-en.html:8 front/backup/index.html:8
 msgid "Quality Perfection"
@@ -366,46 +469,9 @@ msgstr "جميع الحقوق محفوظة © 2024"
 msgid "Quality Perfection certificates"
 msgstr "مركز جودة الاتقان"
 
-#: front/certificate.html:64
-msgid "الرئيسية"
-msgstr "الرئيسية"
-
-#: front/certificate.html:65
-msgid "من نحن"
-msgstr "من نحن"
-
-#: front/certificate.html:66
-msgid "خدماتنا"
-msgstr "خدماتنا"
-
-#: front/certificate.html:67
-msgid "الشهادات"
-msgstr "الشهادات"
-
-#: front/certificate.html:68
-msgid "اتصل بنا"
-msgstr "اتصل بنا"
-
-#: front/certificate.html:98 front/certificate.html:119
-msgid "home"
-msgstr "الرئيسية"
-
-#: front/certificate.html:99
-msgid "about us"
-msgstr "من نحن"
-
-#: front/certificate.html:100
+#: front/certificate.html:66 front/certificate.html:100
 msgid "our services"
 msgstr "خدماتنا"
-
-#: front/certificate.html:101 front/certificate.html:116
-#: front/certificate.html:122 front/certificate.html:148
-msgid "certificates"
-msgstr "الشهادات"
-
-#: front/certificate.html:102
-msgid "contact us"
-msgstr "اتصل بنا"
 
 #: front/certificate.html:161
 msgid "Quality certificates and accreditations"
