@@ -19,3 +19,9 @@ def certificates(request):
     return render(request, 'certificate.html', {'configurations': configurations})
 
 
+def about(request):
+    configurations = Configuration.objects.filter().order_by('-id').first()
+    goals = Goal.objects.filter(is_active=True).order_by('-id')
+    return render(request, 'about.html', {'configurations': configurations, 'goals': goals})
+
+

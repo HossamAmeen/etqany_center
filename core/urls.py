@@ -30,6 +30,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('', config_views.index, name='index'),
     path('certificate/', config_views.certificates, name='certificates'),
+    path('about-us/', config_views.about, name='about'),
     path('admin/', admin.site.urls),
 )
 
