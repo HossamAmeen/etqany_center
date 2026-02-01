@@ -77,9 +77,6 @@ class Goal(models.Model):
     title = models.CharField(_("title"), max_length=200, blank=True)
     title_ar = models.CharField(_("title_ar"),
                                 max_length=200, null=True, blank=True)
-    description = models.TextField(_("description"), blank=True)
-    description_ar = models.TextField(_("description_ar"),
-                                      null=True, blank=True)
     image = models.FileField(_("image"), upload_to='goals/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)

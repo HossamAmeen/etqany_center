@@ -313,9 +313,9 @@
               </div>
               <p class="text-[15px] sm:text-[18px] font-normal pt-10! sm:font-light text-surface-white">
                 {% if request.LANGUAGE_CODE == 'ar' %}
-                {{ goal.description_ar|default:goal.title_ar }}
+                {{ goal.title_ar }}
                 {% else %}
-                {{ goal.description|default:goal.title }}
+                {{ goal.title }}
                 {% endif %}
               </p>
             </div>
