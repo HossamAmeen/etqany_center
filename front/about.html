@@ -169,8 +169,9 @@
 
           <!-- ================= START IMAGE ABOUT ================= -->
           <div class="image-about  md:pt-16! md:ms-15!" data-aos="fade-down">
-            <img src="{% static 'images/about-image.png' %}" alt="about us" class="w-full h-full object-cover"
-              loading="lazy" />
+            <img
+              src="{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/about-image.png' %}{% else %}{% static 'images/about-image-ltr.png' %}{% endif %}"
+              alt="about us" class="w-full h-full object-cover" loading="lazy" />
             <!-- ================= END IMAGE ABOUT ================= -->
 
           </div>
