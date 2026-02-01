@@ -37,6 +37,19 @@
       width: 100% !important;
       object-fit: cover !important;
     }
+
+    /* Limit Why QPC text to 2 rows */
+    .card-why h3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-width: 250px;
+      /* Force wrapping */
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
   </style>
 </head>
 
@@ -434,7 +447,7 @@
           <div class="main-why-qpc grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8" data-aos="fade-up">
             {% for advantage in advantages %}
             <!-- =============== START CARD WHY =============== -->
-            <div class="card-why flex flex-col gap-4 group items-center text-center">
+            <div class="card-why flex flex-col items-start gap-4 group text-start">
               <div
                 class="icon-card h-20 w-20 min-w-20 bg-crimson-red rounded-full flex items-center justify-center shadow-sm transform group-hover:scale-110 transition-transform duration-300">
                 {% if advantage.image %}
@@ -446,7 +459,7 @@
                 {% endif %}
               </div>
 
-              <div class="content-why max-w-64">
+              <div class="content-why">
                 <h3
                   class="text-[18px] md:text-[20px] font-normal text-surface-dark leading-tight group-hover:text-crimson-red transition-colors duration-300">
                   {% if request.LANGUAGE_CODE == 'ar' %}
