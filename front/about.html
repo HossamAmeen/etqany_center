@@ -30,8 +30,10 @@
       <div class="container-media">
         <div class="flex items-center justify-between py-4! md:py-1!">
           <!-- Logo Section -->
-          <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-auto" data-aos="fade-right">
-            <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo" class="w-30 md:w-47.75 md:h-[73.4px]" />
+          <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-auto"
+            data-aos="fade-right">
+            <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo"
+              class="w-30 md:w-47.75 md:h-[73.4px]" />
           </a>
 
           <!-- Burger -->
@@ -63,14 +65,15 @@
               <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
               <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
               {% if request.LANGUAGE_CODE == 'ar' %}
-                <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">EN</a>
+              <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">EN</a>
               {% else %}
-                <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">AR</a>
+              <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">AR</a>
               {% endif %}
             </ul>
 
             <!-- ================ START PHONE NUMBER ================= -->
-            <a data-aos="fade-left" href="tel:+{{ configurations.phone_number }}" class="flex items-center gap-4 ml-auto!">
+            <a data-aos="fade-left" href="tel:+{{ configurations.phone_number }}"
+              class="flex items-center gap-4 ml-auto!">
               <div class="relative w-12 h-12">
                 <span class="ripple absolute inset-0"></span>
                 <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
@@ -124,9 +127,9 @@
           <!-- ================ START CONTENT ABOUT =============== -->
           <div class="content-about" data-aos="fade-up">
             <!-- ============== START SECTION TILTE ================ -->
-            <div class="section-title flex justify-start items-start text-center flex-col gap-4">
+            <div class="section-title flex justify-start items-start text-start flex-col gap-4">
               <!-- ============ START HEADER TITLE =============== -->
-              <div class="header-title flex items-center justify-center">
+              <div class="header-title flex items-center justify-start">
                 <!--  START LINES RIGHT -->
                 <div class="flex flex-col justify-center mr-2">
                   <div class="w-10.5 h-0.5 bg-crimson-red"></div>
@@ -154,7 +157,7 @@
               <!-- =========== END INFO TITLE =============== -->
             </div>
             <!-- ============== END SECTION TILTE ================ -->
-            <p class="text-[20px] font-light text-surface-dark leading-10! mt-3!">
+            <p class="text-[20px] font-light text-surface-dark leading-10! mt-3! text-start">
               {% if request.LANGUAGE_CODE == 'ar' %}
               {{ configurations.About_the_Center_ar }}
               {% else %}
