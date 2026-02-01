@@ -58,11 +58,13 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Advantage )
 class AdvantageAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description_summary', 'display_image', 'created_at')
+    list_display = ('title', 'display_image', 'created_at')
 
-    def description_summary(self, obj):
-        return obj.description[:50] + '...' if len(obj.description) > 50 else obj.description # noqa
-    description_summary.short_description = _('description')
+    def title_summary(self, obj):
+        
+        return obj.title[:50] + '...' if len(obj.title) > 50 else obj.title # noqa
+    title_summary.short_description = _('title')
+
 
     def display_image(self, obj):
         if obj.image:

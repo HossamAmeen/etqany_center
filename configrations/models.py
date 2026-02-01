@@ -10,7 +10,7 @@ class SuccessStory(models.Model):
     title_ar = models.CharField(_("title_ar"), max_length=150, blank=True)
     content = models.TextField(_("content"))
     content_ar = models.TextField(_("content_ar"), null=True, blank=True)
-    image = models.ImageField(_("image"), upload_to='success_stories/', blank=True, null=True)
+    image = models.FileField(_("image"), upload_to='success_stories/', blank=True, null=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
 
@@ -23,7 +23,7 @@ class SuccessStory(models.Model):
 
 
 class Logo(models.Model):
-    image = models.ImageField(_("image"))
+    image = models.FileField(_("image"))
     name = models.CharField(_("name"), max_length=100)
     name_ar = models.CharField(_("name_ar"), max_length=100, null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
@@ -44,7 +44,7 @@ class Service(models.Model):
     description = models.TextField(_("description"), blank=True)
     description_ar = models.TextField(_("description_ar"),
                                       null=True, blank=True)
-    image = models.ImageField(_("image"), upload_to='services/icons/',
+    image = models.FileField(_("image"), upload_to='services/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
@@ -61,10 +61,7 @@ class Advantage (models.Model):
     title = models.CharField(_("title"), max_length=200, blank=True)
     title_ar = models.CharField(_("title_ar"),
                                 max_length=200, null=True, blank=True)
-    description = models.TextField(_("description"), blank=True)
-    description_ar = models.TextField(_("description_ar"),
-                                      null=True, blank=True)
-    image = models.ImageField(_("image"), upload_to='why_choose_us/icons/',
+    image = models.FileField(_("image"), upload_to='why_choose_us/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
@@ -83,7 +80,7 @@ class Goal(models.Model):
     description = models.TextField(_("description"), blank=True)
     description_ar = models.TextField(_("description_ar"),
                                       null=True, blank=True)
-    image = models.ImageField(_("image"), upload_to='goals/icons/',
+    image = models.FileField(_("image"), upload_to='goals/icons/',
                               null=True, blank=True)
     is_active = models.BooleanField(_("is_active"), default=True)
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
@@ -97,7 +94,7 @@ class Goal(models.Model):
 
 
 class Configuration(models.Model):
-    certificate_image = models.ImageField(_("certificate_image"),
+    certificate_image = models.FileField(_("certificate_image"),
                                           upload_to='configurations/', null=True, blank=True)
     certificate_description = models.TextField(_("certificate_description"), blank=True)
     certificate_description_ar = models.TextField(_("certificate_description_ar"), null=True, blank=True)
