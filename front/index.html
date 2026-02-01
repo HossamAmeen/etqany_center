@@ -28,23 +28,36 @@
   <!-- ================= END SCROLL TO TOP BUTTON =================== -->
   <div class="flex-height-screen">
     <!-- ================== START NAVBAR ======================== -->
-    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!"
-      dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!" dir="ltr">
       <div class="container-media">
         <div class="flex items-center justify-between py-4! md:py-1!">
           <!-- Logo Section -->
-          <div class="flex-1 flex items-center">
-            <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-10 me-8"
-              data-aos="fade-right">
-              <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo"
-                class="w-30 md:w-47.75 md:h-[73.4px]" />
-            </a>
-          </div>
+          <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-auto" data-aos="fade-right">
+            <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo" class="w-30 md:w-47.75 md:h-[73.4px]" />
+          </a>
 
-          <!-- Desktop Menu Section (Centered) -->
-          <div class="max-[1169px]:hidden flex-1 flex justify-center">
+          <!-- Burger -->
+          <div class="all-mobile-menu items-center gap-5 max-[1169px]:flex hidden" data-aos="fade-left">
+            <!-- ================ START PHONE NUMBER ================= -->
+            <a href="tel:+{{ configurations.phone_number }}" class="relative w-10 h-10 block">
+              <span class="ripple absolute inset-0"></span>
+
+              <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
+              </div>
+            </a>
+            <!-- ================ END PHONE NUMBER ================= -->
+            <a href="{% url 'index' %}" class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">EN</a>
+
+            <button id="menuBtn"
+              class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
+              ☰
+            </button>
+          </div>
+          <!-- Desktop Right -->
+          <div class="max-[1169px]:hidden flex items-center justify-center gap-4 w-full">
             <ul data-aos="fade-down"
-              class="flex gap-8 text-surface-white text-[18px] font-normal justify-center items-center"
+              class="flex gap-8 text-surface-white text-[18px] font-normal ml-auto! justify-center items-center"
               dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
               <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
               <li><a href="{% url 'about' %}" class="nav-link">{% trans "about us" %}</a></li>
@@ -52,18 +65,14 @@
               <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
               <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
               {% if request.LANGUAGE_CODE == 'ar' %}
-              <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1 cursor-pointer uppercase">EN</a>
+                <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">EN</a>
               {% else %}
-              <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1 cursor-pointer uppercase">AR</a>
+                <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">AR</a>
               {% endif %}
             </ul>
-          </div>
 
-          <!-- Actions Section (Right) -->
-          <div class="flex-1 flex justify-end items-center gap-4">
-            <!-- Desktop Phone (Hidden on Mobile) -->
-            <a data-aos="fade-left" href="tel:{{ configurations.phone_number }}"
-              class="max-[1169px]:hidden flex items-center gap-4">
+            <!-- ================ START PHONE NUMBER ================= -->
+            <a data-aos="fade-left" href="tel:+{{ configurations.phone_number }}" class="flex items-center gap-4 ml-auto!">
               <div class="relative w-12 h-12">
                 <span class="ripple absolute inset-0"></span>
                 <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
@@ -72,29 +81,7 @@
               </div>
               <span class="text-[18px] font-normal text-surface-white">{{ configurations.phone_number }}</span>
             </a>
-
-            <!-- Mobile Burger & Phone (Visible on Mobile) -->
-            <div class="all-mobile-menu flex items-center gap-5 min-[1170px]:hidden" data-aos="fade-left">
-              <!-- ================ START PHONE NUMBER ================= -->
-              <a href="tel:{{ configurations.phone_number }}" class="relative w-10 h-10 block">
-                <span class="ripple absolute inset-0"></span>
-                <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
-                  <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
-                </div>
-              </a>
-              <!-- ================ END PHONE NUMBER ================= -->
-              {% if request.LANGUAGE_CODE == 'ar' %}
-              <a href="/en{{ request.path|slice:'3:' }}"
-                class="switchLang_1 cursor-pointer uppercase text-surface-white">EN</a>
-              {% else %}
-              <a href="/ar{{ request.path|slice:'3:' }}"
-                class="switchLang_1 cursor-pointer uppercase text-surface-white">AR</a>
-              {% endif %}
-              <button id="menuBtn"
-                class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
-                ☰
-              </button>
-            </div>
+            <!-- ================ END PHONE NUMBER ================= -->
           </div>
         </div>
       </div>
@@ -418,16 +405,16 @@
             {% for advantage in advantages %}
             <!-- =============== START CARD WHY =============== -->
             <div class="card-why flex flex-col gap-4 group items-center text-center">
-                <div
+              <div
                 class="icon-card h-20 w-20 min-w-20 bg-crimson-red rounded-full flex items-center justify-center shadow-sm transform group-hover:scale-110 transition-transform duration-300">
-                  {% if advantage.image %}
-                  <img src="{{ advantage.image.url }}" alt="{{ advantage.title }}"
-                    class="w-12 h-12 object-contain brightness-0 invert" />
-                  {% else %}
-                  <img src="{% static 'images/why/01.svg' %}" alt="icon"
-                    class="w-12 h-12 object-contain brightness-0 invert" />
-                  {% endif %}
-                </div>
+                {% if advantage.image %}
+                <img src="{{ advantage.image.url }}" alt="{{ advantage.title }}"
+                  class="w-12 h-12 object-contain brightness-0 invert" />
+                {% else %}
+                <img src="{% static 'images/why/01.svg' %}" alt="icon"
+                  class="w-12 h-12 object-contain brightness-0 invert" />
+                {% endif %}
+              </div>
 
               <div class="content-why max-w-64">
                 <h3
@@ -760,12 +747,7 @@
 
     </div>
     <!-- ================= END FOOTER ================ -->
-
-
-
   </div>
-
-
 
   <script>
     // MODAL SERVICES
