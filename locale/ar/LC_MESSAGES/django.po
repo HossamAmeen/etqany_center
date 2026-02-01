@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-01 00:59+0200\n"
+"POT-Creation-Date: 2026-02-01 12:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,10 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: configrations/admin.py:19 configrations/admin.py:38
-#: configrations/admin.py:56 configrations/admin.py:74
-#: configrations/admin.py:91 configrations/models.py:13
+#: configrations/admin.py:56 configrations/admin.py:76
+#: configrations/admin.py:93 configrations/models.py:13
 #: configrations/models.py:26 configrations/models.py:47
-#: configrations/models.py:67 configrations/models.py:86
+#: configrations/models.py:64 configrations/models.py:83
 msgid "image"
 msgstr "الصورة"
 
@@ -30,41 +30,46 @@ msgstr "الصورة"
 msgid "content"
 msgstr "المحتوى"
 
-#: configrations/admin.py:47 configrations/admin.py:65
-#: configrations/admin.py:82 configrations/models.py:44
-#: configrations/models.py:64 configrations/models.py:83
+#: configrations/admin.py:47 configrations/admin.py:84
+#: configrations/models.py:44 configrations/models.py:80
 msgid "description"
 msgstr "الوصف"
 
-#: configrations/admin.py:100 configrations/models.py:102
+#: configrations/admin.py:66 configrations/models.py:9
+#: configrations/models.py:41 configrations/models.py:61
+#: configrations/models.py:77
+msgid "title"
+msgstr "العنوان"
+
+#: configrations/admin.py:102 configrations/models.py:99
 msgid "certificate_description"
 msgstr "وصف الشهادة"
 
-#: configrations/admin.py:104
+#: configrations/admin.py:106
 msgid "Our message"
 msgstr "رسالتنا"
 
-#: configrations/admin.py:108
+#: configrations/admin.py:110
 msgid "Our vision"
 msgstr "رؤيتنا"
 
-#: configrations/admin.py:112
+#: configrations/admin.py:114
 msgid "Technical innovation"
 msgstr "الابتكار التقني"
 
-#: configrations/admin.py:116 configrations/models.py:116
+#: configrations/admin.py:118 configrations/models.py:113
 msgid "Social responsibility"
 msgstr "المسؤولية المجتمعية والبيئية"
 
-#: configrations/admin.py:120 configrations/models.py:118
+#: configrations/admin.py:122 configrations/models.py:115
 msgid "Customer experience"
 msgstr "تجربة العميل"
 
-#: configrations/admin.py:124 configrations/models.py:122
+#: configrations/admin.py:126 configrations/models.py:119
 msgid "Future vision"
 msgstr "الرؤية المستقبلية والتوسع"
 
-#: configrations/admin.py:128 front/about.html:155 front/index.html:182
+#: configrations/admin.py:130 front/about.html:155 front/index.html:185
 msgid "About the Center"
 msgstr "نبذه عن المركز"
 
@@ -76,13 +81,8 @@ msgstr "الاسم"
 msgid "name_ar"
 msgstr "الاسم بالعربية"
 
-#: configrations/models.py:9 configrations/models.py:41
-#: configrations/models.py:61 configrations/models.py:80
-msgid "title"
-msgstr "العنوان"
-
 #: configrations/models.py:10 configrations/models.py:42
-#: configrations/models.py:62 configrations/models.py:81
+#: configrations/models.py:62 configrations/models.py:78
 msgid "title_ar"
 msgstr "العنوان بالعربية"
 
@@ -91,14 +91,14 @@ msgid "content_ar"
 msgstr "المحتوى بالعربية"
 
 #: configrations/models.py:14 configrations/models.py:29
-#: configrations/models.py:49 configrations/models.py:69
-#: configrations/models.py:88
+#: configrations/models.py:49 configrations/models.py:66
+#: configrations/models.py:85
 msgid "is_active"
 msgstr "نشيط"
 
 #: configrations/models.py:15 configrations/models.py:30
-#: configrations/models.py:50 configrations/models.py:70
-#: configrations/models.py:89 configrations/models.py:108
+#: configrations/models.py:50 configrations/models.py:67
+#: configrations/models.py:86 configrations/models.py:105
 msgid "created_at"
 msgstr "تم الإنشاء في"
 
@@ -107,7 +107,7 @@ msgid "Success Story"
 msgstr "قصة نجاح"
 
 #: configrations/models.py:22 front/backup/index-en.html:482
-#: front/backup/index.html:482 front/index.html:512
+#: front/backup/index.html:482 front/index.html:520
 msgid "Success Stories"
 msgstr "قصص نجاح"
 
@@ -119,8 +119,7 @@ msgstr "الشعار"
 msgid "Logos"
 msgstr "الشعارات"
 
-#: configrations/models.py:45 configrations/models.py:65
-#: configrations/models.py:84
+#: configrations/models.py:45 configrations/models.py:81
 msgid "description_ar"
 msgstr "الوصف بالعربية"
 
@@ -132,99 +131,99 @@ msgstr "الخدمة"
 msgid "Services"
 msgstr "الخدمات"
 
-#: configrations/models.py:76
+#: configrations/models.py:73
 msgid "Advantage"
 msgstr "ميزة"
 
-#: configrations/models.py:77
+#: configrations/models.py:74
 msgid "Advantages"
 msgstr "المميزات"
 
-#: configrations/models.py:95
+#: configrations/models.py:92
 msgid "Goal"
 msgstr "الهدف"
 
-#: configrations/models.py:96
+#: configrations/models.py:93
 msgid "Goals"
 msgstr "الاهداف"
 
-#: configrations/models.py:100
+#: configrations/models.py:97
 msgid "certificate_image"
 msgstr "صورة الشهادة"
 
-#: configrations/models.py:103
+#: configrations/models.py:100
 msgid "certificate_description_ar"
 msgstr "الوصف بالعربية"
 
-#: configrations/models.py:104
+#: configrations/models.py:101
 msgid "Our_message"
 msgstr "رسالتنا"
 
-#: configrations/models.py:105
+#: configrations/models.py:102
 msgid "Our_message_ar"
 msgstr "رسالتنا بالعربية"
 
-#: configrations/models.py:106
+#: configrations/models.py:103
 msgid "Our_vision"
 msgstr "رؤيتنا"
 
-#: configrations/models.py:107
+#: configrations/models.py:104
 msgid "Our_vision_ar"
 msgstr "رؤيتنا بالعربية"
 
-#: configrations/models.py:109
+#: configrations/models.py:106
 msgid "modified_at"
 msgstr "تم التعديل في"
 
-#: configrations/models.py:110
+#: configrations/models.py:107
 msgid "email"
 msgstr "البريد الالكتروني"
 
-#: configrations/models.py:111
+#: configrations/models.py:108
 msgid "phone_number"
 msgstr "رقم الهاتف"
 
-#: configrations/models.py:112
+#: configrations/models.py:109
 msgid "address"
 msgstr "العنوان"
 
-#: configrations/models.py:113
+#: configrations/models.py:110
 msgid "address_ar"
 msgstr "العنوان بالعربية"
 
-#: configrations/models.py:114
+#: configrations/models.py:111
 msgid "Technical_innovation"
 msgstr "الابتكار التقني"
 
-#: configrations/models.py:115
+#: configrations/models.py:112
 msgid "Technical_innovation_ar"
 msgstr "الابتكار التقني بالعربية"
 
-#: configrations/models.py:117
+#: configrations/models.py:114
 msgid "Social responsibility_ar"
 msgstr "المسؤولية المجتمعية والبيئية"
 
-#: configrations/models.py:119
+#: configrations/models.py:116
 msgid "Customer experience_ar"
 msgstr "تجربة العميل وخدمات ما بعد الصيانه"
 
-#: configrations/models.py:120
+#: configrations/models.py:117
 msgid "About_the_Center"
 msgstr "عن المركز"
 
-#: configrations/models.py:121
+#: configrations/models.py:118
 msgid "About_the_Center_ar"
 msgstr "عن المركز بالعربية"
 
-#: configrations/models.py:123
+#: configrations/models.py:120
 msgid "Future vision_ar"
 msgstr "الرؤية المستقبلية والتوسع"
 
-#: configrations/models.py:129
+#: configrations/models.py:126
 msgid "Configuration"
 msgstr "التكوين"
 
-#: configrations/models.py:130
+#: configrations/models.py:127
 msgid "Configurations"
 msgstr "التكوينات"
 
@@ -255,6 +254,10 @@ msgstr "مرحبا في لوحة التحكم"
 #: core/settings.py:165
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
+
+#: core/settings.py:166
+msgid "website"
+msgstr "لينك الموقع"
 
 #: front/about.html:9
 msgid "Quality Perfection about"
@@ -293,7 +296,7 @@ msgstr "اتصل بنا"
 msgid "About the Center for Quality Excellence"
 msgstr "نبذه عن المركز"
 
-#: front/about.html:181 front/index.html:208
+#: front/about.html:181 front/index.html:211
 msgid "more"
 msgstr "المزيد"
 
@@ -362,7 +365,7 @@ msgid ""
 "always adopting the latest technical solutions in the world of maintenance"
 msgstr "نحن نتبع التطورات التقنية في مجال الصيانة"
 
-#: front/about.html:529 front/index.html:735
+#: front/about.html:529 front/index.html:749
 msgid "all rights reserved © 2024"
 msgstr "جميع الحقوق محفوظة © 2024"
 
@@ -388,7 +391,7 @@ msgstr "من نحن"
 
 #: front/backup/index-en.html:68 front/backup/index-en.html:101
 #: front/backup/index-en.html:242 front/backup/index.html:68
-#: front/backup/index.html:101 front/backup/index.html:242 front/index.html:241
+#: front/backup/index.html:101 front/backup/index.html:242 front/index.html:244
 msgid "Our Services"
 msgstr "خدماتنا"
 
@@ -403,7 +406,7 @@ msgid "Contact Us"
 msgstr "اتصل بنا"
 
 #: front/backup/index-en.html:145 front/backup/index.html:145
-#: front/index.html:146
+#: front/index.html:149
 msgid "Quality Perfection Center"
 msgstr "مركز جودة الاتقان"
 
@@ -439,22 +442,22 @@ msgid "Technical Innovation & Digital Transformation"
 msgstr "الابتكار التقنى والتحول الرقمي"
 
 #: front/backup/index-en.html:373 front/backup/index.html:373
-#: front/index.html:392
+#: front/index.html:395
 msgid "Why Quality Perfection Center"
 msgstr "لماذا مركز جودة الاتقان"
 
 #: front/backup/index-en.html:386 front/backup/index.html:386
-#: front/index.html:405
+#: front/index.html:408
 msgid "What Distinguishes Us"
 msgstr "ما يميزنا"
 
 #: front/backup/index-en.html:423 front/backup/index.html:423
-#: front/index.html:451
+#: front/index.html:459
 msgid "Social & Environmental Responsibility"
 msgstr "المسؤولية المجتمعية والبيئية"
 
 #: front/backup/index-en.html:469 front/backup/index.html:469
-#: front/index.html:498
+#: front/index.html:506
 msgid "Our Clients' Stories"
 msgstr "قصص عملاؤنا"
 
@@ -490,30 +493,31 @@ msgstr "شهادات الجودة والاعتمادات"
 msgid "All rights reserved"
 msgstr "جميع الحقوق محفوظة © 2024"
 
-#: front/index.html:148
+#: front/index.html:151
 msgid "Trust extending since 2008"
 msgstr "ثقة تمتد منذ 2008"
 
-#: front/index.html:195
+#: front/index.html:198
 msgid "About the center for Quality Excellence"
 msgstr "نبذه عن المركز"
 
-#: front/index.html:255
+#: front/index.html:258
 msgid "Center Services"
 msgstr "خدمات المركز"
 
-#: front/index.html:259
-msgid "We provide a wide range of integrated services at Quality Perfection Center"
+#: front/index.html:262
+msgid ""
+"We provide a wide range of integrated services at Quality Perfection Center"
 msgstr "نحن نقدم مجموعة متكاملة من الخدمات في مركز جودة الاتقان"
 
-#: front/index.html:355
+#: front/index.html:358
 msgid "Technological Innovation & Digital Transformation"
 msgstr "الابتكار التقنى والتحول الرقمي"
 
-#: front/index.html:592
+#: front/index.html:606
 msgid "Future Vision & Expansion"
 msgstr "الرؤية المستقبلية والتوسع"
 
-#: front/index.html:618
+#: front/index.html:632
 msgid "Customer Experience & After-Sales Services"
 msgstr "تجربة العميل وخدمات ما بعد الصيانه"

@@ -163,6 +163,7 @@ JAZZMIN_SETTINGS = {
 
     "topmenu_links": [
         {"name": _("Dashboard"), "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": _("website"), "url": "/", "permissions": []},
     ],
 
     "icons": {
