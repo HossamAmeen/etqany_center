@@ -26,67 +26,73 @@
 
   <div class="flex-height-screen">
     <!-- ================== START NAVBAR ======================== -->
-    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!" dir="ltr">
+    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!"
+      dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
       <div class="container-media">
         <div class="flex items-center justify-between py-4! md:py-1!">
-          <!-- Logo -->
-          <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-auto" data-aos="fade-right">
-            <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo" class="w-30 md:w-47.75 md:h-[73.4px]" />
-          </a>
-
-          <!-- Burger -->
-          <div class="all-mobile-menu items-center gap-5 max-[1169px]:flex hidden" data-aos="fade-left">
-            <!-- ================ START PHONE NUMBER ================= -->
-            <a href="tel:{{ configurations.phone_number }}" class="relative w-10 h-10 block">
-              <span class="ripple absolute inset-0"></span>
-
-              <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
-                <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
-              </div>
+          <!-- Logo Section -->
+          <div class="flex-1 flex items-center">
+            <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-10 me-8"
+              data-aos="fade-right">
+              <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo"
+                class="w-30 md:w-47.75 md:h-[73.4px]" />
             </a>
-            <!-- ================ END PHONE NUMBER ================= -->
-            {% if request.LANGUAGE_CODE == 'en' %}
-                <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1 ms-auto cursor-pointer uppercase text-surface-white">AR</a>
-            {% else %}
-                <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1 ms-auto cursor-pointer uppercase text-surface-white">EN</a>
-            {% endif %}
-
-            <button id="menuBtn"
-              class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
-              ☰
-            </button>
           </div>
-          <!-- Desktop Right -->
-          <div class="max-[1169px]:hidden flex items-center justify-center gap-4 w-full">
+
+          <!-- Desktop Menu Section (Centered) -->
+          <div class="max-[1169px]:hidden flex-1 flex justify-center">
             <ul data-aos="fade-down"
-              class="flex gap-8 text-surface-white text-[18px] font-normal ml-auto! justify-center items-center"
+              class="flex gap-8 text-surface-white text-[18px] font-normal justify-center items-center"
               dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
               <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
               <li><a href="#" class="nav-link">{% trans "about us" %}</a></li>
               <li><a href="{% url 'index' %}#services-section" class="nav-link">{% trans "our services" %}</a></li>
               <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
               <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
-              
               {% if request.LANGUAGE_CODE == 'en' %}
-                  <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1 ms-auto cursor-pointer uppercase">AR</a>
+              <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1 cursor-pointer uppercase">AR</a>
               {% else %}
-                  <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1 ms-auto cursor-pointer uppercase">EN</a>
+              <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1 cursor-pointer uppercase">EN</a>
               {% endif %}
             </ul>
+          </div>
 
-            <!-- ================ START PHONE NUMBER ================= -->
-            <a data-aos="fade-left" href="tel:{{ configurations.phone_number }}" class="flex items-center gap-4 ml-auto!">
+          <!-- Actions Section (Right) -->
+          <div class="flex-1 flex justify-end items-center gap-4">
+            <!-- Desktop Phone (Hidden on Mobile) -->
+            <a data-aos="fade-left" href="tel:{{ configurations.phone_number }}"
+              class="max-[1169px]:hidden flex items-center gap-4">
               <div class="relative w-12 h-12">
                 <span class="ripple absolute inset-0"></span>
-
                 <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
                   <img src="{% static 'icons/phone.svg' %}" alt="Phone" class="w-6 h-6" />
                 </div>
               </div>
-
               <span class="text-[18px] font-normal text-surface-white">{{ configurations.phone_number }}</span>
             </a>
-            <!-- ================ END PHONE NUMBER ================= -->
+
+            <!-- Mobile Burger & Phone (Visible on Mobile) -->
+            <div class="all-mobile-menu flex items-center gap-5 min-[1170px]:hidden" data-aos="fade-left">
+              <!-- ================ START PHONE NUMBER ================= -->
+              <a href="tel:{{ configurations.phone_number }}" class="relative w-10 h-10 block">
+                <span class="ripple absolute inset-0"></span>
+                <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                  <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
+                </div>
+              </a>
+              <!-- ================ END PHONE NUMBER ================= -->
+              {% if request.LANGUAGE_CODE == 'en' %}
+              <a href="/ar{{ request.path|slice:'3:' }}"
+                class="switchLang_1 cursor-pointer uppercase text-surface-white">AR</a>
+              {% else %}
+              <a href="/en{{ request.path|slice:'3:' }}"
+                class="switchLang_1 cursor-pointer uppercase text-surface-white">EN</a>
+              {% endif %}
+              <button id="menuBtn"
+                class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
+                ☰
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +100,8 @@
       <!-- ONE Mobile Dropdown Menu -->
       <div id="mobileMenu"
         class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out bg-gradient-dark">
-        <ul class="flex flex-col items-end gap-6 py-4! text-surface-white text-[18px] font-normal pb-10! px-5!" dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
+        <ul class="flex flex-col items-end gap-6 py-4! text-surface-white text-[18px] font-normal pb-10! px-5!"
+          dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
           <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
           <li><a href="#" class="nav-link">{% trans "about us" %}</a></li>
           <li><a href="{% url 'index' %}#services-section" class="nav-link">{% trans "our services" %}</a></li>
@@ -108,9 +115,8 @@
     <!-- ================ START HEADER PAGE =================== -->
     <header>
       <!-- =============== START HEADER PAGE ==================== -->
-      <div class="header-page relative bg-cover bg-center bg-no-repeat pb-17! pt-25! md:pt-25! md:pb-30!" style="
-            background-image: url({% static 'images/banner-page.png' %});
-          ">
+      <div class="header-page relative bg-cover bg-center bg-no-repeat pb-17! pt-25! md:pt-25! md:pb-30!"
+        style="background-image: url('{% static 'images/banner-page.png' %}');">
         <div data-aos="fade-up" class="container-media">
           <h1 class="text-[30px] sm:text-[35px] md:text-[60px] font-bold text-white">
             {% trans "certificates" %}
@@ -163,9 +169,9 @@
             <p
               class="text-[16px] sm:text-[20px] font-medium sm:font-light text-surface-dark w-full max-w-142.75 text-center leading-10!">
               {% if request.LANGUAGE_CODE == 'ar' %}
-                {{ configurations.certificate_description_ar }}
+              {{ configurations.certificate_description_ar }}
               {% else %}
-                {{ configurations.certificate_description }}
+              {{ configurations.certificate_description }}
               {% endif %}
             </p>
             <!-- =========== END INFO TITLE =============== -->
@@ -174,11 +180,11 @@
           <!-- ============ START ALL CERTIFICATES ============= -->
           <div class="all-certificates" data-aos="flip-right">
             {% if configurations.certificate_image %}
-              <img src="{{ configurations.certificate_image.url }}" alt="certificate" class="w-full h-auto object-cover"
-                loading="lazy" />
+            <img src="{{ configurations.certificate_image.url }}" alt="certificate" class="w-full h-auto object-cover"
+              loading="lazy" />
             {% else %}
-               <img src="{% static 'images/certificates/certificates.svg' %}" alt="certificate" class="w-full h-auto object-cover"
-                loading="lazy" />
+            <img src="{% static 'images/certificates/certificates.svg' %}" alt="certificate"
+              class="w-full h-auto object-cover" loading="lazy" />
             {% endif %}
           </div>
           <!-- ============ END ALL CERTIFICATES ============= -->
@@ -196,20 +202,23 @@
           <div class="main-footer flex justify-center items-center w-full flex-col gap-8 pt-13.5!" data-aos="fade-up">
             <!-- ============== START LOGO FOOTER ============= -->
             <a href="{% url 'index' %}" class="logo-footer">
-              <img src="{% static 'images/logo-footer.svg' %}" alt="Quality Perfection Logo" class="logo-footer-img" loading="lazy" />
+              <img src="{% static 'images/logo-footer.svg' %}" alt="Quality Perfection Logo" class="logo-footer-img"
+                loading="lazy" />
             </a>
             <!-- ============== END LOGO FOOTER ============= -->
             <!-- ============== START CONTACT INFO ============= -->
             <div class="flex items-center gap-y-5 gap-x-8! md:gap-x-10! flex-wrap text-surface-white py-1!">
-              <a href="https://www.google.com/maps/search/?api=1&query={% if request.LANGUAGE_CODE == 'ar' %}{{ configurations.address_ar }}{% else %}{{ configurations.address }}{% endif %}" target="_blank"
-                class="flex items-center gap-3.5 hover:text-crimson-red transition">
+              <a href="https://www.google.com/maps/search/?api=1&query={% if request.LANGUAGE_CODE == 'ar' %}{{ configurations.address_ar }}{% else %}{{ configurations.address }}{% endif %}"
+                target="_blank" class="flex items-center gap-3.5 hover:text-crimson-red transition">
                 <img src="{% static 'icons/location.svg' %}" alt="location" loading="lazy" class="w-6 h-6" />
                 <span class="text-[14px] font-normal md:text-[18px]">
-                   {% if request.LANGUAGE_CODE == 'ar' %}{{ configurations.address_ar }}{% else %}{{ configurations.address }}{% endif %}
+                  {% if request.LANGUAGE_CODE == 'ar' %}{{ configurations.address_ar }}{% else %}{{
+                  configurations.address }}{% endif %}
                 </span>
               </a>
 
-              <a href="tel:{{ configurations.phone_number }}" class="flex items-center gap-3.5 hover:text-crimson-red transition">
+              <a href="tel:{{ configurations.phone_number }}"
+                class="flex items-center gap-3.5 hover:text-crimson-red transition">
                 <img src="{% static 'icons/phone-solid.svg' %}" alt="phone" loading="lazy" class="w-6 h-6" />
                 <span class="text-[14px] font-normal md:text-[18px]">
                   {{ configurations.phone_number }}

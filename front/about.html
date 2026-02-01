@@ -26,45 +26,24 @@
   <!-- ================= END SCROLL TO TOP BUTTON =================== -->
   <div class="flex-height-screen">
     <!-- ================== START NAVBAR ======================== -->
-    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!" dir="ltr">
+    <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!"
+      dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
       <div class="container-media">
         <div class="flex items-center justify-between py-4! md:py-1!">
-          <!-- Logo -->
-          <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-auto"
-            data-aos="fade-right">
-            <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo"
-              class="w-30 md:w-47.75 md:h-[73.4px]" />
-          </a>
-
-          <!-- Burger -->
-          <div class="all-mobile-menu items-center gap-5 max-[1169px]:flex hidden" data-aos="fade-left">
-            <!-- ================ START PHONE NUMBER ================= -->
-            <a href="tel:{{ configurations.phone_number }}" class="relative w-10 h-10 block">
-              <span class="ripple absolute inset-0"></span>
-
-              <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
-                <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
-              </div>
+          <!-- Logo Section -->
+          <div class="flex-1 flex items-center">
+            <a href="{% url 'index' %}" class="flex items-center gap-2 text-white font-bold ms-10 me-8"
+              data-aos="fade-right">
+              <img src="{% static 'images/logo.svg' %}" alt="Quality Perfection Logo"
+                class="w-30 md:w-47.75 md:h-[73.4px]" />
             </a>
-            <!-- ================ END PHONE NUMBER ================= -->
-            {% if request.LANGUAGE_CODE == 'ar' %}
-            <a href="/en{{ request.path|slice:'3:' }}"
-              class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">EN</a>
-            {% else %}
-            <a href="/ar{{ request.path|slice:'3:' }}"
-              class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">AR</a>
-            {% endif %}
-
-            <button id="menuBtn"
-              class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
-              ☰
-            </button>
           </div>
-          <!-- Desktop Right -->
-          <div class="max-[1169px]:hidden flex items-center justify-center gap-4 w-full">
+
+          <!-- Desktop Menu Section (Centered) -->
+          <div class="max-[1169px]:hidden flex-1 flex justify-center">
             <ul data-aos="fade-down"
-              class="flex gap-8 text-surface-white text-[18px] font-normal ml-auto! justify-center items-center"
-              dir="rtl">
+              class="flex gap-8 text-surface-white text-[18px] font-normal justify-center items-center"
+              dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
               <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
               <li><a href="{% url 'about' %}" class="nav-link">{% trans "about us" %}</a></li>
               <li><a
@@ -73,26 +52,49 @@
               <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
               <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
               {% if request.LANGUAGE_CODE == 'ar' %}
-              <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">EN</a>
+              <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1 cursor-pointer uppercase">EN</a>
               {% else %}
-              <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">AR</a>
+              <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1 cursor-pointer uppercase">AR</a>
               {% endif %}
             </ul>
+          </div>
 
-            <!-- ================ START PHONE NUMBER ================= -->
+          <!-- Actions Section (Right) -->
+          <div class="flex-1 flex justify-end items-center gap-4">
+            <!-- Desktop Phone (Hidden on Mobile) -->
             <a data-aos="fade-left" href="tel:{{ configurations.phone_number }}"
-              class="flex items-center gap-4 ml-auto!">
+              class="max-[1169px]:hidden flex items-center gap-4">
               <div class="relative w-12 h-12">
                 <span class="ripple absolute inset-0"></span>
-
                 <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
                   <img src="{% static 'icons/phone.svg' %}" alt="Phone" class="w-6 h-6" />
                 </div>
               </div>
-
               <span class="text-[18px] font-normal text-surface-white">{{ configurations.phone_number }}</span>
             </a>
-            <!-- ================ END PHONE NUMBER ================= -->
+
+            <!-- Mobile Burger & Phone (Visible on Mobile) -->
+            <div class="all-mobile-menu flex items-center gap-5 min-[1170px]:hidden" data-aos="fade-left">
+              <!-- ================ START PHONE NUMBER ================= -->
+              <a href="tel:{{ configurations.phone_number }}" class="relative w-10 h-10 block">
+                <span class="ripple absolute inset-0"></span>
+                <div class="absolute inset-0 bg-crimson-red rounded-full flex items-center justify-center z-10">
+                  <img src="{% static 'icons/phone.svg' %}" alt="Call" class="w-4 h-4" />
+                </div>
+              </a>
+              <!-- ================ END PHONE NUMBER ================= -->
+              {% if request.LANGUAGE_CODE == 'ar' %}
+              <a href="/en{{ request.path|slice:'3:' }}"
+                class="switchLang_1 cursor-pointer uppercase text-surface-white">EN</a>
+              {% else %}
+              <a href="/ar{{ request.path|slice:'3:' }}"
+                class="switchLang_1 cursor-pointer uppercase text-surface-white">AR</a>
+              {% endif %}
+              <button id="menuBtn"
+                class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
+                ☰
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -177,9 +179,6 @@
               {{ configurations.About_the_Center }}
               {% endif %}
             </p>
-            <a href="{% url 'about' %}" class="btn mt-6!">
-              <img src="{% static 'icons/arrow.svg' %}" alt="arrow" class="inline-block ml-2" /> {% trans "more" %}
-            </a>
           </div>
           <!-- ================ END CONTENT ABOUT =============== -->
 
@@ -275,9 +274,8 @@
       <!-- ================== END SECTION  VISION MISSION ================== -->
 
       <!-- ================== START OUR GOALS ================== -->
-      <section class="our-goals py-21.25! md:padding-y-120 relative bg-cover bg-center bg-no-repeat" style="
-            background-image: url('{% static 'images/our-goals/bg-our-goals.png' %}');
-          ">
+      <section class="our-goals py-21.25! md:padding-y-120 relative bg-cover bg-center bg-no-repeat"
+        style="background-image: url('{% static 'images/our-goals/bg-our-goals.png' %}');">
         <!-- =================== START CONTAINER ================ -->
         <div class="container-media">
           <!-- ============== START SECTION TILTE ================ -->
@@ -382,7 +380,7 @@
             <!-- ============ END HEADER TITLE =============== -->
             <!-- =========== START INFO TITLE =============== -->
             <h2 class="info-title text-[24px] sm:text-[32px] md:text-[44px] font-bold text-surface-dark">
-              {% trans "our values" %}
+              {% trans "our basic values" %}
             </h2>
             <!-- =========== END INFO TITLE =============== -->
           </div>
@@ -415,7 +413,8 @@
                 <img src="{% static 'images/our-values/02.svg' %}" alt="الشفافية" class="w-8 h-8 object-cover mt-1.5!"
                   width="32px" height="32px">
                 <div class="info-card-item">
-                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "transparency" %}</h2>
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "transparency" %}
+                  </h2>
                   <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
                     {% trans "we believe in the importance of honesty with the client at every stage" %}.</p>
                 </div>
@@ -442,7 +441,8 @@
                 <img src="{% static 'images/our-values/04.svg' %}" alt="المسؤولية" class="w-8 h-8 object-cover mt-1.5!"
                   width="32px" height="32px">
                 <div class="info-card-item">
-                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "responsibility" %}</h2>
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "responsibility" %}
+                  </h2>
                   <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
                     {% trans "we take responsibility for our clients' cars as if they were our own" %}.</p>
                 </div>
