@@ -61,9 +61,9 @@
               dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}">
               <li><a href="{% url 'index' %}" class="nav-link">{% trans "home" %}</a></li>
               <li><a href="{% url 'about' %}" class="nav-link">{% trans "about us" %}</a></li>
-              <li><a href="#services-section" class="nav-link">{% trans "services" %}</a></li>
+              <li><a href="{% url 'index' %}#services-section" class="nav-link">{% trans "services" %}</a></li>
               <li><a href="{% url 'certificates' %}" class="nav-link">{% trans "certificates" %}</a></li>
-              <li><a href="#contact" class="nav-link">{% trans "contact us" %}</a></li>
+              <li><a href="{% url 'index' %}#contact" class="nav-link">{% trans "contact us" %}</a></li>
               {% if request.LANGUAGE_CODE == 'ar' %}
               <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1  ms-auto cursor-pointer uppercase">EN</a>
               {% else %}
