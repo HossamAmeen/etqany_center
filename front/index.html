@@ -122,7 +122,8 @@
                   <img src="{% static 'icons/phone.svg' %}" alt="Phone" class="w-6 h-6" />
                 </div>
               </div>
-              <span class="text-[18px] font-normal text-surface-white"><span dir="ltr">{{ configurations.phone_number }}</span></span>
+              <span class="text-[18px] font-normal text-surface-white"><span dir="ltr">{{ configurations.phone_number
+                  }}</span></span>
             </a>
             <!-- ================ END PHONE NUMBER ================= -->
           </div>
@@ -247,8 +248,9 @@
 
           <!-- ================= START IMAGE ABOUT ================= -->
           <div class="image-about  md:pt-16! md:ms-15!" data-aos="fade-right">
-            <img src="{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/about-image.png' %}{% else %}{% static 'images/about-image-ltr.png' %}{% endif %}" alt="about us" class="w-full h-full object-cover"
-              loading="lazy" />
+            <img
+              src="{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/about-image.png' %}{% else %}{% static 'images/about-image-ltr.png' %}{% endif %}"
+              alt="about us" class="w-full h-full object-cover" loading="lazy" />
             <!-- ================= END IMAGE ABOUT ================= -->
 
           </div>
@@ -380,7 +382,7 @@
 
       <!-- ============== START BANNER: TECHNOLOGICAL INNOVATION & DIGITAL TRANSFORMATION ================= -->
       <section class="banner-social relative bg-cover bg-center bg-no-repeat py-16"
-        style="background-image: url('{% static 'images/banner-technology.svg' %}');">
+        style="background-image: url('{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/banner-technology.svg' %}{% else %}{% static 'images/banner-technology-ltr.jpg' %}{% endif %}');">
         <!-- ================= START CONTAINER MEDIA ======================= -->
         <div class="container-media">
           <!-- ================= START MAIN CONTENR SOCIAL ================== -->
@@ -481,7 +483,7 @@
 
       <!-- ============== START BANNER: SOCIAL & ENVIRONMENTAL RESPONSIBILITY ================= -->
       <section class="banner-social relative bg-cover bg-center bg-no-repeat py-16"
-        style="background-image: url('{% static 'images/banner-social.svg' %}');">
+        style="background-image: url('{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/banner-social.svg' %}{% else %}{% static 'images/banner-social-ltr.jpg' %}{% endif %}');">
         <!-- ================= START CONTAINER MEDIA ======================= -->
         <div class="container-media">
           <!-- ================= START MAIN CONTENR SOCIAL ================== -->
