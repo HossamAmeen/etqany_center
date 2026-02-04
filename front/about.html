@@ -179,6 +179,46 @@
 
       </section>
       <!-- =================== END SECTION ABOUT =================== -->
+       <!-- ================== START SECTION MANAGMENT MESSAGE ============== -->
+      <section class="management-message pt-21.25! pb-5!" data-aos="fade-up">
+        <!-- ================= START CONTAINER =================== -->
+        <div class="container-media">
+          <!-- ============== START SECTION TILTE ================ -->
+          <div class="section-title flex justify-center items-center text-center flex-col gap-4 mb-13!">
+            <!-- ============ START HEADER TITLE =============== -->
+            <div class="header-title flex items-center justify-center">
+              <!--  START LINES RIGHT -->
+              <div class="flex flex-col justify-center mr-2">
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+                <div class="w-6 h-0.5 bg-crimson-red mt-1.5!"></div>
+              </div>
+              <!--  END LINES RIGHT -->
+
+              <!-- START TEXT CONTENT -->
+              <h2 class="text-crimson-red text-[15px] md:text-[18px] font-normal px-4!">
+                {% trans "Management Message" %}
+              </h2>
+              <!-- END TEXT CONTENT -->
+              <!--  START LINES LEFT -->
+              <div class="flex flex-col justify-center ml-2">
+                <div class="w-6 h-0.5 bg-crimson-red -mb-2.5!"></div>
+                <div class="w-10.5 h-0.5 bg-crimson-red"></div>
+              </div>
+              <!--  END LINES LEFT -->
+            </div>
+            <!-- ============ END HEADER TITLE =============== -->
+
+          </div>
+          <!-- ============== END SECTION TILTE ================ -->
+          <div class="max-w-180 w-full text-center mx-auto!">
+            <p class="text-[15px] md:text-[18px] font-medium text-surface-dark">{% if request.LANGUAGE_CODE == 'ar' %}{{ configurations.management_message_ar }}{% else %}{{ configurations.management_message }}{% endif %}</p>
+          </div>
+
+        </div>
+        <!-- ================= END CONTAINER =================== -->
+
+      </section>
+      <!-- ================== END SECTION MANAGMENT MESSAGE ============== -->
       <!-- ================== START SECTION  VISION MISSION ================== -->
       <section class="vision-mission py-21.25! md:padding-y-120" data-aos="fade-up">
         <!-- ================= START CONTAINER ================= -->
@@ -386,7 +426,7 @@
                 <img src="{% static 'images/our-values/01.svg' %}" alt="الاتقان" class="w-8 h-8 object-cover mt-1.5!"
                   width="32px" height="32px">
                 <div class="info-card-item">
-                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "excellence" %}</h2>
+                  <h2 class="text-[17px] sm:text-[20px] font-bold text-surface-dark mb-3!">{% trans "Perfection" %}</h2>
                   <p class="text-[14px] sm:text-[16px] font-medium sm:font-light text-surface-dark">
                     {% trans "we strive for perfection in every detail of the service" %}. </p>
                 </div>

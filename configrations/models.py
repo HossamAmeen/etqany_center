@@ -57,7 +57,7 @@ class Service(models.Model):
         verbose_name_plural = _("Services")
 
 
-class Advantage (models.Model):
+class Advantage(models.Model):
     title = models.CharField(_("title"), max_length=200, blank=True)
     title_ar = models.CharField(_("title_ar"),
                                 max_length=200, null=True, blank=True)
@@ -115,6 +115,8 @@ class Configuration(models.Model):
     About_the_Center_ar = models.TextField(_("About_the_Center_ar"), null=True, blank=True)
     Future_vision = models.TextField(_("Future vision"), blank=True)
     Future_vision_ar = models.TextField(_("Future vision_ar"), null=True, blank=True)
+    management_message = models.TextField(_("management_message"), blank=True)
+    management_message_ar = models.TextField(_("management_message_ar"), null=True, blank=True)
 
 
     def __str__(self):
