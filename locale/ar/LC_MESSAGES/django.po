@@ -367,8 +367,8 @@ msgid ""
 msgstr "نحن نتبع التطورات التقنية في مجال الصيانة"
 
 #: front/about.html:529 front/index.html:765
-msgid "all rights reserved © 2024"
-msgstr "جميع الحقوق محفوظة © 2024"
+msgid "all rights reserved © 2026"
+msgstr "جميع الحقوق محفوظة © 2026"
 
 #: front/backup/index-en.html:8 front/backup/index.html:8 front/index.html:9
 msgid "Quality Perfection"

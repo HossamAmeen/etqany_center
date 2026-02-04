@@ -171,7 +171,7 @@ var Ke=Object.defineProperty,Qe=Object.defineProperties;var Ze=Object.getOwnProp
       <div\r
         class="text-surface-white text-center py-8! border-t border-surface-white-10 w-full text-[14px] font-normal"\r
       >\r
-        جميع الحقوق محفوظة © 2024\r
+        جميع الحقوق محفوظة © 2026\r
       </div>\r
       <!-- ================== END @ COPY ================ -->\r
     </div>\r
