@@ -294,7 +294,7 @@ msgstr "اتصل بنا"
 
 #: front/about.html:170
 msgid "About the Center for Quality Excellence"
-msgstr "نبذه عن المركز"
+msgstr "نبذه عن مركز جودة الاتقان"
 
 #: front/about.html:213 front/about.html:226
 msgid "vision and mission"
@@ -326,8 +326,8 @@ msgid "our basic values"
 msgstr "قيمنا الاساسية"
 
 #: front/about.html:403
-msgid "excellence"
-msgstr "التميز"
+msgid "Perfection"
+msgstr "الاتقان"
 
 #: front/about.html:405
 msgid "we strive for perfection in every detail of the service"
@@ -351,7 +351,7 @@ msgstr "نحن نتبع أعلى المعايير الدولية في الخدم
 
 #: front/about.html:444
 msgid "responsibility"
-msgstr "المسؤولية المجتمعية والبيئية"
+msgstr "المسؤولية"
 
 #: front/about.html:447
 msgid "we take responsibility for our clients' cars as if they were our own"
@@ -359,7 +359,7 @@ msgstr "نحن نأخذ المسؤولية عن سيارات عملائنا كم
 
 #: front/about.html:458
 msgid "innovation"
-msgstr "الابتكار التقني"
+msgstr "الابتكار"
 
 #: front/about.html:460
 msgid ""
@@ -505,7 +505,7 @@ msgstr "ثقة تمتد منذ 2008"
 
 #: front/index.html:200
 msgid "About the center for Quality Excellence"
-msgstr "نبذه عن المركز"
+msgstr "نـبذه عن المركز جودة الاتقان"
 
 #: front/index.html:213
 msgid "more"

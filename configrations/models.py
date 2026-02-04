@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class SuccessStory(models.Model):
-    name = models.CharField(_("name"), max_length=100)
+    name = models.CharField(_("name"), max_length=100, blank=True, null=True)
     name_ar = models.CharField(_("name_ar"), max_length=100, null=True, blank=True)
     title = models.CharField(_("title"), max_length=150, blank=True)
     title_ar = models.CharField(_("title_ar"), max_length=150, blank=True)
@@ -15,7 +15,7 @@ class SuccessStory(models.Model):
     created_at = models.DateTimeField(_("created_at"), auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return str(self.id)
     
     class Meta:
         verbose_name = _("Success Story")

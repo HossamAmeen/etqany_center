@@ -247,7 +247,7 @@
 
           <!-- ================= START IMAGE ABOUT ================= -->
           <div class="image-about  md:pt-16! md:ms-15!" data-aos="fade-right">
-            <img src="{% static 'images/about-image.png' %}" alt="about us" class="w-full h-full object-cover"
+            <img src="{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/about-image.png' %}{% else %}{% static 'images/about-image-ltr.png' %}{% endif %}" alt="about us" class="w-full h-full object-cover"
               loading="lazy" />
             <!-- ================= END IMAGE ABOUT ================= -->
 
@@ -591,14 +591,14 @@
                       <img src="{{ story.image.url }}" alt="{{ story.name }}"
                         class="w-15 h-15 min-w-15 min-h-15 mx-auto! mb-2! object-cover" width="60px" height="60px">
                       {% else %}
-                      <img src="{% static 'images/user.png' %}" alt="user"
-                        class="w-15 h-15 min-w-15 min-h-15 mx-auto! mb-2! object-cover" width="60px" height="60px">
+                      <!-- <img src="{% static 'images/user.png' %}" alt="user"
+                        class="w-15 h-15 min-w-15 min-h-15 mx-auto! mb-2! object-cover" width="60px" height="60px"> -->
                       {% endif %}
                       <p class="name-user text-[20px] font-normal text-surface-dark">
                         {% if request.LANGUAGE_CODE == 'ar' %}
-                        {{ story.name_ar|default:story.name }}
+                        {{ story.name_ar|default:"" }}
                         {% else %}
-                        {{ story.name }}
+                        {{""}}
                         {% endif %}
                       </p>
                     </div>
