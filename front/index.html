@@ -8,9 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% trans "Quality Perfection" %}</title>
 
-
   <script src="{% static 'assets/main-BI6zJ0SQ.js' %}"></script>
-  <link rel="stylesheet" href="{% static 'assets/style-CQRcHHq-.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/style-C_3znNml.css' %}">
   <style>
     /* Fixed Height for Service Cards */
     .card-service .content-card {
@@ -147,52 +146,37 @@
     <!-- ================ START HEADER PAGE =================== -->
     <header>
       <!-- =============== START HEADER PAGE ==================== -->
-      <div class="header-page relative   h-full pb-17! max-[768px]:pt-17! max-[1199px]:pt-60! pt-150! md:py-30!">
-
-        <div class="img-bg -mt-30!  relative top-0 left-0 right-0 w-full">
-          <img
-            src="{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/bg-header.png' %}{% else %}{% static 'images/bg-header-ltr.png' %}{% endif %}"
-            class="w-full max-[670px]:h-screen max-[879px]:h-[130vh] h-full object-cover" alt="background header">
-          <div
-            class="gif-bg absolute max-[879px]:hidden! z-3 {% if request.LANGUAGE_CODE == 'ar' %}left-[32.5%]{% else %}right-[32.5%]{% endif %} w-[58%] top-[48.5%] {% if request.LANGUAGE_CODE == 'ar' %}-translate-x-1/2{% else %}translate-x-1/2{% endif %} -translate-y-1/2">
-
-            <img
-              src="{% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/circle.gif' %}{% else %}{% static 'images/circle-ltr.gif' %}{% endif %}"
-              alt="gif" class="w-full h-full">
-          </div>
-
-          <a href="#about" class="absolute max-[1025px]:bottom-12 bottom-20 left-1/2 -translate-x-1/2">
-            <div
-              class="max-[670px]:w-7.5 max-[670px]:h-12 w-9.5 h-15 rounded-full border border-surface-white flex items-center justify-center">
-              <span class="animate-[scrollHint_1.8s_ease-in-out_infinite] text-white text-xl">
-                <img src="{% static 'icons/arrow-down.svg' %}" alt="arrow down">
-              </span>
-            </div>
-          </a>
-
-        </div>
+      <div style="background-image: url({% if request.LANGUAGE_CODE == 'ar' %}{% static 'images/header-bg-001.jpeg' %}{% else %}{% static 'images/header-bg-001-en.png' %}{% endif %});"
+        class="header-page relative  bg-no-repeat bg-cover bg-center max-[670px]:h-screen  h-full">
         <!-- ================= START CONTAINER =================== -->
         <div class="container-media">
           <!-- ================ START CONTENT INFO HEADER ================== -->
-          <div data-aos="fade-down" dir="{% if request.LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}"
-            class="content-info-header absolute max-[670px]:bottom-[50%] max-[670px]:right-[0%] max-[670px]:transform max-[670px]:translate-middle max-[879px]:bottom-[25%] max-[1024px]:bottom-[15%]   bottom-37.5   flex flex-col max-[670px]:h-auto h-screen max-[670px]:items-center max-[670px]:text-center justify-center  w-full">
+          <div data-aos="fade-down"
+            class="content-info-header flex flex-col h-screen max-[670px]:items-center max-[670px]:text-center justify-center  w-full">
             <h1
-              class="max-[450px]:text-[35px] max-[1025px]:text-[37px] max-[1280px]:text-[50px]  text-[62px] font-bold text-surface-white">
+              class="max-[1025px]:text-[40px] max-[1280px]:text-[50px]  text-[62px] font-bold text-surface-white">
               {% trans "Perfection Center" %}</h1>
-            <p class="max-[450px]:text-[22px] max-[550px]:text-[24px] text-[27px]  font-normal text-surface-white">
+            <p class="max-[550px]:text-[24px] text-[27px]  font-normal text-surface-white">
               {% trans "Trust extending since 2008" %}</p>
 
           </div>
           <!-- ================ END CONTENT INFO HEADER ================== -->
         </div>
         <!-- ================= END CONTAINER =================== -->
-
-
-
+        <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div
+            class="max-[670px]:w-7.5 max-[670px]:h-12 w-9.5 h-15 rounded-full border border-surface-white flex items-center justify-center">
+            <span class="animate-[scrollHint_1.8s_ease-in-out_infinite] text-white text-xl">
+              <img src="{% static 'icons/arrow-down.svg' %}" alt="arrow down">
+            </span>
+          </div>
+        </a>
       </div>
       <!-- =============== END HEADER PAGE ==================== -->
     </header>
     <!-- ================ END HEADER PAGE =================== -->
+
+
     <!-- =================  START MAIN ===================== -->
     <main>
       <!-- =================== START SECTION ABOUT =================== -->
