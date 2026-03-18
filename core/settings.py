@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "https://quality-perf.com",
-    "https://www.quality-perf.com"
+    "https://www.quality-perf.com",
+    "www.quality-perf.com",
+    
 ]
 
 CSRF_COOKIE_SECURE = True
