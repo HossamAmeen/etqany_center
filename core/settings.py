@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-0o^s85h-z86c*3y8f9dh4-mx2mz1lmh99_0t((^_rya7nmh!ms
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "quality-perf.com",
-    "www.quality-perf.com"
+    "https://quality-perf.com",
+    "https://www.quality-perf.com"
 ]
 
 CSRF_COOKIE_SECURE = True
