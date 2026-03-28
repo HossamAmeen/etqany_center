@@ -52,7 +52,11 @@
               </div>
             </a>
             <!-- ================ END PHONE NUMBER ================= -->
-            <a href="{% url 'index' %}" class="switchLang_1  ms-auto cursor-pointer uppercase text-surface-white">EN</a>
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <a href="/en{{ request.path|slice:'3:' }}" class="switchLang_1 ms-auto cursor-pointer uppercase text-surface-white">EN</a>
+            {% else %}
+            <a href="/ar{{ request.path|slice:'3:' }}" class="switchLang_1 ms-auto cursor-pointer uppercase text-surface-white">AR</a>
+            {% endif %}
 
             <button id="menuBtn"
               class="text-white text-xl border border-[#dddddd48] rounded-[50%] w-10.25 h-10.25 flex items-center justify-center">
