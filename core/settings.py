@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "https://quality-perf.com",
     "https://www.quality-perf.com",
     "www.quality-perf.com",
+    "quality-perf.com",
     
 ]
 
