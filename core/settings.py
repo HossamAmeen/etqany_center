@@ -192,8 +192,6 @@ JAZZMIN_SETTINGS.update({
 CSRF_TRUSTED_ORIGINS = [
     "https://www.quality-perf.com",
     "https://quality-perf.com",
-    "www.quality-perf.com",
-    "quality-perf.com",
 ]
 
 CORS_ALLOWED_ORIGINS = [

@@ -103,6 +103,7 @@ class Configuration(models.Model):
     modified_at = models.DateTimeField(_("modified_at"), auto_now=True)
     email = models.EmailField(_("email"), max_length=254, blank=True)
     phone_number = models.CharField(_("phone_number"), max_length=20, blank=True)
+    whatsapp_number = models.CharField(_("whatsapp_number"), max_length=20, blank=True)
     address = models.CharField(_("address"), max_length=255, blank=True)
     address_ar = models.CharField(_("address_ar"), max_length=255, null=True, blank=True)
     Technical_innovation = models.TextField(_("Technical_innovation"), blank=True)
