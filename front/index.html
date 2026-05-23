@@ -54,6 +54,43 @@
       line-height: 1.0;
     }
   </style>
+    <style>
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25D366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        z-index: 9999;
+        animation: bounce 3s ease-in-out infinite;
+    }
+    .whatsapp-float img { width: 35px; height: 35px; }
+    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    /* Floating Appointment button */
+    .appointment-float {
+        position: fixed;
+        bottom: 175px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #007bff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        z-index: 9999;
+        animation: bounce 3s ease-in-out infinite;
+    }
+    .appointment-float img { width: 35px; height: 35px; }
+    </style>
 </head>
 
 <body>
@@ -68,7 +105,17 @@
     aria-label="Scroll to top">
     <img src="{% static 'icons/arrow.svg' %}" alt="arrow button" class="-rotate-90">
   </button>
-  <!-- ================= END SCROLL TO TOP BUTTON =================== -->
+   <!-- ================= END SCROLL TO TOP BUTTON =================== -->
+   <div class="whatsapp-float">
+     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}" target="_blank">
+       <img src="{% static 'icons/whatsapp.svg' %}" alt="WhatsApp">
+     </a>
+   </div>
+   <div class="appointment-float">
+     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}?text=%D8%AD%D8%AC%D8%B2%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF" target="_blank">
+       <img src="{% static 'icons/calendar.svg' %}" alt="Book Appointment">
+     </a>
+   </div>
   <div class="flex-height-screen">
     <!-- ================== START NAVBAR ======================== -->
     <nav class="fixed top-0 w-full z-50 navbar-menu transition-colors duration-300 pt-4! md:pt-8!" dir="ltr">
@@ -354,14 +401,6 @@
                 </div>
                 <!-- ============== END SWIPER SLIDE =============== -->
                 {% endfor %}
-      <div class="swiper-slide">
-        <a href="https://wa.me/{{ configurations.whatsapp_number }}" target="_blank" class="card-service group cursor-pointer" data-title="{% trans 'Book an appointment' %}" data-description="{% trans 'Book your appointment via WhatsApp' %}">
-          <div class="px-5! relative z-1">
-            <h1 class="text-[20px] font-bold text-surface-dark mb-2!">{% trans 'Book an appointment' %}</h1>
-          </div>
-        </a>
-      </div>
-
               </div>
               <!-- ============== END SWIPER WRAPPER =================== -->
 
