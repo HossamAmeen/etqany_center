@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,6 +27,7 @@ SECRET_KEY = 'django-insecure-0o^s85h-z86c*3y8f9dh4-mx2mz1lmh99_0t((^_rya7nmh!ms
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "127.0.0.1",
     "https://quality-perf.com",
     "https://www.quality-perf.com",
     "www.quality-perf.com",
@@ -148,7 +150,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
     ('en', _('English')),
