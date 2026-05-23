@@ -22,3 +22,5 @@ shell:
 superuser:
 	$(MANAGE) createsuperuser
 
+collectstatic:
+	$(MANAGE) collectstatic --no-input --clear
