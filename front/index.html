@@ -145,6 +145,25 @@
       display: block;
     }
 
+    /* Mobile: always show full label */
+    @media (max-width: 768px) {
+      .appointment-float-btn__inner {
+        width: auto;
+        height: auto;
+        border-radius: 32px;
+        padding: 4px;
+      }
+
+      .appointment-float-btn__compact {
+        display: none !important;
+      }
+
+      .appointment-float-btn__full {
+        display: block !important;
+        width: min(240px, calc(100vw - 90px));
+      }
+    }
+
     </style>
 </head>
 
@@ -932,34 +951,6 @@
     modal.addEventListener("click", e => {
       if (e.target === modal) closeModal();
     });
-
-    // Side appointment tab — expand on long-press (touch)
-    (function () {
-      const tab = document.getElementById("appointmentSideTab");
-      if (!tab) return;
-
-      let holdTimer = null;
-
-      tab.addEventListener("touchstart", function () {
-        holdTimer = setTimeout(function () {
-          tab.classList.add("is-expanded");
-        }, 400);
-      }, { passive: true });
-
-      tab.addEventListener("touchend", function () {
-        clearTimeout(holdTimer);
-      });
-
-      tab.addEventListener("touchmove", function () {
-        clearTimeout(holdTimer);
-      });
-
-      document.addEventListener("touchstart", function (e) {
-        if (!tab.contains(e.target)) {
-          tab.classList.remove("is-expanded");
-        }
-      }, { passive: true });
-    })();
   </script>
 
 
