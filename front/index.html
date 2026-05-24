@@ -55,41 +55,96 @@
     }
   </style>
     <style>
-    /* Floating WhatsApp button */
+    /* Floating action buttons (WhatsApp + Book Appointment) */
+    .floating-actions {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
     .whatsapp-float {
-        position: fixed;
-        bottom: 100px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: #25D366;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        z-index: 9999;
-        animation: bounce 3s ease-in-out infinite;
+      position: static;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      animation: bounce 3s ease-in-out infinite;
+      flex-shrink: 0;
     }
+
     .whatsapp-float img { width: 35px; height: 35px; }
+
     @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    /* Floating Appointment button */
-    .appointment-float {
-        position: fixed;
-        bottom: 175px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: #007bff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        z-index: 9999;
-        animation: bounce 3s ease-in-out infinite;
+
+    /* Book Appointment button */
+    .appointment-float-btn {
+      text-decoration: none;
+      cursor: pointer;
+      flex-shrink: 0;
     }
-    .appointment-float img { width: 35px; height: 35px; }
+
+    .appointment-float-btn__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(5.97deg, #d43831 2.26%, #3172b4 100%);
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      transition: width 0.4s ease, height 0.4s ease, border-radius 0.4s ease, padding 0.4s ease;
+    }
+
+    .appointment-float-btn__compact {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .appointment-float-btn__compact img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    .appointment-float-btn__full {
+      display: none;
+      width: 240px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .appointment-float-btn:hover .appointment-float-btn__inner,
+    .appointment-float-btn.is-expanded .appointment-float-btn__inner {
+      width: auto;
+      height: auto;
+      border-radius: 32px;
+      padding: 4px;
+    }
+
+    .appointment-float-btn:hover .appointment-float-btn__compact,
+    .appointment-float-btn.is-expanded .appointment-float-btn__compact {
+      display: none;
+    }
+
+    .appointment-float-btn:hover .appointment-float-btn__full,
+    .appointment-float-btn.is-expanded .appointment-float-btn__full {
+      display: block;
+    }
+
     </style>
 </head>
 
@@ -106,14 +161,23 @@
     <img src="{% static 'icons/arrow.svg' %}" alt="arrow button" class="-rotate-90">
   </button>
    <!-- ================= END SCROLL TO TOP BUTTON =================== -->
-   <div class="whatsapp-float">
-     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}" target="_blank">
-       <img src="{% static 'icons/whatsapp.svg' %}" alt="WhatsApp">
+   <div class="floating-actions">
+     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}?text=%D8%AD%D8%AC%D8%B2%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF"
+       class="appointment-float-btn" id="appointmentSideTab" target="_blank"
+       aria-label="{% trans 'Book your appointment via WhatsApp' %}">
+       <div class="appointment-float-btn__inner">
+         <span class="appointment-float-btn__compact">
+           <img src="{% static 'icons/calendar.svg' %}" alt="">
+         </span>
+         {% if request.LANGUAGE_CODE == 'ar' %}
+         <img src="{% static 'icons/احجز_موعدك.svg' %}" alt="{% trans 'Book an appointment' %}" class="appointment-float-btn__full">
+         {% else %}
+         <img src="{% static 'icons/book_appointment.svg' %}" alt="{% trans 'Book an appointment' %}" class="appointment-float-btn__full">
+         {% endif %}
+       </div>
      </a>
-   </div>
-   <div class="appointment-float">
-     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}?text=%D8%AD%D8%AC%D8%B2%20%D8%A7%D9%84%D9%85%D9%88%D8%B9%D8%AF" target="_blank">
-       <img src="{% static 'icons/calendar.svg' %}" alt="Book Appointment">
+     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}" target="_blank" class="whatsapp-float">
+       <img src="{% static 'icons/whatsapp.svg' %}" alt="WhatsApp">
      </a>
    </div>
   <div class="flex-height-screen">
@@ -868,6 +932,34 @@
     modal.addEventListener("click", e => {
       if (e.target === modal) closeModal();
     });
+
+    // Side appointment tab — expand on long-press (touch)
+    (function () {
+      const tab = document.getElementById("appointmentSideTab");
+      if (!tab) return;
+
+      let holdTimer = null;
+
+      tab.addEventListener("touchstart", function () {
+        holdTimer = setTimeout(function () {
+          tab.classList.add("is-expanded");
+        }, 400);
+      }, { passive: true });
+
+      tab.addEventListener("touchend", function () {
+        clearTimeout(holdTimer);
+      });
+
+      tab.addEventListener("touchmove", function () {
+        clearTimeout(holdTimer);
+      });
+
+      document.addEventListener("touchstart", function (e) {
+        if (!tab.contains(e.target)) {
+          tab.classList.remove("is-expanded");
+        }
+      }, { passive: true });
+    })();
   </script>
 
 

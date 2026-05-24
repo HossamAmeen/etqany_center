@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="book-appointment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.33 74.49">
+  <defs>
+    <!-- Brand premium gradient -->
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(5.97)">
+      <stop offset="2.26%" stop-color="#d43831" />
+      <stop offset="100%" stop-color="#3172b4" />
+    </linearGradient>
+    <!-- Subtle drop shadow -->
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#d43831" flood-opacity="0.16" />
+    </filter>
+  </defs>
+  <!-- Pill background -->
+  <rect x="5" y="5" width="341.33" height="64.49" rx="32.25" fill="url(#brand-grad)" filter="url(#soft-shadow)" />
+  <!-- Simple Book Icon (white) -->
+  <g transform="translate(30,20)" fill="#ffffff">
+    <!-- Book base -->
+    <rect x="0" y="0" width="24" height="28" rx="2" ry="2" fill="none" stroke="#ffffff" stroke-width="1" />
+    <!-- Page line -->
+    <path d="M4 4 H20" stroke="#ffffff" stroke-width="0.8" />
+    <path d="M4 8 H20" stroke="#ffffff" stroke-width="0.8" />
+    <path d="M4 12 H20" stroke="#ffffff" stroke-width="0.8" />
+    <path d="M4 16 H20" stroke="#ffffff" stroke-width="0.8" />
+  </g>
+  <!-- English text -->
+  <text x="205" y="44.5" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Book an Appointment</text>
+</svg>
