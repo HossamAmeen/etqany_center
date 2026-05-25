@@ -55,7 +55,7 @@
     }
   </style>
     <style>
-    /* Floating action buttons (WhatsApp + Book Appointment) */
+    /* Floating Book Appointment button */
     .floating-actions {
       position: fixed;
       bottom: 100px;
@@ -64,26 +64,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 12px;
     }
-
-    .whatsapp-float {
-      position: static;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #25D366;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      animation: bounce 3s ease-in-out infinite;
-      flex-shrink: 0;
-    }
-
-    .whatsapp-float img { width: 35px; height: 35px; }
-
-    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
     /* Book Appointment button */
     .appointment-float-btn {
@@ -194,9 +175,6 @@
          <img src="{% static 'icons/book_appointment.svg' %}" alt="{% trans 'Book an appointment' %}" class="appointment-float-btn__full">
          {% endif %}
        </div>
-     </a>
-     <a href="https://wa.me/{{ configurations.whatsapp_number|default:configurations.phone_number|cut:' '|cut:'+'|cut:'-' }}" target="_blank" class="whatsapp-float">
-       <img src="{% static 'icons/whatsapp.svg' %}" alt="WhatsApp">
      </a>
    </div>
   <div class="flex-height-screen">
